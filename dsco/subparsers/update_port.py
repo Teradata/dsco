@@ -8,9 +8,12 @@ cmd_name = "update_port"
 
 
 def add_cmd(subparsers):
-    cmd = subparsers.add_parser(cmd_name, help="update contianer port")
+    cmd = subparsers.add_parser(cmd_name, help="update container port")
     cmd.add_argument(
-        "base_port", type=int, nargs="?", help="by default update dev and prod"
+        "base_port",
+        type=int,
+        nargs="?",
+        help="by default update dev (base_port) and prod (base_port + 1000)",
     )
     cmd.add_argument("--dev", type=int, help="update dev port")
     cmd.add_argument("--prod", type=int, help="update prod port")

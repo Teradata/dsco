@@ -8,7 +8,7 @@ cmd_name = "gen_reports"
 
 
 def add_cmd(subparsers):
-    subparsers.add_parser(cmd_name, help="remove containers")
+    subparsers.add_parser(cmd_name, help="(re)generate reports in static html")
 
 
 def run_cmd(args, conf):

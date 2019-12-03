@@ -8,9 +8,9 @@ cmd_name = "shell"
 
 
 def add_cmd(subparsers):
-    cmd = subparsers.add_parser(cmd_name, help="remove containers")
-    cmd.add_argument("--dev", action="store_true", help="include dev service")
-    cmd.add_argument("--prod", action="store_true", help="include prod service")
+    cmd = subparsers.add_parser(cmd_name, help="start shell in container")
+    cmd.add_argument("--dev", action="store_true", help="attach to dev")
+    cmd.add_argument("--prod", action="store_true", help="attach to prod")
 
 
 def run_cmd(args, conf):

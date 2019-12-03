@@ -8,10 +8,10 @@ cmd_name = "rmi"
 
 
 def add_cmd(subparsers):
-    cmd = subparsers.add_parser(cmd_name, help="remove containers")
-    cmd.add_argument("--dev", action="store_true", help="include dev service")
-    cmd.add_argument("--prod", action="store_true", help="include prod service")
-    cmd.add_argument("--all", action="store_true", help="include prod service")
+    cmd = subparsers.add_parser(cmd_name, help="remove images")
+    cmd.add_argument("--dev", action="store_true", help="remove dev")
+    cmd.add_argument("--prod", action="store_true", help="remove prod")
+    cmd.add_argument("--all", action="store_true", help="remove dev and prod")
 
 
 def run_cmd(args, conf):

@@ -5,27 +5,33 @@ DSCO (Draft documentation)
 
 A utility to create a data science development container.
 
-Install:
+Install::
+---------
 
     pip install git+https://github.td.teradata.com/Quality-Engineering/dsco.git
 
 Features:
+---------
 
 - Uses `poetry <https://poetry.eustace.io/>`_ to keep track of dependencies.
 - Uses nginx and uwsgi to serve:
+
   - Jupyter (uwsgi)
   - Static reports (nginx)
   - Flask (uwsgi)
     - Dask
+
 - Starts with a project skeleton that includes:
   - resources to build production and dev containers with docker / ansible.
   - flask skeleton already set up for use as api
   - dask skeleton integrated into flask for quickstart web dashboards
 
 Commands:
+---------
 
 dsco init
   Creates a new project directory
+
   example::
 
       dsco init

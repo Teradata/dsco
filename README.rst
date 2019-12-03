@@ -60,7 +60,7 @@ dsco rm
 dsco rmi
   Delete containers and images.
 
-dscl shell
+dsco shell
   Open up a shell in a container.
 
 dsco update_port

@@ -43,7 +43,9 @@ dsco init
   Running this will prompt for project name and other information.
 
 dsco go
-  Launch container and open info page in a browser
+  Launch container and open info page in a browser.
+  First build should take approximately 7 minutes.
+  After the image has been built, this command should finish almost instantly.
 
 dsco build
   Build images only

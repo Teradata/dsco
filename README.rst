@@ -40,7 +40,7 @@ dsco init
 
       dsco init
 
-  Running this will prompt for project name and other inforation.
+  Running this will prompt for project name and other information.
 
 dsco go
   Launch container and open info page in a browser

@@ -1,0 +1,13 @@
+---
+- name: Install os development dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - make
+    - wget
+    - curl
+    - git
+    - vim
+    - pandoc
+

@@ -1,0 +1,4 @@
+---
+jupyter_extensions:
+  - jupyter-contrib-nbextensions
+  - qgrid

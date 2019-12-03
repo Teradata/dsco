@@ -1,0 +1,32 @@
+---
+- name: check that flask_config.ini exists
+  stat: path=/srv/flask_config.ini
+  register: stat_result
+
+- name: fail if file does not exist
+  fail:
+    msg: flask_config.ini file does not exist.
+  when: stat_result.stat.exists == False
+
+- name: install uwsgi
+  pip:
+    name: uwsgi
+
+- name: setup config file for supervisor
+  copy:
+    src: uwsgi.conf
+    dest: /etc/supervisor/conf.d
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Create the log directory
+  file:
+    path: /var/log/uwsgi
+    state: directory
+    mode: 0755
+
+- name: update supervisor
+  supervisorctl:
+    name: uwsgi
+    state: present

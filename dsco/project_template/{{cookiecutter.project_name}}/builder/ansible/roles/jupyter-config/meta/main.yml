@@ -1,0 +1,5 @@
+---
+dependencies:
+  - role: poetry
+  - role: supervisor
+  - role: uwsgi

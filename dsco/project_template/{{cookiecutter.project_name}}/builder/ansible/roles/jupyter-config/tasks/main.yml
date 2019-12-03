@@ -1,0 +1,86 @@
+---
+- name: Check for jupyter
+  shell: $HOME/.poetry/bin/poetry show jupyter
+  ignore_errors: yes
+  register: jupyter_installed
+  
+- name: Check if jupyter_extensions (var) installed
+  shell: "$HOME/.poetry/bin/poetry show {{ item }}"
+  ignore_errors: yes
+  loop: "{{ jupyter_extensions }}"
+  register: extensions_installed
+  when: jupyter_installed.rc|int == 0
+
+- name: install if missing
+  shell: "$HOME/.poetyr/bin/poetry add {{ item.0 }}"
+  when: jupyter_installed.rc|int == 0 and item.1.rc|int != 0
+  loop: "{{ jupyter_extensions|zip(extensions_installed.results)|list }}"
+  
+- name: create jupyter log dir
+  file:
+    path: /var/log/jupyter
+    state: directory
+    mode: 0755
+  when: jupyter_installed.rc|int == 0
+
+- name: .jupyter directory
+  file:
+    path: $HOME/.jupyter
+    state: directory
+    mode: 0755
+  when: jupyter_installed.rc|int == 0
+
+- name: jupyter_notebook_config.py
+  copy:
+    src: jupyter_notebook_config.py
+    dest: $HOME/.jupyter/jupyter_notebook_config.py
+  when: jupyter_installed.rc|int == 0
+
+- name: nbconfig directory
+  file:
+    path: $HOME/.jupyter/nbconfig
+    state: directory
+    mode: '0644'
+  when: jupyter_installed.rc|int == 0
+    
+- name: notebook.json
+  copy:
+    src: notebook.json
+    dest: $HOME/.jupyter/nbconfig/notebook.json
+  when: jupyter_installed.rc|int == 0
+
+- name: custom directory
+  file:
+    path: $HOME/.jupyter/custom
+    state: directory
+    mode: '0644'
+  when: jupyter_installed.rc|int == 0
+
+- name: custom.js
+  copy:
+    src: custom.js
+    dest: $HOME/.jupyter/custom/custom.js
+  when: jupyter_installed.rc|int == 0
+  
+- name: install nbextensions
+  shell: |
+    $HOME/.poetry/bin/poetry run jupyter contrib nbextension install --user
+    $HOME/.poetry/bin/poetry run jupyter nbextensions_configurator enalbe --user
+    $HOME/.poetry/bin/poetry run jupyter nbextension enable --py --sys-prefix qgrid
+    $HOME/.poetry/bin/poetry run jupyter nbextension enable --py --sys-prefix widgetsnbextension
+  when: jupyter_installed.rc|int == 0
+
+- name: copy jupyter.conf file to supervisor dir
+  copy:
+    src: jupyter.conf
+    dest: /etc/supervisor/conf.d/jupyter.conf
+    owner: root
+    group: root
+    mode: 0644
+  when: jupyter_installed.rc|int == 0
+
+- name: update supervisor
+  supervisorctl:
+    name: jupyter
+    state: present
+  when: jupyter_installed.rc|int == 0

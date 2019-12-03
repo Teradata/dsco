@@ -1,0 +1,46 @@
+# We need to install python3-apt for our non-system python.
+# see https://github.com/ansible/ansible/issues/14468#issuecomment-459630445
+#
+# The other alternative is to use the python apt knows about at /usr/bin/python
+#
+- name: Get location of python site-packages
+  shell: python -c "import site; import os.path; print(os.path.join(site.getsitepackages()[0],''))"
+  register: site_path
+
+- name: Download python3-apt
+  shell: |
+    apt update
+    apt download python3-apt
+  args:
+    chdir: /tmp
+
+- name: get name of file we downloaded
+  find:
+    paths: /tmp
+    patterns: 'python3-apt*.deb'
+  register: search_result
+
+- name: extract package
+  shell: |
+    dpkg -x {{ search_result.files.0.path }} python3-apt
+    cp -r /tmp/python3-apt/usr/lib/python3/dist-packages/* {{ site_path.stdout_lines.0 }}
+  args:
+    chdir: /tmp
+
+- name:  rename .so files
+  shell: |
+    mv apt_pkg.*.so apt_pkg.so
+    mv apt_inst.*.so apt_inst.so
+  args:
+    chdir: "{{ site_path.stdout_lines.0 }}"
+
+- name: cleanup downloads - python3-apt*.deb
+  file:
+    path: "{{ search_result.files.0.path }}"
+    state: absent
+
+- name: cleanup downloads - /tmp/python3-apt
+  file:
+    path: /tmp/python3-apt
+    state: absent
+

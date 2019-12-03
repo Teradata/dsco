@@ -1,0 +1,4 @@
+sphinx_extensions:
+  - nbsphinx
+  - guzzle-sphinx-theme
+

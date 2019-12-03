@@ -1,0 +1,11 @@
+FROM python:3.7.5-slim-buster
+
+COPY . /srv
+
+SHELL ["/bin/bash", "-c"]
+
+RUN \
+    pip install ansible toml \
+    && cd /srv/builder/ansible \
+    && ansible-playbook build_prod_container.yml \
+    ;

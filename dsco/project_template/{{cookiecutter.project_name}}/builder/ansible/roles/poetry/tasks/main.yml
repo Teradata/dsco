@@ -1,0 +1,31 @@
+- name: check if poetry is installed
+  shell: $HOME/.poetry/bin/poetry --version
+  register: version_output
+  ignore_errors: yes
+
+- name: download
+  get_url:
+    url: https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py
+    dest: "{{ download_dir }}"
+    mode: 0644
+  when: version_output.rc != 0
+
+- name: install and configure
+  shell: | 
+    python {{ download_dir }}get-poetry.py
+    . $HOME/.poetry/env
+    poetry config settings.virtualenvs.create false
+  when: version_output.rc != 0
+
+- name: remove download
+  file:
+    path: "{{ download_dir }}get-poetry.py"
+    state: absent
+
+- name: modify .bashrc for poetry
+  lineinfile:
+    path: $HOME/.bashrc
+    line: source $HOME/.poetry/env
+    create: yes
+  when: version_output.rc != 0
+

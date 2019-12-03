@@ -1,0 +1,46 @@
+version: '3.7'
+services:
+   dev:
+      build: 
+        context: .
+        dockerfile: ./builder/Dockerfile_dev
+        labels:
+          # use com.docker.compose.project for project name
+          # use com.docker.compose.service=dev
+          - "description=dsco"
+          - "department=TPG"
+      ports:
+        - "{{ cookiecutter.project_port }}:80"
+      volumes:
+         - ./:/srv
+      init: true
+      command: >
+        bash -c "service nginx restart 
+        && service supervisor start 
+        && cd /srv 
+        && ~/.poetry/bin/poetry install 
+        && cd /srv/reports
+        && make html
+        && bash"
+      stdin_open: true
+      tty: true
+   prod:
+      build:
+        context: .
+        dockerfile: ./builder/Dockerfile_prod
+        labels:
+          # use com.docker.compose.project for project name
+          - "description=dsco"
+          - "release=prod"
+          - "department=TPG"
+      ports:
+        - "{{ cookiecutter.project_port|int + 1000 }}:80"
+      init: true
+      command: >
+        bash -c "service nginx restart 
+        && service supervisor start 
+        && cd /srv 
+        && ~/.poetry/bin/poetry install --no-dev 
+        && bash"
+      stdin_open: true
+      tty: true

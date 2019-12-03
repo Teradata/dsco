@@ -1,0 +1,38 @@
+---
+- name: install nginx
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+
+- name: add default homepage
+  template:
+    src: index.nginx-debian.html
+    dest: /var/www/html/index.nginx-debian.html
+    backup: yes
+    owner: root
+    group: root
+    mode: 0644
+
+- name: add nginx site-available default
+  copy:
+    src: default
+    dest: /etc/nginx/sites-available/default
+    backup: yes
+    owner: root
+    group: root
+    mode: 0644
+
+- name: link sites-enabled to sites-available
+  file:
+    src: /etc/nginx/sites-available/default
+    dest: /etc/nginx/sites-enabled/default
+    owner: root
+    group: root
+    mode: 0644
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+

@@ -1,0 +1,15 @@
+--- 
+- name: remove poetry.lock to install dependencies from scratch
+  file:
+    path: /srv/poetry.lock
+    state: absent
+  when: build_from_scratch
+
+- name: create python development environment
+  shell: $HOME/.poetry/bin/poetry install
+  args:
+    chdir: /srv
+    # executable: /bin/bash
+    # environment:
+    # PATH: "root/.poetry/bin"
+

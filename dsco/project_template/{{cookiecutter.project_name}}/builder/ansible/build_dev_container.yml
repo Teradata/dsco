@@ -1,0 +1,16 @@
+- hosts: localhost
+  gather_facts: False
+  vars:
+    build_from_scratch: no
+  roles:
+    - python3-apt
+    - os-prod
+    - os-dev
+    - poetry
+    - python-dev
+    - jupyter-config
+    - sphinx-config
+    - nginx
+    - supervisor
+    - uwsgi
+  

@@ -1,0 +1,23 @@
+- name: install supervisor
+  apt:
+    name: supervisor
+    state: present
+
+- name: config supervisor
+  copy:
+    src: supervisord.conf
+    dest: /etc/supervisor/supervisord.conf
+    owner: root
+    group: root
+    backup: yes
+    mode: 0644
+
+- name: remove supervisor.sock
+  file:
+    path: /dev/shm/supervisor.sock
+    state: absent
+
+- name: start
+  service:
+    name: supervisor
+    state: started

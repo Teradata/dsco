@@ -1,0 +1,19 @@
+---
+- name: Install os production dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - gcc
+    - python3-dev
+
+- name: basic shell settings
+  blockinfile:
+    path: $HOME/.bashrc
+    block: |
+      export SHELL='/bin/bash'
+      export LS_OPTIONS='--color=auto'
+      eval "`dircolors`"
+      alias ls='ls $LS_OPTIONS'
+      alias ll='ls $LS_OPTIONS -lA'
+      alias l='ls $LS_OPTIONS -l'

@@ -1,0 +1,13 @@
+---
+- name: setup config file for supervisor
+  copy:
+    src: data_refresh.conf
+    dest: /etc/supervisor/conf.d
+    owner: root
+    group: root
+    mode: 0644
+
+- name: update supervisor
+  supervisorctl:
+    name: data_refresh
+    state: present

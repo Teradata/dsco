@@ -5,8 +5,10 @@ DSCO (Draft documentation)
 
 A utility to create a data science development container.
 
-Install::
+Install
 ---------
+
+::
 
     pip install git+https://github.td.teradata.com/Quality-Engineering/dsco.git
 

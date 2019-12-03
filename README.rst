@@ -21,9 +21,11 @@ Features
   - Jupyter (uwsgi)
   - Static reports (nginx)
   - Flask (uwsgi)
+
     - Dask
 
 - Starts with a project skeleton that includes:
+
   - resources to build production and dev containers with docker / ansible.
   - flask skeleton already set up for use as api
   - dask skeleton integrated into flask for quickstart web dashboards

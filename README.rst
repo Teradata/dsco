@@ -10,7 +10,7 @@ Install
 
 ::
 
-    pip install git+https://github.td.teradata.com/Quality-Engineering/dsco.git
+    pip install git+ssh://git@github.td.teradata.com/Quality-Engineering/dsco.git
 
 Features
 --------

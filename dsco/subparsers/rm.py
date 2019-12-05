@@ -4,7 +4,7 @@ import subprocess
 import yaml
 from dsco.helpers import get_container
 
-cmd_name = "rm"
+cmd_name = Path(__file__).stem
 
 
 def add_cmd(subparsers):
@@ -24,12 +24,14 @@ def run_cmd(args, conf):
         if prod_flag:
             container_name = get_container(proj_name, "prod")
             cmd = f"docker rm -f $({container_name})"
+            print(cmd)
             subprocess.run(cmd, shell=True)
 
         only_prod_flag = not dev_flag and prod_flag
         if not only_prod_flag:
             container_name = get_container(proj_name, "dev")
             cmd = f"docker rm -f $({container_name})"
+            print(cmd)
             subprocess.run(cmd, shell=True)
 
     else:

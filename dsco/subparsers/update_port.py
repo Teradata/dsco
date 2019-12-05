@@ -4,7 +4,7 @@ from cookiecutter.main import cookiecutter
 from dsco.helpers import get_container, update_port
 import subprocess
 
-cmd_name = "update_port"
+cmd_name = Path(__file__).stem
 
 
 def add_cmd(subparsers):

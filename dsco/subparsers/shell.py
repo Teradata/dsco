@@ -4,7 +4,7 @@ import subprocess
 import yaml
 from dsco.helpers import get_container
 
-cmd_name = "shell"
+cmd_name = Path(__file__).stem
 
 
 def add_cmd(subparsers):

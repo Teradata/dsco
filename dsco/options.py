@@ -6,6 +6,7 @@ import importlib
 from dsco.subparsers import (
     init,
     go,
+    up,
     build,
     rm,
     rmi,
@@ -13,6 +14,7 @@ from dsco.subparsers import (
     restart_flask,
     gen_reports,
     update_port,
+    ls,
 )
 
 
@@ -27,6 +29,7 @@ dispatcher = dict()
 for module in [
     init,
     go,
+    up,
     build,
     rm,
     rmi,
@@ -34,6 +37,7 @@ for module in [
     restart_flask,
     gen_reports,
     update_port,
+    ls,
 ]:
     module.add_cmd(subparsers)
     module.add_dispatch(dispatcher)

@@ -3,7 +3,7 @@ from pathlib import Path
 import subprocess
 import yaml
 
-cmd_name = "build"
+cmd_name = Path(__file__).stem
 
 
 def add_cmd(subparsers):

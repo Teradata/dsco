@@ -4,13 +4,15 @@ from cookiecutter.main import cookiecutter
 from dsco.helpers import get_container
 import subprocess
 
-cmd_name = "restart_flask"
+cmd_name = Path(__file__).stem
+
 
 def add_cmd(subparsers):
-    cmd = subparsers.add_parser(cmd_name, help='restart flask (dev)')
+    cmd = subparsers.add_parser(cmd_name, help="restart flask (dev)")
     cmd.add_argument("--dev", action="store_true", help="restart dev only")
     cmd.add_argument("--prod", action="store_true", help="restart prod only")
     cmd.add_argument("--all", action="store_true", help="restart dev and prod")
+
 
 def run_cmd(args, conf):
     if conf["proj_root"]:
@@ -32,6 +34,7 @@ def run_cmd(args, conf):
             subprocess.run(cmd, shell=True)
     else:
         print("No project found.")
+
 
 def add_dispatch(dispatcher):
     dispatcher[cmd_name] = run_cmd

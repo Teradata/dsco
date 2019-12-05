@@ -4,7 +4,7 @@ import subprocess
 import yaml
 from dsco.subparsers import rm
 
-cmd_name = "rmi"
+cmd_name = Path(__file__).stem
 
 
 def add_cmd(subparsers):

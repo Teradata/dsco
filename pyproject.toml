@@ -14,6 +14,10 @@ pytest = "^3.0"
 rope = "^0.14.0"
 pylint = "^2.4"
 black = {version = "^18.3-alpha.0", allows-prereleases = true}
+doc8 = "^0.8.0"
+docutils = "^0.15.2"
+sphinx = "^2.2"
+sphinx-autobuild = "^0.7.1"
 
 [tool.poetry.scripts]
 dsco = "dsco.application:main"

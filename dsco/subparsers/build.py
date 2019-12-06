@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 import subprocess
 import yaml
+import time
 
 cmd_name = Path(__file__).stem
 
@@ -15,6 +16,7 @@ def add_cmd(subparsers):
 
 def run_cmd(args, conf):
     if conf["proj_root"]:
+        start = time.time()
         dev_flag = args.dev or args.all
         prod_flag = args.prod or args.all
 
@@ -28,6 +30,11 @@ def run_cmd(args, conf):
             subprocess.run(
                 "docker-compose build dev", cwd=conf["proj_root"], shell=True
             )
+        end = time.time()
+        msg = f"{cmd_name} finished in {end - start} seconds."
+        print('-' * len(msg))
+        print(msg)
+        print('-' * len(msg))
 
     else:
         print("No project found.")

@@ -30,8 +30,8 @@ Features
   - flask skeleton already set up for use as api
   - dask skeleton integrated into flask for quickstart web dashboards
 
-Commands
---------
+Useful Commands
+---------------
 
 dsco init
   Creates a new project directory
@@ -46,6 +46,9 @@ dsco go
   Launch container and open info page in a browser.
   First build should take approximately 7 minutes.
   After the image has been built, this command should finish almost instantly.
+
+dsco up
+  Launch dev container.
 
 dsco build
   Build images only

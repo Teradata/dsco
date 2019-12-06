@@ -52,6 +52,7 @@ def update_port(lines, old_port, new_port):
 
 
 def parse_machine(out):
+    # out = sdl32266 tcp://sdl32266.labs.teradata.com:2376
     name, url = out.split()
     url = str(url.split("//")[-1].split(":")[0])
     return Machine(name, url)

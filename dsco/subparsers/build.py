@@ -7,10 +7,10 @@ cmd_name = Path(__file__).stem
 
 
 def add_cmd(subparsers):
-    cmd = subparsers.add_parser(cmd_name, help="build containers")
-    cmd.add_argument("--dev", action="store_true", help="build dev container")
-    cmd.add_argument("--prod", action="store_true", help="build prod container")
-    cmd.add_argument("--all", action="store_true", help="build dev and prod containers")
+    cmd = subparsers.add_parser(cmd_name, help="build images")
+    cmd.add_argument("--dev", action="store_true", help="build dev image")
+    cmd.add_argument("--prod", action="store_true", help="build prod image")
+    cmd.add_argument("--all", action="store_true", help="build dev and prod images")
 
 
 def run_cmd(args, conf):

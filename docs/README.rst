@@ -3,6 +3,7 @@ To configure container setup:
 
 - If project is not local, create a docker-machine (for example sdl32267.labs.teradata.com): 
     ::
+
         docker-machine create \
             --driver generic \
             --generic-ip-address=sdl32267.labs.teradata.com \
@@ -11,10 +12,12 @@ To configure container setup:
 
 - If project is not local, set environment to run commands on remote docker:
     ::
+
         eval "$(docker-machine env sdl32267)"
 
 - Run VS Code in configured shell with 
     ::
+
         code .
 
 - from VS Code attach to a container with: Remote Containers: Attach to Running Container...
@@ -35,5 +38,6 @@ To configure container setup:
 
 - To unset environment:
     ::
+
         eval "$(docker-machine env -u)"
 

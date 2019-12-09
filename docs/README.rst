@@ -31,7 +31,6 @@ To configure container setup:
                 "lextudio.restructuredtext",
                 "ms-python.python"
             ],
-            "python.pythonPath": "/usr/local/bin/python",
             "shutdownAction": "none",
             "workspaceFolder": "/srv"
         }

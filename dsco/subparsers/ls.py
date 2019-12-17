@@ -319,10 +319,10 @@ class Container(object):
         padded_name = f"    {self.name}"
         cols = [
             "{padded_name:<{NAME}}",
+            "{link:<{LINK}}",
             "{id:<{ID}}",
             "{status:<{STATUS}}",
             "{_:<{SIZE}}",
-            "{link:<{LINK}}",
         ]
         container_string = Colors.container(
             "".join(cols).format(
@@ -369,10 +369,10 @@ class Image(object):
     def __str__(self):
         cols = [
             "{name:<{NAME}}",
+            "{_:<{LINK}}",
             "{id:<{ID}}",
             "{created:<{STATUS}}",
             "{size:<{SIZE}}",
-            "{_:<{LINK}}",
         ]
         return "".join(cols).format(**self.properties, **Inventory.columns, _="")
 
@@ -476,7 +476,7 @@ class Host(object):
 
 
 class Inventory(object):
-    columns = OrderedDict(NAME=34, ID=17, STATUS=31, SIZE=10, LINK=48)
+    columns = OrderedDict(NAME=34, LINK=48, ID=17, STATUS=31, SIZE=10)
     header = "".join(["{:<{}}".format(k, v) for k, v in columns.items()])
     line_len = sum(columns.values())
 

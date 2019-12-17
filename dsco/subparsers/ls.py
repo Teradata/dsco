@@ -89,7 +89,7 @@ class Docker(object):
     #
     @classmethod
     def run_docker_cmd(cls, cmd, env=None):
-        return subprocess.run(cmd, shell=True, capture_output=True, env=env)
+        return subprocess.run(cmd, shell=True, capture_output=True, env=env, timeout=10)
 
     # ==================================================================================
     # docker-machine ls

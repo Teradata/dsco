@@ -1,4 +1,5 @@
 from pathlib import Path
+import concurrent.futures
 
 # import os
 # import yaml
@@ -476,20 +477,25 @@ class Host(object):
 
 
 class Inventory(object):
-    columns = OrderedDict(NAME=34, LINK=48, ID=17, STATUS=31, SIZE=10)
+    columns = OrderedDict(NAME=34, LINK=43, ID=17, STATUS=30, SIZE=10)
     header = "".join(["{:<{}}".format(k, v) for k, v in columns.items()])
     line_len = sum(columns.values())
 
     def __init__(self, localhost=True, remote=False):
-        self.hosts = []
-        if localhost:
-            self.hosts.append(Host("localhost"))
+        hosts = []
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+            if localhost:
+                future = executor.submit(Host, "localhost")
+                hosts.append(future)
 
-        if remote:
-            docker_machine_list = Docker.ls_machines()
-            for docker_machine in docker_machine_list:
-                self.hosts.append(Host(docker_machine))
+            if remote:
+                docker_machine_list = Docker.ls_machines()
+                for docker_machine in docker_machine_list:
+                    future = executor.submit(Host, docker_machine)
+                    hosts.append(future)
+        self.hosts = [host.result() for host in hosts]
 
+        
     def __str__(self):
         lines = []
         for host in self.hosts:
@@ -500,7 +506,7 @@ class Inventory(object):
         return "\n".join(lines)
 
 
-def main(localhost=False, remote=True):
+def main(localhost=True, remote=True):
     inventory = Inventory(localhost, remote)
     print(inventory)
 

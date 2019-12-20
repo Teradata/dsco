@@ -90,7 +90,14 @@ class Docker(object):
     #
     @classmethod
     def run_docker_cmd(cls, cmd, env=None):
-        return subprocess.run(cmd, shell=True, capture_output=True, env=env, timeout=10)
+        try:
+            completed_process = subprocess.run(
+                cmd, shell=True, capture_output=True, env=env, timeout=15
+            )
+        except subprocess.TimeoutExpired:
+            completed_process = None
+
+        return completed_process
 
     # ==================================================================================
     # docker-machine ls
@@ -104,12 +111,15 @@ class Docker(object):
         Returns:
             list: machine names
         """
-        machine_list = (
-            Docker.run_docker_cmd(cls.machine_ls_docker_cmd)
-            .stdout.decode("utf-8")
-            .strip()
-            .split("\n")
-        )
+        try:
+            machine_list = (
+                Docker.run_docker_cmd(cls.machine_ls_docker_cmd)
+                .stdout.decode("utf-8")
+                .strip()
+                .split("\n")
+            )
+        except AttributeError:
+            machine_list = []
         # output is a list of machine names
         return machine_list
 
@@ -142,12 +152,15 @@ class Docker(object):
                 of the image_format_list.
         """
         # each line contains information about an image
-        images_docker_cmd_output = (
-            cls.run_docker_cmd(cmd=cls.images_docker_cmd, env=host.docker_machine_env)
-            .stdout.decode("utf-8")
-            .strip()
-            .split("\n")
-        )
+        try:
+            images_docker_cmd_output = (
+                cls.run_docker_cmd(cmd=cls.images_docker_cmd, env=host.docker_machine_env)
+                .stdout.decode("utf-8")
+                .strip()
+                .split("\n")
+            )
+        except AttributeError:
+            images_docker_cmd_output = []
         # convert each line to a dictionary keyed by image_format_list
         image_list = [
             Format.format_output_to_dict(cls.image_format_list, line)
@@ -186,12 +199,15 @@ class Docker(object):
                 of the ps_format_list.
         """
         # each line contains information about a container
-        ps_docker_cmd_output = (
-            cls.run_docker_cmd(cmd=cls.ps_docker_cmd, env=host.docker_machine_env)
-            .stdout.decode("utf-8")
-            .strip()
-            .split("\n")
-        )
+        try:
+            ps_docker_cmd_output = (
+                cls.run_docker_cmd(cmd=cls.ps_docker_cmd, env=host.docker_machine_env)
+                .stdout.decode("utf-8")
+                .strip()
+                .split("\n")
+            )
+        except AttributeError:
+            ps_docker_cmd_output = []
         # convert each line to a dictionary keyed by ps_format_list
         container_list = [
             Format.format_output_to_dict(cls.ps_format_list, line)
@@ -495,7 +511,6 @@ class Inventory(object):
                     hosts.append(future)
         self.hosts = [host.result() for host in hosts]
 
-        
     def __str__(self):
         lines = []
         for host in self.hosts:

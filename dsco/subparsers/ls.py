@@ -315,7 +315,7 @@ class Container(object):
         # Port
         try:
             port = inspect_dict["HostConfig"]["PortBindings"]["80/tcp"][0]["HostPort"]
-        except KeyError:
+        except (KeyError, TypeError):
             port = "____"
 
         try:
@@ -470,9 +470,9 @@ class Host(object):
                 for image in self.image_list:
                     print(f"=     {image.name}")
                 print("=" * 100)
-                raise e
-
-            host_inventory[image_key]["container_list"].append(container)
+                # raise e
+            else:
+                host_inventory[image_key]["container_list"].append(container)
 
         return host_inventory
 

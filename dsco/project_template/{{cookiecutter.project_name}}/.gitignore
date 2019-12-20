@@ -1,6 +1,6 @@
 #reports/source/udaexec.ini
 **/*.ini
-!myproject.ini
+!flask_config.ini
 **/.ipynb_checkpoints
 **/build
 **/_build

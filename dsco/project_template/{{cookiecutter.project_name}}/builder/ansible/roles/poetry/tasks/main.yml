@@ -12,9 +12,9 @@
 
 - name: install and configure
   shell: | 
-    python {{ download_dir }}get-poetry.py
+    python {{ download_dir }}get-poetry.py --yes
     . $HOME/.poetry/env
-    poetry config settings.virtualenvs.create false
+    poetry config virtualenvs.create false
   when: version_output.rc != 0
 
 - name: remove download

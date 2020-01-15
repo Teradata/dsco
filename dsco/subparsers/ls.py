@@ -102,7 +102,7 @@ class Docker(object):
     # ==================================================================================
     # docker-machine ls
     #
-    machine_ls_docker_cmd = "docker-machine ls --format {{.Name}}"
+    machine_ls_docker_cmd = "docker-machine ls --format {{.Name}} --timeout 0"
 
     @classmethod
     def ls_machines(cls):
@@ -206,8 +206,13 @@ class Docker(object):
                 .strip()
                 .split("\n")
             )
-        except AttributeError:
+            no_containers = ps_docker_cmd_output == ['']
+            if no_containers:
+                raise ValueError
+
+        except (AttributeError, ValueError):
             ps_docker_cmd_output = []
+
         # convert each line to a dictionary keyed by ps_format_list
         container_list = [
             Format.format_output_to_dict(cls.ps_format_list, line)
@@ -463,7 +468,7 @@ class Host(object):
                     for image in self.image_list
                     if container.image in image.name
                 )
-            except StopIteration as e:
+            except StopIteration:  # as e:
                 print("=" * 100)
                 print(f"= Container image: {container.image}")
                 print("= Not found in images:")
@@ -521,7 +526,7 @@ class Inventory(object):
         return "\n".join(lines)
 
 
-def main(localhost=True, remote=True):
+def main(localhost=True, remote=False):
     inventory = Inventory(localhost, remote)
     print(inventory)
 

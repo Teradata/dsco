@@ -31,8 +31,11 @@ def get_pyproject(path):
 
 def get_docker_compose_conf(path):
     p = Path(path) / "docker-compose.yml"
-    with open(str(p), "r") as f:
-        yaml_file = yaml.load(f, Loader=yaml.Loader)
+    if p.exists():
+        with open(str(p), "r") as f:
+            yaml_file = yaml.load(f, Loader=yaml.Loader)
+    else:
+        yaml_file = {}
     return yaml_file
 
 

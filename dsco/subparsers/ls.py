@@ -154,13 +154,20 @@ class Docker(object):
         # each line contains information about an image
         try:
             images_docker_cmd_output = (
-                cls.run_docker_cmd(cmd=cls.images_docker_cmd, env=host.docker_machine_env)
+                cls.run_docker_cmd(
+                    cmd=cls.images_docker_cmd, env=host.docker_machine_env
+                )
                 .stdout.decode("utf-8")
                 .strip()
                 .split("\n")
             )
-        except AttributeError:
+            no_images = images_docker_cmd_output == [""]
+            if no_images:
+                raise ValueError
+
+        except (AttributeError, ValueError):
             images_docker_cmd_output = []
+
         # convert each line to a dictionary keyed by image_format_list
         image_list = [
             Format.format_output_to_dict(cls.image_format_list, line)
@@ -206,7 +213,7 @@ class Docker(object):
                 .strip()
                 .split("\n")
             )
-            no_containers = ps_docker_cmd_output == ['']
+            no_containers = ps_docker_cmd_output == [""]
             if no_containers:
                 raise ValueError
 
@@ -403,13 +410,16 @@ class Image(object):
 
 
 class Host(object):
-    def __init__(self, name):
+    def __init__(self, name, images=True, containers=True, inventory=True):
         self.name = name
         self.properties = self._get_properties()
         self.docker_machine_env = self._get_docker_machine_env()
-        self.image_list = self._list_images()
-        self.container_list = self._list_containers()
-        self.host_inventory = self._merge_items()
+        if images or inventory:
+            self.image_list = self._list_images()
+        if containers or inventory:
+            self.container_list = self._list_containers()
+        if inventory:
+            self.host_inventory = self._merge_items()
 
     # ----------------------------------------------------------------------------------
     # Host properties
@@ -499,7 +509,9 @@ class Host(object):
 
 class Inventory(object):
     columns = OrderedDict(NAME=34, LINK=43, ID=17, STATUS=30, SIZE=10)
-    header = "".join(["{:<{}}".format(k, v) for k, v in columns.items()])
+    header = "".join(
+        ["{title:<{width}}".format(title=k, width=v) for k, v in columns.items()]
+    )
     line_len = sum(columns.values())
 
     def __init__(self, localhost=True, remote=False):
@@ -526,7 +538,7 @@ class Inventory(object):
         return "\n".join(lines)
 
 
-def main(localhost=True, remote=False):
+def main(localhost=True, remote=True):
     inventory = Inventory(localhost, remote)
     print(inventory)
 

@@ -7,7 +7,12 @@ from .helpers import find_proj_root, get_pyproject, get_docker_compose_conf
 
 
 def main():
-    # get command line options
+    # get command line options. 
+    # args is a Namespace. dsco ls -r would return:
+    # - args.cmd = ls
+    # - args.remote = True
+    #
+    # To make it a dictionary you can use vars(args)
     args = parser.parse_args()
 
     # build configuration

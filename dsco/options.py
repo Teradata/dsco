@@ -15,6 +15,7 @@ from dsco.subparsers import (
     gen_reports,
     update_port,
     ls,
+    code,
 )
 
 
@@ -38,6 +39,7 @@ for module in [
     gen_reports,
     update_port,
     ls,
+    code,
 ]:
     module.add_cmd(subparsers)
     module.add_dispatch(dispatcher)

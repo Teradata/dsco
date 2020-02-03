@@ -11,6 +11,7 @@ def add_cmd(subparsers):
     cmd = subparsers.add_parser(cmd_name, help="start shell in container")
     cmd.add_argument("--dev", action="store_true", help="attach to dev")
     cmd.add_argument("--prod", action="store_true", help="attach to prod")
+    cmd.add_argument("--debug", action="store_true", help="attach to debug")
 
 
 def run_cmd(args, conf):
@@ -20,12 +21,13 @@ def run_cmd(args, conf):
 
         if args.prod:
             container_name = get_container(proj_name, "prod")
-            cmd = f"docker exec -it $({container_name}) {bash_cmd}"
-            subprocess.run(cmd, shell=True)
+        elif args.debug:
+            container_name = get_container(proj_name, "debug")
         else:
             container_name = get_container(proj_name, "dev")
-            cmd = f"docker exec -it $({container_name}) {bash_cmd}"
-            subprocess.run(cmd, shell=True)
+
+        cmd = f"docker exec -it $({container_name}) {bash_cmd}"
+        subprocess.run(cmd, shell=True)
 
     else:
         print("No project found.")

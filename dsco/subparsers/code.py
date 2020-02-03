@@ -43,7 +43,7 @@ def run_cmd(args, conf):
 
     cmd = "code"
     env = {**os.environ, **host.docker_machine_env}
-    completed_process = subprocess.run(cmd, shell=True, env=env)
+    subprocess.run(cmd, shell=True, env=env)
 
 
 def add_dispatch(dispatcher):

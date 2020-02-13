@@ -4,6 +4,7 @@ services:
       build: 
         context: .
         dockerfile: ./builder/Dockerfile_dev
+        target: dev
         labels:
           # use com.docker.compose.project=project_name
           # use com.docker.compose.service=dev
@@ -27,6 +28,7 @@ services:
       build:
         context: .
         dockerfile: ./builder/Dockerfile_prod
+        target: prod
         labels:
           # use com.docker.compose.project=project_name
           # use com.docker.compose.service=dev
@@ -40,5 +42,22 @@ services:
         && cd /srv 
         && ~/.poetry/bin/poetry install --no-dev 
         && bash"
+      stdin_open: true
+      tty: true
+   debug:
+      build: 
+        context: .
+        dockerfile: ./builder/Dockerfile_dev
+        target: base
+        labels:
+          # use com.docker.compose.project=project_name
+          # use com.docker.compose.service=dev
+          - "com.teradata.dsco=True"
+      ports:
+        - "{{ cookiecutter.project_port|int + 1 }}:80"
+      volumes:
+         - ./:/srv
+      init: true
+      command: bash -c "bash"
       stdin_open: true
       tty: true

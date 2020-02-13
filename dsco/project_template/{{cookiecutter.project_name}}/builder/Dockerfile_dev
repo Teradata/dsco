@@ -1,11 +1,14 @@
-FROM python:3.7.5-slim-buster
+FROM python:3.7.5-slim-buster as base
 
 COPY . /srv
 
 SHELL ["/bin/bash", "-c"]
 
-RUN \
-    pip install ansible toml \
-    && cd /srv/builder/ansible \
-    && ansible-playbook build_dev_container.yml \
-    ;
+RUN pip install ansible toml
+
+FROM base as dev
+
+SHELL ["/bin/bash", "-c"]
+
+RUN cd /srv/builder/ansible && ansible-playbook build_dev_container.yml
+

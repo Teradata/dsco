@@ -40,7 +40,7 @@ def get_docker_compose_conf(path):
 
 
 def get_container(proj_name, service):
-    name_filter = f"--filter 'label=com.docker.compose.project={proj_name}'"
+    name_filter = f"--all --filter 'label=com.docker.compose.project={proj_name}'"
     service_filter = f"--filter 'label=com.docker.compose.service={service}'"
     _format = "--format {{.Names}}"
 

@@ -41,7 +41,7 @@ def run_cmd(args, conf):
     
     host = Host(**host_args)
 
-    cmd = "code"
+    cmd = "code --new-window"
     env = {**os.environ, **host.docker_machine_env}
     subprocess.run(cmd, shell=True, env=env)
 

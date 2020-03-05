@@ -35,6 +35,7 @@ your project directory.
 
 ## ToDo
 - Improve documentation
+- migrate reports and docs directories to share. Make docs directory a build directory for github pages.
 
 ## Notes
 - supervisor can have problems running on an overlay FS in docker. Had to change

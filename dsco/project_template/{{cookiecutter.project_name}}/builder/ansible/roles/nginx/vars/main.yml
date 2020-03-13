@@ -1,3 +1,0 @@
----
-pyproject: "{{ lookup('file', '../../../../pyproject.toml') | from_toml }}"
-project_name: "{{ pyproject.tool.poetry.name }}"

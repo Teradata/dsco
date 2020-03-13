@@ -19,7 +19,7 @@ services:
         && service supervisor start 
         && cd /srv 
         && ~/.poetry/bin/poetry install 
-        && cd /srv/reports
+        && cd /srv/share/reports
         && make html
         && bash"
       stdin_open: true

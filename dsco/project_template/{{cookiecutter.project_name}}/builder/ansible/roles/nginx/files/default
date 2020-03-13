@@ -6,7 +6,7 @@ server {
 
     client_max_body_size 0;
 
-    root /var/www/html;
+    root /srv/landing_page;
 
     # Add index.php to the list if you are using PHP
     index index.html index.htm index.nginx-debian.html;
@@ -20,7 +20,12 @@ server {
     }
 
     location /reports/ {
-        alias /srv/reports/_build/html/;
+        alias /srv/share/reports/_build/html/;
+        index index.html;
+    }
+
+    location /documentation/ {
+        alias /srv/docs/html/;
         index index.html;
     }
 

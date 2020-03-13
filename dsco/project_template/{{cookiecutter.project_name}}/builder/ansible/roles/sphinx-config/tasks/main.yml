@@ -46,5 +46,5 @@
 
 - name: build documentation
   make:
-    chdir: /srv/reports
+    chdir: /srv/share/reports
     target: html

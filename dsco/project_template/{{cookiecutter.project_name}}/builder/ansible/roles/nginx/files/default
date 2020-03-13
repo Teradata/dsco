@@ -20,12 +20,12 @@ server {
     }
 
     location /reports/ {
-        alias /srv/share/reports/_build/html/;
+        alias /srv/docs/reports/html/;
         index index.html;
     }
 
     location /documentation/ {
-        alias /srv/docs/html/;
+        alias /srv/docs/documentation/html/;
         index index.html;
     }
 

@@ -19,8 +19,6 @@ services:
         && service supervisor start 
         && cd /srv 
         && ~/.poetry/bin/poetry install 
-        && cd /srv/share/reports
-        && make html
         && bash"
       stdin_open: true
       tty: true

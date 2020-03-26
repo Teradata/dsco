@@ -1,0 +1,24 @@
+dsco.commands.reports
+=====================
+
+.. automodule:: dsco.commands.reports
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      add_dispatch
+      add_subparser
+      run_cmd
+   
+   
+
+   
+   
+   
+
+   
+   
+   

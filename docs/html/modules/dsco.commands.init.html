@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>dsco.commands.init &#8212; dsco version 0.1.9</title>
+    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="dsco.commands.ls" href="dsco.commands.ls.html" />
+    <link rel="prev" title="dsco.commands.go" href="dsco.commands.go.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dsco.commands.ls.html" title="dsco.commands.ls"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="dsco.commands.go.html" title="dsco.commands.go"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">dsco version 0.1.9</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Modules</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    ../index.html" class="text-logo">dsco</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">DSCO (Draft documentation)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Container setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dsco.application.html">dsco.application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.helpers.html">dsco.helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.options.html">dsco.options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.html">dsco.commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.build.html">dsco.commands.build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.code.html">dsco.commands.code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.documentation.html">dsco.commands.documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.go.html">dsco.commands.go</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">dsco.commands.init</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.ls.html">dsco.commands.ls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.reports.html">dsco.commands.reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.restart.html">dsco.commands.restart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.rm.html">dsco.commands.rm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.rmi.html">dsco.commands.rmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.shell.html">dsco.commands.shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.up.html">dsco.commands.up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsco.commands.update_port.html">dsco.commands.update_port</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../autoapi/modules2.html">dsco</a></li>
+</ul>
+
+    
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Docs</a></li>
+              
+                <li><a href="../modules.html">Modules</a></li>
+              
+              <li>dsco.commands.init</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="module-dsco.commands.init">
+<span id="dsco-commands-init"></span><h1>dsco.commands.init<a class="headerlink" href="#module-dsco.commands.init" title="Permalink to this headline">¶</a></h1>
+<p>This is the init parser</p>
+<p>Use this to start a project</p>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../autoapi/dsco.commands.html#dsco.commands.init.add_dispatch" title="dsco.commands.init.add_dispatch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_dispatch</span></code></a>(dispatcher)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../autoapi/dsco.commands.html#dsco.commands.init.add_subparser" title="dsco.commands.init.add_subparser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_subparser</span></code></a>(subparsers)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../autoapi/dsco.commands.html#dsco.commands.init.run_cmd" title="dsco.commands.init.run_cmd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_cmd</span></code></a>(args, conf)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="dsco.commands.go.html" title="previous chapter (use the left arrow)">dsco.commands.go</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="dsco.commands.ls.html" title="next chapter (use the right arrow)">dsco.commands.ls</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dsco.commands.ls.html" title="dsco.commands.ls"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="dsco.commands.go.html" title="dsco.commands.go"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">dsco version 0.1.9</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >Modules</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2020, Teradata. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

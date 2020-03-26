@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>dsco: {{ cookiecutter.project_name }}</title>
+      <style type="text/css">
+         :root {
+	   --main-width: 815px;
+	 }
+	 .banner-size {
+           width: var(--main-width);
+	   height: 150px;
+         }
+	 table {
+           width: var(--main-width);
+	   border-style: outset;
+	   border: 1px solid black;
+	   border-spacing: 0px;
+         }
+	 td {
+	   padding: 15px;
+	   height: 120px;
+	 }
+	 .td-dark-gray {
+	   background-color: #6b767d;
+	 }
+	 .td-light-gray {
+	   background-color: #e7e6e6;
+	 }
+	 .indent {
+	   margin-left: 40px;
+	 }
+      </style>
+   </head>
+   <body>
+      <h2>{{ cookiecutter.project_name }}</h2>
+      <div class="banner-size td-dark-gray">
+         <img class="banner-size" src="banner.png">
+      </div>
+      <table>
+         <tbody>
+            <tr>
+	       <td class="td-light-gray">
+		  <div class="indent">
+                     <a href="https://jupyter.org/" target="_blank">
+		     <img src="jupyter.svg" alt="" style="width: 242px; height: 65px;">
+		     </a>
+		     <p></p>
+		     <div class="indent">
+                     Access your 
+		     <a href="notebook" target="_blank">Jupyter notebook server</a>.
+		     </div>
+	          </div>
+               </td>
+            </tr>
+            <tr>
+	       <td>
+		  <div class="indent">
+                     <a href="https://www.sphinx-doc.org/" target="_blank">
+		     <img src="sphinxheader.png" alt="" style="width: 374px; height: 65px;">
+		     </a>
+                     <div class="indent">
+		        <p></p>
+			Access static 
+			<a href="reports/" target="_blank">reports</a> built from your notebooks,
+			<br>
+                        and <a href="documentation/" target="_blank">documentation</a>
+                        automatically generated from your source code.
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+	       <td class="td-light-gray">
+	       <div class="indent">
+                  <a href="https://palletsprojects.com/p/flask/" target="_blank">
+		  <img src="flask-logo.png" alt="" style="width: 168px; height: 65px;"></a>
+		  <p></p>
+                  <div class="indent"> 
+		     Use flask to route incoming 
+		     <a href="webapp/" target="_blank">http requests</a>.<br>
+                     These could be REST API endpoints, or 
+		     <a href="webapp/dash" target="_blank">dashboards</a>.
+                  </div>
+                  <div class="indent">
+		     <a href="https://dash.plot.ly/" target="_blank">
+		     <img src="dash-logo.png" alt="" style="width: 164px; height: 42px;">
+		     </a>
+		  </div>
+               </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <p class="indent">
+         <a href="https://github.com/Teradata/dsco" target="_blank">
+	 <img src="space-shuttle-launch.png" style="width: 241px; height: 88px;">
+	 </a><br>
+	 Learn more at 
+	 <a href="https://github.com/Teradata/dsco" target="_blank">
+	 https://github.com/Teradata/dsco</a>.
+      </p>
+   </body>
+</html>

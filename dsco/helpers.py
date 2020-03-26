@@ -4,10 +4,18 @@ from pathlib import Path
 import yaml
 import subprocess
 from collections import namedtuple
+import time
 
 
 Machine = namedtuple("Machine", "name url")
 localhost = Machine("localhost", "localhost")
+
+
+# return the project port from the config
+def get_port(conf, service):
+    services_conf = conf["docker_compose_yaml"]["services"]
+    proj_port = services_conf[service]["ports"][0].split(":")[0]
+    return proj_port
 
 
 # search for pyproject.toml
@@ -15,7 +23,7 @@ def find_proj_root(path):
     p = Path(path)
     proj_root = ""
     if "pyproject.toml" in os.listdir(p):
-        proj_root = path
+        proj_root = p
     elif path != Path("/"):
         proj_root = find_proj_root(p.parent)
 
@@ -39,8 +47,26 @@ def get_docker_compose_conf(path):
     return yaml_file
 
 
+def add_timer(func_name):
+    """Decorator to add timing to run commands
+    """
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            start = time.time()
+            func(*args, **kwargs)
+            end = time.time()
+            line_len = 88
+            print("")
+            print("=" * line_len)
+            print(f"{func_name} execution time: {end - start} seconds")
+            print("=" * line_len)
+
+        return wrapper
+    return decorator
+
+
 def get_container(proj_name, service):
-    name_filter = f"--filter 'label=com.docker.compose.project={proj_name}'"
+    name_filter = f"--all --filter 'label=com.docker.compose.project={proj_name}'"
     service_filter = f"--filter 'label=com.docker.compose.service={service}'"
     _format = "--format {{.Names}}"
 
@@ -61,6 +87,9 @@ def parse_machine(out):
     return Machine(name, url)
 
 
+# --------------------------------------------------------------------------------------
+# To be deprecated
+#
 def list_docker_machines():
     output = (
         subprocess.run(
@@ -124,11 +153,11 @@ def docker_ps(project="", service="", dsco=False, local=True, remote=False):
         print("localhost")
         print("---------")
         print(_docker_ps(project, service, dsco))
-        print('-'*88)
-    
+        print("-" * 88)
+
     if remote:
         for machine in list_docker_machines():
             print(machine.name)
-            print('-'*len(machine.name))
+            print("-" * len(machine.name))
             print(_docker_ps(machine=machine))
-            print('-'*88)
+            print("-" * 88)

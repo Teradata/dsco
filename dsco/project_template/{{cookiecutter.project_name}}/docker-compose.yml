@@ -19,8 +19,6 @@ services:
         && service supervisor start 
         && cd /srv 
         && ~/.poetry/bin/poetry install 
-        && cd /srv/reports
-        && make html
         && bash"
       stdin_open: true
       tty: true
@@ -54,7 +52,7 @@ services:
           # use com.docker.compose.service=dev
           - "com.teradata.dsco=True"
       ports:
-        - "{{ cookiecutter.project_port|int + 1 }}:80"
+        - "{{ cookiecutter.project_port|int - 500 }}:80"
       volumes:
          - ./:/srv
       init: true

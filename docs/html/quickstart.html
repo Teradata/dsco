@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Quickstart &#8212; dsco version 0.1.9</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Features" href="features.html" />
+    <link rel="prev" title="Overview" href="index.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="features.html" title="Features"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Overview"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">dsco version 0.1.9</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    index.html" class="text-logo">dsco</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start-a-project">Start a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-dependencies">Install dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-jupyter-notebooks">Create Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-static-output">Create static output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">How do I use dsco? (commands)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer.html">Developer documentation</a></li>
+</ul>
+
+    
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>Quickstart</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <img alt="_images/space-shuttle-launch.png" src="_images/space-shuttle-launch.png" />
+<div class="section" id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">git+ssh://git&#64;github.com/Teradata/dsco.git</span></code></p>
+</div></blockquote>
+</div>
+<div class="section" id="start-a-project">
+<h2>Start a project<a class="headerlink" href="#start-a-project" title="Permalink to this headline">¶</a></h2>
+<p>Create project <code class="code docutils literal notranslate"><span class="pre">foo</span></code> in the current directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dsco</span> <span class="n">init</span>
+<span class="go">Using template: ...</span>
+<span class="go">Creating project in ...</span>
+<span class="go">project_name [MyProject]: foo</span>
+<span class="go">author [Discovery]:</span>
+<span class="go">version [0.1]:</span>
+<span class="go">year [2020]:</span>
+<span class="go">project_port [8001]:</span>
+</pre></div>
+</div>
+<p>Build the development image and create a development container:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span> <span class="n">foo</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dsco</span> <span class="n">go</span>
+<span class="go">docker-compose up -d dev</span>
+<span class="go">Building dev</span>
+<span class="gp">...</span>
+<span class="go">&lt;lots of ansible output&gt;</span>
+<span class="gp">...</span>
+<span class="go">Creating foo_dev_1 ... done</span>
+<span class="go">========================================================================================</span>
+<span class="go">execution time: 490.9753198623657 seconds</span>
+<span class="go">========================================================================================</span>
+</pre></div>
+</div>
+<p>If you are running on your local machine, your project landing
+page should have opened up in your browser. Sometimes the browser
+opens faster than the internal server starts so don’t be alarmed if
+it takes a couple of seconds to load.</p>
+<p>You can see what containers are running with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dsco</span> <span class="n">ls</span>
+<span class="go">localhost</span>
+<span class="go">NAME             LINK                    ID             STATUS                        SIZE</span>
+<span class="go">foo_dev:latest                           4903b3c62ae2   7 minutes ago                 1.75GB</span>
+<span class="go">    foo_dev_1    http://localhost:8001   aa864a674b4f   Up 7 minutes</span>
+</pre></div>
+</div>
+<p>In most terminals, you should be able to click (or shift+click) on the
+link as another way to open the landing page.</p>
+</div>
+<div class="section" id="install-dependencies">
+<h2>Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>We will be using <a class="reference external" href="https://python-poetry.org/">poetry</a> as our package
+manager. Dsco can be run without ever installing python locally,
+everything is <strong>in</strong> your container, so the easiest way to manage
+packages is to open a shell in your container:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># make sure you&#39;re still in your project directory</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dsco</span> <span class="n">shell</span>
+<span class="go">docker exec -it $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=dev&#39; --format {{.Names}}) bash -c &#39;cd /srv &amp;&amp; exec &quot;${SHELL:-sh}&quot;&#39;</span>
+<span class="go">root@aa864a674b4f:/srv#</span>
+</pre></div>
+</div>
+<p>This opens up a bash prompt inside our container. Our project directory
+is mounted at <code class="code docutils literal notranslate"><span class="pre">/srv</span></code>, which is our current directory.</p>
+<p>To list the python packages installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">poetry</span> <span class="n">show</span>
+<span class="gp">...</span>
+<span class="go">ipython   7.13.0   IPython: Productive Interactive Computing</span>
+<span class="gp">...</span>
+<span class="go">jupyter   1.0.0    Jupyter metapackage. Install all the Jupyter components in one go.</span>
+<span class="gp">...</span>
+<span class="go">pandas    0.24.2   Powerful data structures for data analysis, time series, and statistics</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+<p>I’ve only listed a few of the packages here.</p>
+<p>If we want to install scikit-learn:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">poetry</span> <span class="n">add</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+<span class="go">Skipping virtualenv creation, as specified in config file.</span>
+<span class="go">Using version ^0.22.2 for scikit-learn</span>
+
+<span class="go">Updating dependencies</span>
+<span class="go">Resolving dependencies... (3.3s)</span>
+
+<span class="go">Writing lock file</span>
+
+
+<span class="go">Package operations: 3 installs, 1 update, 0 removals</span>
+
+<span class="go">  - Installing joblib (0.14.1)</span>
+<span class="go">  - Installing scipy (1.4.1)</span>
+<span class="go">  - Installing scikit-learn (0.22.2.post1)</span>
+<span class="go">  - Updating tdsqlmagic (0.18 -&gt; 0.18 builder/cache/tdsqlmagic-0.18-py3-none-any.whl)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-jupyter-notebooks">
+<h2>Create Jupyter notebooks<a class="headerlink" href="#create-jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
+<p>Creating notebooks should be a familiar process. Go to the
+<strong>Jupyter</strong> section of your landing page. There will be a link to
+your server there:</p>
+<blockquote>
+<div><p>Access your <a class="reference external" href="http://localhost:8001/notebook">Jupyter notebook server.</a></p>
+</div></blockquote>
+<p>If you’re on your local computer and you entered 8001 as your project
+port, the above link will work as well.</p>
+<p>The jupyter server loads in the root of your project directory.
+You can create notebooks wherever you want, but Dsco tools are
+configured to expect your notebooks to be in the
+<code class="code docutils literal notranslate"><span class="pre">docs/reports/source</span></code> directory. Go ahead and create a
+notebook called <code class="code docutils literal notranslate"><span class="pre">foo_notebook.ipynb</span></code> in this directory and
+fill in a few cells. Now save and quit the notebook.</p>
+<p>Because we’ve mounted our project directory into our container,
+you will see this new notebook on your local computer as well.</p>
+</div>
+<div class="section" id="create-static-output">
+<h2>Create static output<a class="headerlink" href="#create-static-output" title="Permalink to this headline">¶</a></h2>
+<p>To create a static html version of your new notebook, we need to
+open <code class="code docutils literal notranslate"><span class="pre">/srv/docs/reports/source/index.rst</span></code> (you can do this
+through the Jupyter server interface).</p>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="cp">.. Template documentation master file, created by</span>
+<span class="cp">   sphinx-quickstart</span>
+<span class="cp">   You can adapt this file completely to your liking, but it should at least</span>
+<span class="cp">   contain the root `toctree` directive.</span>
+
+Welcome to {{ cookiecutter.project_name }}&#39;s documentation!
+============================{{&quot;=&quot;*cookiecutter.project_name|length}}
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Contents:
+
+<span class="hll">   reports_template
+</span>
+
+<span class="gh">Indices and tables</span>
+<span class="gh">==================</span>
+
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`genindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`modindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`search`</span>
+</pre></div>
+</div>
+<p>This is a <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
+file if you want to learn more about the formatting, but all you need
+to do is to add the name of your notebook under the highlighted line
+and save the file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reports_template</span>
+<span class="n">foo_notebook</span>
+</pre></div>
+</div>
+<p>Now, from <strong>outside</strong> the container, within the project directory run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dsco</span> <span class="n">reports</span> <span class="o">--</span><span class="n">generate</span>
+<span class="go">docker exec -it $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=dev&#39; --format {{.Names}}) bash -c &#39;cd /srv/docs/reports/source &amp;&amp; make html&#39;</span>
+<span class="go">Running Sphinx v2.4.4</span>
+<span class="gp">...</span>
+<span class="go">build succeeded, 1 warning.</span>
+
+<span class="go">The HTML pages are in ../html.</span>
+</pre></div>
+</div>
+<p>Now go back to your project landing page and follow the link in
+the Sphinx section to your reports section.</p>
+<blockquote>
+<div><p>Access static <a class="reference external" href="http://localhost:8001/reports/">reports</a> built from your notebooks</p>
+</div></blockquote>
+<p>Again, if you’re on your local computer and you entered 8001 as your project
+port, the above link will work as well.</p>
+<p>QED</p>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="index.html" title="previous chapter (use the left arrow)">Overview</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="features.html" title="next chapter (use the right arrow)">Features</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="features.html" title="Features"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Overview"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">dsco version 0.1.9</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2020, Teradata. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+dsco.application
+================
+
+.. automodule:: dsco.application
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      main
+   
+   
+
+   
+   
+   
+
+   
+   
+   

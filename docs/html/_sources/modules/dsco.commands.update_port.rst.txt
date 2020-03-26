@@ -1,0 +1,24 @@
+dsco.commands.update\_port
+==========================
+
+.. automodule:: dsco.commands.update_port
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      add_dispatch
+      add_subparser
+      run_cmd
+   
+   
+
+   
+   
+   
+
+   
+   
+   

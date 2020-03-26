@@ -9,8 +9,7 @@ A utility to create a data science development container.
 Documentation
 -------------
 
-`github pages`_
-.. _`github pages`: https://teradata.github.io/dsco/html/
+`github pages <https://teradata.github.io/dsco/html/>`_
 
 
 Features

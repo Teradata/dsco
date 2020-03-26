@@ -9,7 +9,9 @@ A utility to create a data science development container.
 Documentation
 -------------
 
-`https://teradata.github.io/dsco/html/`_
+`github pages`_
+.. _`github pages`: https://teradata.github.io/dsco/html/
+
 
 Features
 --------
@@ -20,7 +22,7 @@ DSCO creates a development container that:
   - generates static html representations of your notebooks 
     for easy sharing with anyone by either the included server
     or github pages.
-  - manages python dependencies with `poetry <https://python-poetry.org/>`_
+  - manages python dependencies with `poetry <https://python-poetry.org/>`_.
   - integrates with vscode for an IDE with a local-like feel.
 
 If that's not enough, you also get:

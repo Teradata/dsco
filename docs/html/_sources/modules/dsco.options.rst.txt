@@ -1,0 +1,22 @@
+dsco.options
+============
+
+.. automodule:: dsco.options
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      is_not_hidden
+   
+   
+
+   
+   
+   
+
+   
+   
+   

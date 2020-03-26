@@ -1,0 +1,24 @@
+dsco.commands.restart
+=====================
+
+.. automodule:: dsco.commands.restart
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      add_dispatch
+      add_subparser
+      run_cmd
+   
+   
+
+   
+   
+   
+
+   
+   
+   

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dsco"
-version = "0.1.8"
+version = "0.1.9"
 description = ""
 authors = ["Aaron Palumbo <aaron.palumbo@teradata.com>"]
 
@@ -13,11 +13,14 @@ cookiecutter = "^1.6"
 pytest = "^3.0"
 rope = "^0.14.0"
 pylint = "^2.4"
-black = {version = "^18.3-alpha.0", allows-prereleases = true}
+black = {version = "^18.3-alpha.0", allow-prereleases = true}
 doc8 = "^0.8.0"
 docutils = "^0.15.2"
 sphinx = "^2.2"
 sphinx-autobuild = "^0.7.1"
+guzzle_sphinx_theme = "^0.7.11"
+nbsphinx = "^0.5.1"
+jupyter = "^1.0.0"
 
 [tool.poetry.scripts]
 dsco = "dsco.application:main"

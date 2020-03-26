@@ -1,0 +1,2449 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>How do I use dsco? (commands) &#8212; dsco version 0.1.9</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Developer documentation" href="developer.html" />
+    <link rel="prev" title="Features" href="features.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="developer.html" title="Developer documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="features.html" title="Features"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">dsco version 0.1.9</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    index.html" class="text-logo">dsco</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How do I use dsco? (commands)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--help">–help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--init">–init</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--build">–build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--up">–up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--go">–go</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--documentation-/---reports">–documentation / –reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--ls">–ls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--shell">–shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--code">–code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--restart">–restart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--update_port">–update_port</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--rm">–rm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#--rmi">–rmi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developer.html">Developer documentation</a></li>
+</ul>
+
+    
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>How do I use dsco? (commands)</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5.5ex;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 0.3rem;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<div class="section" id="How-do-I-use-dsco?-(commands)">
+<h1>How do I use dsco? (commands)<a class="headerlink" href="#How-do-I-use-dsco?-(commands)" title="Permalink to this headline">¶</a></h1>
+<p>Here we will do an introduction to dsco commands.</p>
+<p>To do this we will be setting up a new project called <code class="docutils literal notranslate"><span class="pre">foo</span></code>.</p>
+<div class="section" id="Setup">
+<h2>Setup<a class="headerlink" href="#Setup" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>from IPython.core.display import display, HTML
+display(HTML(&quot;&lt;style&gt;.container { width:85% !important; }&lt;/style&gt;&quot;))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<style>.container { width:85% !important; }</style></div>
+</div>
+<p>Create a working directory:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!mkdir -p /tmp/dsco_overview
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cd /tmp/dsco_overview/
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+/private/tmp/dsco_overview
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="--help">
+<h2>–help<a class="headerlink" href="#--help" title="Permalink to this headline">¶</a></h2>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">--help</span></code> to see a list of the available commands and a short description of what they do.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco [-h]
+            {build,code,documentation,go,init,ls,reports,restart,rm,rmi,shell,up,update_port}
+            ...
+
+positional arguments:
+  {build,code,documentation,go,init,ls,reports,restart,rm,rmi,shell,up,update_port}
+                        available functionality
+    build               build images. No flag builds dev.
+    code                launch vs-code
+    documentation       view and update documentation in the dev container
+    go                  Build containers, then open the web page interface.
+    init                create a new project
+    ls                  list containers
+    reports             view and update reports in the dev container
+    restart             restart nginx and flask (dev)
+    rm                  remove containers
+    rmi                 remove images
+    shell               start shell in container
+    up                  create and launch containers
+    update_port         update container port (container restart required)
+
+optional arguments:
+  -h, --help            show this help message and exit
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="--init">
+<h2>–init<a class="headerlink" href="#--init" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco init --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco init [-h]
+
+optional arguments:
+  -h, --help  show this help message and exit
+</pre></div></div>
+</div>
+<p>The first thing we’ll want to do is create our project. We do this with <code class="docutils literal notranslate"><span class="pre">--init</span></code></p>
+<p>Normally the <code class="docutils literal notranslate"><span class="pre">--init</span></code> command prompts us for input. However this is being done in a jupyter notebook, which does not allow for interactive responses. To get around this we will pipe in our responses as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">project_name</span> <span class="p">[</span><span class="n">MyProject</span><span class="p">]:</span> <span class="n">foo</span>
+<span class="o">-</span> <span class="n">author</span> <span class="p">[</span><span class="n">Discovery</span><span class="p">]:</span>
+<span class="o">-</span> <span class="n">version</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">]:</span>
+<span class="o">-</span> <span class="n">year</span> <span class="p">[</span><span class="mi">2020</span><span class="p">]:</span>
+<span class="o">-</span> <span class="n">project_port</span><span class="p">[</span><span class="mi">8001</span><span class="p">]:</span>
+</pre></div>
+</div>
+<p>The only default we’re changing is the project name. In actual usage just run <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">init</span></code> and answer the prompts.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!echo &quot;foo\n\n\n\n\n&quot; | dsco init
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Using template: /Users/ap186098/.pyenv/versions/3.7.5/lib/python3.7/site-packages/dsco/project_template
+Creating project in /private/tmp/dsco_overview
+project_name [MyProject]: author [Discovery]: version [0.1]: year [2020]: project_port [8001]:
+</pre></div></div>
+</div>
+<div class="section" id="PROJECT-DIRECTORY">
+<h3>PROJECT DIRECTORY<a class="headerlink" href="#PROJECT-DIRECTORY" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cd foo
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+/private/tmp/dsco_overview/foo
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!ls
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+README.md          definitions.py     flask_config.ini   <span class="ansi-cyan-fg">landing_page</span>
+<span class="ansi-cyan-fg">__pycache__</span>        docker-compose.yml flask_run.py       pyproject.toml
+<span class="ansi-cyan-fg">builder</span>            <span class="ansi-cyan-fg">docs</span>               <span class="ansi-cyan-fg">foo</span>                <span class="ansi-cyan-fg">tests</span>
+</pre></div></div>
+</div>
+<p>One of the nice things about using dsco to create your project is the consistency in project structure. Let’s point out a few of the key features.</p>
+<div class="section" id="README.md">
+<h4>README.md<a class="headerlink" href="#README.md" title="Permalink to this headline">¶</a></h4>
+<p>A standard project README file.</p>
+</div>
+<div class="section" id="builder">
+<h4>builder<a class="headerlink" href="#builder" title="Permalink to this headline">¶</a></h4>
+<p>The builder directory contains everything necessary to build the project containers including docker files and ansible playbooks.</p>
+</div>
+<div class="section" id="definitions.py">
+<h4>definitions.py<a class="headerlink" href="#definitions.py" title="Permalink to this headline">¶</a></h4>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cat definitions.py
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+#!/usr/bin/env python
+# * encoding: utf-8
+import os
+
+
+def _test_dir(dir_path):
+    if not os.path.isdir(dir_path):
+        raise IOError(f&#34;Expected specs directory at {dir_path}&#34;)
+
+
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+SQL_DIR = os.path.join(ROOT_DIR, &#34;foo&#34;, &#34;sql&#34;)
+_test_dir(SQL_DIR)
+</pre></div></div>
+</div>
+<p>This is a placeholder for defining a few useful project variables. If you need access to the project root directory you can import it from definitions.</p>
+</div>
+<div class="section" id="docker-compose.yml">
+<h4>docker-compose.yml<a class="headerlink" href="#docker-compose.yml" title="Permalink to this headline">¶</a></h4>
+<p>This defines the service definitions: dev, prod, and debug for use with docker-compose. This is where they are tied to the appropriate docker file.</p>
+</div>
+<div class="section" id="docs">
+<h4>docs<a class="headerlink" href="#docs" title="Permalink to this headline">¶</a></h4>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!tree docs
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-blue-intense-fg ansi-bold">docs</span>
+├── <span class="ansi-blue-intense-fg ansi-bold">assets</span>
+│   ├── banner.png
+│   ├── space-shuttle-launch.png
+│   └── sphinxheader.png
+├── <span class="ansi-blue-intense-fg ansi-bold">documentation</span>
+│   ├── <span class="ansi-blue-intense-fg ansi-bold">html</span>
+│   │   └── plotly.js
+│   └── <span class="ansi-blue-intense-fg ansi-bold">source</span>
+│       ├── Makefile
+│       ├── <span class="ansi-blue-intense-fg ansi-bold">__pycache__</span>
+│       │   └── conf.cpython-37.pyc
+│       ├── <span class="ansi-blue-intense-fg ansi-bold">_static</span>
+│       │   └── plotly.js
+│       ├── conf.py
+│       └── index.rst
+├── index.html
+└── <span class="ansi-blue-intense-fg ansi-bold">reports</span>
+    ├── <span class="ansi-blue-intense-fg ansi-bold">html</span>
+    │   └── plotly.js
+    └── <span class="ansi-blue-intense-fg ansi-bold">source</span>
+        ├── Makefile
+        ├── __init__.py
+        ├── <span class="ansi-blue-intense-fg ansi-bold">__pycache__</span>
+        │   ├── __init__.cpython-37.pyc
+        │   └── conf.cpython-37.pyc
+        ├── <span class="ansi-blue-intense-fg ansi-bold">_static</span>
+        │   └── plotly.js
+        ├── components.png
+        ├── conf.py
+        ├── index.rst
+        ├── reports_template.ipynb
+        └── resources.ipynb
+
+11 directories, 21 files
+</pre></div></div>
+</div>
+<p>The docs directory is important. Dsco distinguishes between two different types of docs: documentation and reports.</p>
+<p>Documentation is project documentation. The how and why of your code.</p>
+<p>Reports is meant to be a place to put your exploratory analysis.</p>
+<p>Dsco facilitates the production of a static html representation of each of these types of documentation. Put any .rst or notebook files in the source directory and generate html with either <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">documentation</span> <span class="pre">-g</span></code> or <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">reports</span> <span class="pre">-g</span></code>.</p>
+</div>
+<div class="section" id="flask_config.ini">
+<h4>flask_config.ini<a class="headerlink" href="#flask_config.ini" title="Permalink to this headline">¶</a></h4>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cat flask_config.ini
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[uwsgi]
+socket = 127.0.0.1:3031
+mount = /webapp=flask_run.py
+callable=app
+
+master = true
+processes = 2
+
+chmod-socket = 660
+vacuum = true
+
+die-on-term = true
+manage-script-name = true
+
+</pre></div></div>
+</div>
+<p>The container is running Flask with uwsgi. This is the configuration file. Don’t mess with it unless you know what you’re doing.</p>
+</div>
+<div class="section" id="flask_run.py">
+<h4>flask_run.py<a class="headerlink" href="#flask_run.py" title="Permalink to this headline">¶</a></h4>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cat flask_run.py
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#34;&#34;&#34;App entry point.&#34;&#34;&#34;
+from foo import create_app
+
+app = create_app()
+
+if __name__ == &#34;__main__&#34;:
+    app.run(host=&#34;0.0.0.0&#34;, debug=True)
+</pre></div></div>
+</div>
+<p>This is the flask entry point. Again, don’t mess with it unless you know what you’re doing.</p>
+</div>
+<div class="section" id="project_name-(e.g.-foo)">
+<h4>project_name (e.g. foo)<a class="headerlink" href="#project_name-(e.g.-foo)" title="Permalink to this headline">¶</a></h4>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!tree foo
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-blue-intense-fg ansi-bold">foo</span>
+├── __init__.py
+├── <span class="ansi-blue-intense-fg ansi-bold">__pycache__</span>
+│   ├── __init__.cpython-37.pyc
+│   ├── connection.cpython-37.pyc
+│   ├── flask_main.cpython-37.pyc
+│   ├── foo.cpython-37.pyc
+│   ├── helpers.cpython-37.pyc
+│   ├── queries.cpython-37.pyc
+│   └── routes.cpython-37.pyc
+├── connection.py
+├── <span class="ansi-blue-intense-fg ansi-bold">dashapp1</span>
+│   ├── __init__.py
+│   └── <span class="ansi-blue-intense-fg ansi-bold">__pycache__</span>
+│       └── __init__.cpython-37.pyc
+├── flask_main.py
+├── foo.py
+├── helpers.py
+├── queries.py
+├── routes.py
+└── <span class="ansi-blue-intense-fg ansi-bold">sql</span>
+    ├── all_test_queries.sql
+    └── events.sql
+
+4 directories, 18 files
+</pre></div></div>
+</div>
+<p>This is your python package directory. It will have whatever name you provided in the <code class="docutils literal notranslate"><span class="pre">--init</span></code> command for <code class="docutils literal notranslate"><span class="pre">[project_name]</span></code>. This is a standard setup for creating python packages.</p>
+<p>If you’re not creating a package, don’t worry about it. It’s not taking up a lot of overhead. Just create notebooks in the <code class="docutils literal notranslate"><span class="pre">docs/reports/source</span></code> directory and leave this alone.</p>
+<p>If you are creating a package, there are some nice features in this package directory you should know about.</p>
+<blockquote>
+<div><p><strong>Opinionated perspective</strong></p>
+<p>In the introduction, we said we take an opinionated perspective on the data science development perspective. That started with the first step of doing EDA in jupyter notebooks.</p>
+<p>After EDA, the next level of maturity is to build some sort of dashboard. Dsco sets up the scaffolding for using plotly | Dash in conjunction with Flask to build your dashboard.</p>
+</div></blockquote>
+<p>The flask app is created in <code class="docutils literal notranslate"><span class="pre">flask_main.py</span></code>. Flask routes are configured in <code class="docutils literal notranslate"><span class="pre">routes.py</span></code>. This is where you can create rest API routes that would return data.</p>
+<p>The dash app is created in <code class="docutils literal notranslate"><span class="pre">dashapp1/__init__.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">nginx</span></code> is configured to handle requests to <code class="docutils literal notranslate"><span class="pre">/</span></code>. Nginx also handles serving the static content generated in <code class="docutils literal notranslate"><span class="pre">docs</span></code>. This can be found at <code class="docutils literal notranslate"><span class="pre">/reports/</span></code> and <code class="docutils literal notranslate"><span class="pre">/documentation/</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">flask</span></code> is configured to handle requests to <code class="docutils literal notranslate"><span class="pre">/webapp/</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dash</span></code> is configured to handle requests to <code class="docutils literal notranslate"><span class="pre">/webapp/dash</span></code>.</p>
+</div>
+<div class="section" id="landing_page">
+<h4>landing_page<a class="headerlink" href="#landing_page" title="Permalink to this headline">¶</a></h4>
+<p>The landing_page directory contains the html for the page you see when you connect to the container at <code class="docutils literal notranslate"><span class="pre">http://&lt;container&gt;:&lt;port&gt;/</span></code>.</p>
+</div>
+<div class="section" id="pyproject.toml,-poetry.lock">
+<h4>pyproject.toml, poetry.lock<a class="headerlink" href="#pyproject.toml,-poetry.lock" title="Permalink to this headline">¶</a></h4>
+<p>These files manage our python dependencies. For more information see <a class="reference external" href="http://https://python-poetry.org/">http://https://python-poetry.org/</a>.</p>
+</div>
+<div class="section" id="tests">
+<h4>tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h4>
+<p>TODO: At the moment this is more of a place holder. The intention is to build scaffolding around testing and wrap that in something like <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">test</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="--build">
+<h2>–build<a class="headerlink" href="#--build" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have our project directory, it’s time to build our development image. We do that with <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">build</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco build --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco build [-h] [--dev] [--prod] [--debug] [--all]
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --dev       build dev image
+  --prod      build prod image
+  --debug     build debug image
+  --all       build all images
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># this produces a lot of output from ansible and takes ~8 minutes
+!dsco build
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker-compose build dev
+Building dev
+Step 1/8 : FROM python:3.7.5-slim-buster as base
+ ---&gt; 07ee12a5eb2a
+Step 2/8 : COPY . /srv
+ ---&gt; fe7bea56aca8
+Step 3/8 : SHELL [&#34;/bin/bash&#34;, &#34;-c&#34;]
+ ---&gt; Running in 979b9edc0383
+Removing intermediate container 979b9edc0383
+ ---&gt; 54b5f1dddb06
+Step 4/8 : RUN pip install ansible toml
+ ---&gt; Running in dcbc0ef6d114
+Collecting ansible
+  Downloading https://files.pythonhosted.org/packages/ae/b7/c717363f767f7af33d90af9458d5f1e0960db9c2393a6c221c2ce97ad1aa/ansible-2.9.6.tar.gz (14.2MB)
+Collecting toml
+  Downloading https://files.pythonhosted.org/packages/a2/12/ced7105d2de62fa7c8fb5fce92cc4ce66b57c95fb875e9318dba7f8c5db0/toml-0.10.0-py2.py3-none-any.whl
+Collecting jinja2
+  Downloading https://files.pythonhosted.org/packages/27/24/4f35961e5c669e96f6559760042a55b9bcfcdb82b9bdb3c8753dbe042e35/Jinja2-2.11.1-py2.py3-none-any.whl (126kB)
+Collecting PyYAML
+  Downloading https://files.pythonhosted.org/packages/64/c2/b80047c7ac2478f9501676c988a5411ed5572f35d1beff9cae07d321512c/PyYAML-5.3.1.tar.gz (269kB)
+Collecting cryptography
+  Downloading https://files.pythonhosted.org/packages/ca/9a/7cece52c46546e214e10811b36b2da52ce1ea7fa203203a629b8dfadad53/cryptography-2.8-cp34-abi3-manylinux2010_x86_64.whl (2.3MB)
+Collecting MarkupSafe&gt;=0.23
+  Downloading https://files.pythonhosted.org/packages/98/7b/ff284bd8c80654e471b769062a9b43cc5d03e7a615048d96f4619df8d420/MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl
+Collecting six&gt;=1.4.1
+  Downloading https://files.pythonhosted.org/packages/65/eb/1f97cb97bfc2390a276969c6fae16075da282f5058082d4cb10c6c5c1dba/six-1.14.0-py2.py3-none-any.whl
+Collecting cffi!=1.11.3,&gt;=1.8
+  Downloading https://files.pythonhosted.org/packages/ff/1d/0b743dadcdf4980b717163fd2d24cd18c1c0c7a78a076268afd7e0e2c25e/cffi-1.14.0-cp37-cp37m-manylinux1_x86_64.whl (400kB)
+Collecting pycparser
+  Downloading https://files.pythonhosted.org/packages/ae/e7/d9c3a176ca4b02024debf82342dab36efadfc5776f9c8db077e8f6e71821/pycparser-2.20-py2.py3-none-any.whl (112kB)
+Building wheels for collected packages: ansible, PyYAML
+  Building wheel for ansible (setup.py): started
+  Building wheel for ansible (setup.py): finished with status &#39;done&#39;
+  Created wheel for ansible: filename=ansible-2.9.6-cp37-none-any.whl size=16164186 sha256=6e0bd6c2ef9e37e73be07f049833a55e5f0c615ed06f0b582f6d1334bb189db6
+  Stored in directory: /root/.cache/pip/wheels/e0/d8/74/a4e0b92e45a38ab0c22eaadc5981f3ddab41a6e188c0c8867d
+  Building wheel for PyYAML (setup.py): started
+  Building wheel for PyYAML (setup.py): finished with status &#39;done&#39;
+  Created wheel for PyYAML: filename=PyYAML-5.3.1-cp37-cp37m-linux_x86_64.whl size=44620 sha256=b4f815b4dd4db5f08317f85d97d4eba20aed66ec1dc880d3a2159c843665280d
+  Stored in directory: /root/.cache/pip/wheels/a7/c1/ea/cf5bd31012e735dc1dfea3131a2d5eae7978b251083d6247bd
+Successfully built ansible PyYAML
+Installing collected packages: MarkupSafe, jinja2, PyYAML, six, pycparser, cffi, cryptography, ansible, toml
+Successfully installed MarkupSafe-1.1.1 PyYAML-5.3.1 ansible-2.9.6 cffi-1.14.0 cryptography-2.8 jinja2-2.11.1 pycparser-2.20 six-1.14.0 toml-0.10.0
+<span class="ansi-red-intense-fg">WARNING: You are using pip version 19.3.1; however, version 20.0.2 is available.
+You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.
+</span>Removing intermediate container dcbc0ef6d114
+ ---&gt; 1a09eebc3fd7
+
+Step 5/8 : FROM base as dev
+ ---&gt; 1a09eebc3fd7
+Step 6/8 : SHELL [&#34;/bin/bash&#34;, &#34;-c&#34;]
+ ---&gt; Running in 74cf887c347d
+Removing intermediate container 74cf887c347d
+ ---&gt; 45ae1c880b28
+Step 7/8 : RUN cd /srv/builder/ansible &amp;&amp; ansible-playbook build_dev_container.yml
+ ---&gt; Running in 9d2529d7a485
+<span class="ansi-red-intense-fg">[WARNING]: No inventory was parsed, only implicit localhost is available
+</span><span class="ansi-red-intense-fg">[WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match &#39;all&#39;
+</span>
+PLAY [localhost] ***************************************************************
+
+TASK [python3-apt : Get location of python site-packages] **********************
+changed: [localhost]
+
+TASK [python3-apt : Download python3-apt] **************************************
+changed: [localhost]
+
+TASK [python3-apt : get name of file we downloaded] ****************************
+ok: [localhost]
+
+TASK [python3-apt : extract package] *******************************************
+changed: [localhost]
+
+TASK [python3-apt : rename .so files] ******************************************
+changed: [localhost]
+
+TASK [python3-apt : cleanup downloads - python3-apt*.deb] **********************
+changed: [localhost]
+
+TASK [python3-apt : cleanup downloads - /tmp/python3-apt] **********************
+changed: [localhost]
+
+TASK [os-prod : Install os production dependencies] ****************************
+changed: [localhost] =&gt; (item=gcc)
+changed: [localhost] =&gt; (item=python3-dev)
+<span class="ansi-red-intense-fg">[WARNING]: Updating cache and auto-installing missing dependency: python3-apt
+</span>
+TASK [os-prod : basic shell settings] ******************************************
+changed: [localhost]
+
+TASK [os-dev : Install os development dependencies] ****************************
+changed: [localhost] =&gt; (item=make)
+changed: [localhost] =&gt; (item=wget)
+changed: [localhost] =&gt; (item=curl)
+changed: [localhost] =&gt; (item=git)
+changed: [localhost] =&gt; (item=vim)
+changed: [localhost] =&gt; (item=pandoc)
+
+TASK [poetry : check if poetry is installed] ***********************************
+fatal: [localhost]: FAILED! =&gt; {&#34;changed&#34;: true, &#34;cmd&#34;: &#34;$HOME/.poetry/bin/poetry --version&#34;, &#34;delta&#34;: &#34;0:00:00.004405&#34;, &#34;end&#34;: &#34;2020-03-26 04:01:33.488639&#34;, &#34;msg&#34;: &#34;non-zero return code&#34;, &#34;rc&#34;: 127, &#34;start&#34;: &#34;2020-03-26 04:01:33.484234&#34;, &#34;stderr&#34;: &#34;/bin/sh: 1: /root/.poetry/bin/poetry: not found&#34;, &#34;stderr_lines&#34;: [&#34;/bin/sh: 1: /root/.poetry/bin/poetry: not found&#34;], &#34;stdout&#34;: &#34;&#34;, &#34;stdout_lines&#34;: []}
+...ignoring
+
+TASK [poetry : download] *******************************************************
+changed: [localhost]
+
+TASK [poetry : install and configure] ******************************************
+changed: [localhost]
+
+TASK [poetry : remove download] ************************************************
+changed: [localhost]
+
+TASK [poetry : modify .bashrc for poetry] **************************************
+changed: [localhost]
+
+TASK [python-dev : remove poetry.lock to install dependencies from scratch] ****
+skipping: [localhost]
+
+TASK [python-dev : create python development environment] **********************
+changed: [localhost]
+
+TASK [supervisor : install supervisor] *****************************************
+changed: [localhost]
+
+TASK [supervisor : config supervisor] ******************************************
+changed: [localhost]
+
+TASK [supervisor : remove supervisor.sock] *************************************
+ok: [localhost]
+
+TASK [supervisor : start] ******************************************************
+changed: [localhost]
+
+TASK [uwsgi : check that flask_config.ini exists] ******************************
+ok: [localhost]
+
+TASK [uwsgi : fail if file does not exist] *************************************
+skipping: [localhost]
+
+TASK [uwsgi : install uwsgi] ***************************************************
+changed: [localhost]
+
+TASK [uwsgi : setup config file for supervisor] ********************************
+changed: [localhost]
+
+TASK [uwsgi : Create the log directory] ****************************************
+changed: [localhost]
+
+TASK [uwsgi : update supervisor] ***********************************************
+changed: [localhost]
+
+TASK [jupyter-config : Check for jupyter] **************************************
+changed: [localhost]
+
+TASK [jupyter-config : Check if jupyter_extensions (var) installed] ************
+changed: [localhost] =&gt; (item=jupyter-contrib-nbextensions)
+changed: [localhost] =&gt; (item=qgrid)
+
+TASK [jupyter-config : install if missing] *************************************
+skipping: [localhost] =&gt; (item=[&#39;jupyter-contrib-nbextensions&#39;, {&#39;cmd&#39;: &#39;$HOME/.poetry/bin/poetry show jupyter-contrib-nbextensions&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : jupyter-contrib-nbextensions\nversion      : 0.5.1\ndescription  : A collection of Jupyter nbextensions.\n\ndependencies\n - ipython-genutils *\n - jupyter-contrib-core &gt;=0.3.3\n - jupyter-core *\n - jupyter-highlight-selected-word &gt;=0.1.1\n - jupyter-latex-envs &gt;=1.3.8\n - jupyter-nbextensions-configurator &gt;=0.4.0\n - lxml *\n - nbconvert &gt;=4.2\n - notebook &gt;=4.0\n - pyyaml *\n - tornado *\n - traitlets &gt;=4.1&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-26 04:05:30.977206&#39;, &#39;end&#39;: &#39;2020-03-26 04:05:32.446634&#39;, &#39;delta&#39;: &#39;0:00:01.469428&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;$HOME/.poetry/bin/poetry show jupyter-contrib-nbextensions&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : jupyter-contrib-nbextensions&#39;, &#39;version      : 0.5.1&#39;, &#39;description  : A collection of Jupyter nbextensions.&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - ipython-genutils *&#39;, &#39; - jupyter-contrib-core &gt;=0.3.3&#39;, &#39; - jupyter-core *&#39;, &#39; - jupyter-highlight-selected-word &gt;=0.1.1&#39;, &#39; - jupyter-latex-envs &gt;=1.3.8&#39;, &#39; - jupyter-nbextensions-configurator &gt;=0.4.0&#39;, &#39; - lxml *&#39;, &#39; - nbconvert &gt;=4.2&#39;, &#39; - notebook &gt;=4.0&#39;, &#39; - pyyaml *&#39;, &#39; - tornado *&#39;, &#39; - traitlets &gt;=4.1&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;jupyter-contrib-nbextensions&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
+skipping: [localhost] =&gt; (item=[&#39;qgrid&#39;, {&#39;cmd&#39;: &#39;$HOME/.poetry/bin/poetry show qgrid&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : qgrid\nversion      : 1.3.0\ndescription  : An Interactive Grid for Sorting and Filtering DataFrames in\n            Jupyter Notebook\n\ndependencies\n - ipywidgets &gt;=7.0.0\n - notebook &gt;=4.0.0\n - pandas &gt;=0.18.0&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-26 04:05:32.643039&#39;, &#39;end&#39;: &#39;2020-03-26 04:05:34.084638&#39;, &#39;delta&#39;: &#39;0:00:01.441599&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;$HOME/.poetry/bin/poetry show qgrid&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : qgrid&#39;, &#39;version      : 1.3.0&#39;, &#39;description  : An Interactive Grid for Sorting and Filtering DataFrames in&#39;, &#39;            Jupyter Notebook&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - ipywidgets &gt;=7.0.0&#39;, &#39; - notebook &gt;=4.0.0&#39;, &#39; - pandas &gt;=0.18.0&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;qgrid&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
+
+TASK [jupyter-config : create jupyter log dir] *********************************
+changed: [localhost]
+
+TASK [jupyter-config : .jupyter directory] *************************************
+changed: [localhost]
+
+TASK [jupyter-config : jupyter_notebook_config.py] *****************************
+changed: [localhost]
+
+TASK [jupyter-config : nbconfig directory] *************************************
+changed: [localhost]
+
+TASK [jupyter-config : notebook.json] ******************************************
+changed: [localhost]
+
+TASK [jupyter-config : custom directory] ***************************************
+changed: [localhost]
+
+TASK [jupyter-config : custom.js] **********************************************
+changed: [localhost]
+
+TASK [jupyter-config : install nbextensions] ***********************************
+changed: [localhost]
+
+TASK [jupyter-config : copy jupyter.conf file to supervisor dir] ***************
+changed: [localhost]
+
+TASK [jupyter-config : update supervisor] **************************************
+changed: [localhost]
+
+TASK [sphinx-config : Check if sphinx is installed] ****************************
+changed: [localhost]
+
+TASK [sphinx-config : Install os requirements] *********************************
+ok: [localhost] =&gt; (item=make)
+ok: [localhost] =&gt; (item=pandoc)
+
+TASK [sphinx-config : check if sphinx_extensions (var) are installed] **********
+changed: [localhost] =&gt; (item=nbsphinx)
+changed: [localhost] =&gt; (item=guzzle-sphinx-theme)
+
+TASK [sphinx-config : install if missing] **************************************
+skipping: [localhost] =&gt; (item=[&#39;nbsphinx&#39;, {&#39;cmd&#39;: &#39;. $HOME/.poetry/env\npoetry show nbsphinx\n&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : nbsphinx\nversion      : 0.4.3\ndescription  : Jupyter Notebook Tools for Sphinx\n\ndependencies\n - docutils *\n - jinja2 *\n - nbconvert !=5.4\n - nbformat *\n - sphinx &gt;=1.6.3\n - traitlets *&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-26 04:05:49.708241&#39;, &#39;end&#39;: &#39;2020-03-26 04:05:51.194933&#39;, &#39;delta&#39;: &#39;0:00:01.486692&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;. $HOME/.poetry/env\npoetry show nbsphinx\n&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : nbsphinx&#39;, &#39;version      : 0.4.3&#39;, &#39;description  : Jupyter Notebook Tools for Sphinx&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - docutils *&#39;, &#39; - jinja2 *&#39;, &#39; - nbconvert !=5.4&#39;, &#39; - nbformat *&#39;, &#39; - sphinx &gt;=1.6.3&#39;, &#39; - traitlets *&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;nbsphinx&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
+skipping: [localhost] =&gt; (item=[&#39;guzzle-sphinx-theme&#39;, {&#39;cmd&#39;: &#39;. $HOME/.poetry/env\npoetry show guzzle-sphinx-theme\n&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : guzzle-sphinx-theme\nversion      : 0.7.11\ndescription  : Sphinx theme used by Guzzle.\n\ndependencies\n - Sphinx &gt;=1.2b1&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-26 04:05:51.398301&#39;, &#39;end&#39;: &#39;2020-03-26 04:05:52.837945&#39;, &#39;delta&#39;: &#39;0:00:01.439644&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;. $HOME/.poetry/env\npoetry show guzzle-sphinx-theme\n&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : guzzle-sphinx-theme&#39;, &#39;version      : 0.7.11&#39;, &#39;description  : Sphinx theme used by Guzzle.&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - Sphinx &gt;=1.2b1&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;guzzle-sphinx-theme&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
+
+TASK [sphinx-config : Get location of python site-packages] ********************
+changed: [localhost]
+
+TASK [sphinx-config : modify guzzle theme (make it wider)] *********************
+changed: [localhost]
+
+TASK [sphinx-config : build documentation] *************************************
+changed: [localhost]
+
+TASK [nginx : install nginx] ***************************************************
+changed: [localhost]
+
+TASK [nginx : add nginx site-available default] ********************************
+changed: [localhost]
+
+TASK [nginx : link sites-enabled to sites-available] ***************************
+ok: [localhost]
+
+TASK [nginx : restart nginx] ***************************************************
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=47   changed=42   unreachable=0    failed=0    skipped=4    rescued=0    ignored=1
+
+Removing intermediate container 9d2529d7a485
+ ---&gt; 36097f11cd53
+Step 8/8 : LABEL com.teradata.dsco=True
+ ---&gt; Running in b59472161481
+Removing intermediate container b59472161481
+ ---&gt; d5c29dc3707d
+
+Successfully built d5c29dc3707d
+Successfully tagged foo_dev:latest
+
+========================================================================================
+build execution time: 435.13234996795654 seconds
+========================================================================================
+</pre></div></div>
+</div>
+<p>Generally this build takes about 8 minutes (see execution time at the end).</p>
+<p>We can see that it built if we run <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">ls</span></code>. We should see <code class="docutils literal notranslate"><span class="pre">foo_dev:latest</span></code> listed.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+foo_dev:latest                                                               d5c29dc3707d     3 seconds ago                 1.75GB
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="--up">
+<h2>–up<a class="headerlink" href="#--up" title="Permalink to this headline">¶</a></h2>
+<p>The next step is to create a container from the image. If the image is already built, this is really fast, if the image has not been built, this will first build the image, and then create the container, which will take about 8 minutes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco up
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker-compose up -d dev
+Creating foo_dev_1 ...
+ting foo_dev_1 ... <span class="ansi-green-fg">done</span>
+========================================================================================
+up execution time: 1.7827799320220947 seconds
+========================================================================================
+</pre></div></div>
+</div>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">ls</span></code> to see if the container is up.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+foo_dev:latest                                                               d5c29dc3707d     7 seconds ago                 1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up Less than a second                   </span>
+</pre></div></div>
+</div>
+<p>We can access the container at the specified link. If the container is not running you will see this.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># we can use docker commands to interact with our containers as well
+# this one stops the container without deleting it
+!docker stop foo_dev_1
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+foo_dev_1
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+foo_dev:latest                                                               d5c29dc3707d     8 seconds ago                 1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://_________:8001                      cca408b97e0a     Exited (143) Less than a second ago          </span>
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># start it again ...
+!dsco up
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker-compose up -d dev
+Starting foo_dev_1 ...
+ting foo_dev_1 ... <span class="ansi-green-fg">done</span>
+========================================================================================
+up execution time: 1.3186349868774414 seconds
+========================================================================================
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="--go">
+<h2>–go<a class="headerlink" href="#--go" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco go --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco go [-h] [--dev] [--prod] [--debug] [--all]
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --dev       dev container
+  --prod      prod container
+  --debug     debug container
+  --all       all containers
+</pre></div></div>
+</div>
+<p>Here we have used <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">build</span></code> and <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">up</span></code> to build and launch our dev container. We also could have used <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">go</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">go</span></code> runs <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">up</span></code> and then launches a web browser connected to the container. If a container is already running, the only effect will be to open a web browser.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco go
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker-compose up -d dev
+foo_dev_1 is up-to-date
+
+========================================================================================
+up execution time: 0.9284379482269287 seconds
+========================================================================================
+
+========================================================================================
+go execution time: 1.2834627628326416 seconds
+========================================================================================
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="--documentation-/---reports">
+<h2>–documentation / –reports<a class="headerlink" href="#--documentation-/---reports" title="Permalink to this headline">¶</a></h2>
+<p>If we try to go to access our reports or documentation through the links on the landing page we will be met with an error 403 message. This is because we have not built it yet.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># build documentation
+!dsco documentation --generate
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker exec -it $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=dev&#39; --format {{.Names}}) bash -c &#39;cd /srv/docs/documentation/source &amp;&amp; make html&#39;
+<span class="ansi-bold">Running Sphinx v2.4.4</span>
+<span class="ansi-bold">building [mo]: </span>targets for 0 po files that are out of date
+<span class="ansi-bold">building [html]: </span>targets for 1 source files that are out of date
+<span class="ansi-bold">updating environment: </span>[new config] 1 added, 0 changed, 0 removed
+<span class="ansi-bold">reading sources... </span>[100%] <span class="ansi-magenta-fg">index</span>
+<span class="ansi-bold">looking for now-outdated files... </span>none found
+<span class="ansi-bold">pickling environment... </span>done
+<span class="ansi-bold">checking consistency... </span>done
+<span class="ansi-bold">preparing documents... </span>done
+/usr/local/lib/python3.7/site-packages/guzzle_sphinx_theme/guzzle_sphinx_theme/layout.html:200: RemovedInSphinx30Warning: To modify script_files in the theme is deprecated. Please insert a &lt;script&gt; tag directly in your theme instead.
+
+<span class="ansi-bold">generating indices... </span> genindexdone
+<span class="ansi-bold">writing additional pages... </span> searchdone
+<span class="ansi-bold">copying static files... ... </span>done
+<span class="ansi-bold">copying extra files... </span>done
+<span class="ansi-bold">dumping search index in English (code: en)... </span>done
+<span class="ansi-bold">dumping object inventory... </span>done
+<span class="ansi-bold">build succeeded.</span>
+
+The HTML pages are in ../html.
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># build reports
+!dsco reports --generate
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker exec -it $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=dev&#39; --format {{.Names}}) bash -c &#39;cd /srv/docs/reports/source &amp;&amp; make html&#39;
+<span class="ansi-bold">Running Sphinx v2.4.4</span>
+<span class="ansi-bold">building [mo]: </span>targets for 0 po files that are out of date
+<span class="ansi-bold">building [html]: </span>targets for 3 source files that are out of date
+<span class="ansi-bold">updating environment: </span>[new config] 3 added, 0 changed, 0 removed
+<span class="ansi-bold">reading sources... </span>[100%] <span class="ansi-magenta-fg">resources</span>
+<span class="ansi-red-intense-fg ansi-bold">/srv/docs/reports/source/reports_template.ipynb:24: WARNING: File not found: &#39;/notebook/notebooks/reports/reports_template.ipynb&#39;</span>
+<span class="ansi-red-intense-fg ansi-bold">/srv/docs/reports/source/reports_template.ipynb:24: WARNING: File not found: &#39;/reports/reports_template.html#&#39;</span>
+<span class="ansi-red-intense-fg ansi-bold">/srv/docs/reports/source/reports_template.ipynb:41: WARNING: File not found: &#39;/notebook/edit/reports/index.rst&#39;</span>
+<span class="ansi-bold">looking for now-outdated files... </span>none found
+<span class="ansi-bold">pickling environment... </span>done
+<span class="ansi-bold">checking consistency... </span><span class="ansi-red-intense-fg ansi-bold">/srv/docs/reports/source/resources.ipynb: WARNING: document isn&#39;t included in any toctree</span>
+done
+<span class="ansi-bold">preparing documents... </span>done
+/usr/local/lib/python3.7/site-packages/guzzle_sphinx_theme/guzzle_sphinx_theme/layout.html:200: RemovedInSphinx30Warning: To modify script_files in the theme is deprecated. Please insert a &lt;script&gt; tag directly in your theme instead.
+/usr/local/lib/python3.7/site-packages/guzzle_sphinx_theme/guzzle_sphinx_theme/layout.html:200: RemovedInSphinx30Warning: To modify script_files in the theme is deprecated. Please insert a &lt;script&gt; tag directly in your theme instead.
+<span class="ansi-bold">writing output... </span>[100%] <span class="ansi-green-fg">resources</span>
+<span class="ansi-bold">generating indices... </span> genindexdone
+<span class="ansi-bold">writing additional pages... </span> searchdone
+<span class="ansi-bold">copying static files... ... </span>done
+<span class="ansi-bold">copying extra files... </span>done
+<span class="ansi-bold">dumping search index in English (code: en)... </span>done
+<span class="ansi-bold">dumping object inventory... </span>done
+<span class="ansi-bold">build succeeded, 4 warnings.</span>
+
+The HTML pages are in ../html.
+</pre></div></div>
+</div>
+<p>Now we should be able to access the starting points of our documentation and reports.</p>
+<p>Of course, there’s just some basic scaffolding in place. To create the documentation write some content in reStructuredText files or jupyter notebooks and add these files to <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> in the <code class="docutils literal notranslate"><span class="pre">source/</span></code> directory.</p>
+<p>As a simple example:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>%%writefile docs/reports/source/example.rst
+Example
+=======
+
+This is an example .rst file
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Writing docs/reports/source/example.rst
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>%%writefile docs/reports/source/index.rst
+.. Template documentation master file, created by
+   sphinx-quickstart
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to foo&#39;s documentation!
+===============================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   reports_template
+   example
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Overwriting docs/reports/source/index.rst
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco reports --generate
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker exec -it $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=dev&#39; --format {{.Names}}) bash -c &#39;cd /srv/docs/reports/source &amp;&amp; make html&#39;
+<span class="ansi-bold">Running Sphinx v2.4.4</span>
+<span class="ansi-bold">loading pickled environment... </span>done
+<span class="ansi-bold">building [mo]: </span>targets for 0 po files that are out of date
+<span class="ansi-bold">building [html]: </span>targets for 1 source files that are out of date
+<span class="ansi-bold">updating environment: </span>1 added, 1 changed, 0 removed
+<span class="ansi-bold">reading sources... </span>[100%] <span class="ansi-magenta-fg">index</span>
+<span class="ansi-bold">looking for now-outdated files... </span>none found
+<span class="ansi-bold">pickling environment... </span>done
+<span class="ansi-bold">checking consistency... </span><span class="ansi-red-intense-fg ansi-bold">/srv/docs/reports/source/resources.ipynb: WARNING: document isn&#39;t included in any toctree</span>
+done
+<span class="ansi-bold">preparing documents... </span>done
+/usr/local/lib/python3.7/site-packages/guzzle_sphinx_theme/guzzle_sphinx_theme/layout.html:200: RemovedInSphinx30Warning: To modify script_files in the theme is deprecated. Please insert a &lt;script&gt; tag directly in your theme instead.
+<span class="ansi-bold">writing output... </span>[100%] <span class="ansi-green-fg">index</span>
+<span class="ansi-bold">generating indices... </span> genindexdone
+<span class="ansi-bold">writing additional pages... </span> searchdone
+<span class="ansi-bold">copying static files... ... </span>done
+<span class="ansi-bold">copying extra files... </span>done
+<span class="ansi-bold">dumping search index in English (code: en)... </span>done
+<span class="ansi-bold">dumping object inventory... </span>done
+<span class="ansi-bold">build succeeded, 1 warning.</span>
+
+The HTML pages are in ../html.
+</pre></div></div>
+</div>
+<p>The rendering isn’t perfect here, but you can see a link to <code class="docutils literal notranslate"><span class="pre">Example</span></code> under the <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">foo's</span> <span class="pre">documentation!</span></code> section.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>display(HTML(&quot;docs/reports/html/index.html&quot;))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to foo’s documentation! &#8212; foo version 0.1</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Reports template" href="reports_template.html" />
+
+
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="reports_template.html" title="Reports template"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">foo version 0.1</a> &#187;</li>
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    #" class="text-logo">foo</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+
+
+      <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reports_template.html">Reports template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+</ul>
+
+
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+        <div id="right-column">
+
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="#">Docs</a></li>
+
+              <li>Welcome to foo’s documentation!</li>
+            </ol>
+          </div>
+
+          <div class="document clearer body">
+
+  <div class="section" id="welcome-to-foo-s-documentation">
+<h1>Welcome to foo’s documentation!<a class="headerlink" href="#welcome-to-foo-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reports_template.html">Reports template</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reports_template.html#Overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reports_template.html#Instructions">Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+
+  <div class="footer-relations">
+
+      <div class="pull-right">
+        <a class="btn btn-default" href="reports_template.html" title="next chapter (use the right arrow)">Reports template</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="reports_template.html" title="Reports template"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">foo version 0.1</a> &#187;</li>
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2020, Discovery. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html></div>
+</div>
+<p>And another imperfect rendering of the <code class="docutils literal notranslate"><span class="pre">Example</span></code> page we created.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>display(HTML(&quot;docs/reports/html/example.html&quot;))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Example &#8212; foo version 0.1</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Reports template" href="reports_template.html" />
+
+
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="reports_template.html" title="Reports template"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">foo version 0.1</a> &#187;</li>
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    index.html" class="text-logo">foo</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+
+
+      <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reports_template.html">Reports template</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example</a></li>
+</ul>
+
+
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+        <div id="right-column">
+
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+
+              <li>Example</li>
+            </ol>
+          </div>
+
+          <div class="document clearer body">
+
+  <div class="section" id="example">
+<h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h1>
+<p>This is an example .rst file</p>
+</div>
+
+
+          </div>
+
+  <div class="footer-relations">
+
+      <div class="pull-left">
+        <a class="btn btn-default" href="reports_template.html" title="previous chapter (use the left arrow)">Reports template</a>
+      </div>
+
+    </div>
+    <div class="clearer"></div>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="reports_template.html" title="Reports template"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">foo version 0.1</a> &#187;</li>
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2020, Discovery. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html></div>
+</div>
+</div>
+<div class="section" id="--ls">
+<h2>–ls<a class="headerlink" href="#--ls" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco ls --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco ls [-h] [-r]
+
+optional arguments:
+  -h, --help    show this help message and exit
+  -r, --remote  list remote containers using docker over ssh
+</pre></div></div>
+</div>
+<p>We’ve already been using <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">ls</span></code> to see the containers and images that are present on our local machine.</p>
+<p>We can also use <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">ls</span> <span class="pre">-r</span></code> to see containers we have running on remote machines. This leverages docker’s ability to run docker commands over ssh by setting the <code class="docutils literal notranslate"><span class="pre">DOCKER_HOST</span></code> environment variable.</p>
+<p>For this to work, you need to have keyless ssh set up to your remote host, and then create a <code class="docutils literal notranslate"><span class="pre">$HOME/.dsco/settings.json</span></code> file that contains the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;remote&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_name_for_my_machine&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;fully_qualified_domain_name&quot;</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;env&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;DOCKER_HOST&quot;</span><span class="p">:</span> <span class="s2">&quot;ssh://user@fqdn&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_name_for_my_machine2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;fully_qualified_domain_name&quot;</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;env&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;DOCKER_HOST&quot;</span><span class="p">:</span> <span class="s2">&quot;ssh://user@fqdn&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+foo_dev:latest                                                               d5c29dc3707d     28 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up 17 seconds                           </span>
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="--shell">
+<h2>–shell<a class="headerlink" href="#--shell" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco shell --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco shell [-h] [--dev] [--prod] [--debug]
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --dev       attach to dev
+  --prod      attach to prod
+  --debug     attach to debug
+</pre></div></div>
+</div>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">shell</span></code> command to open a bash shell inside your container.</p>
+<p>This is the preferred way to work with your project dependencies.</p>
+</div>
+<div class="section" id="--code">
+<h2>–code<a class="headerlink" href="#--code" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco code --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco code [-h] [-r REMOTE]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -r REMOTE, --remote REMOTE
+                        connect to a container with docker-machine
+</pre></div></div>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">code</span></code> to launch a session of Microsoft’s vscode IDE. After you install the <code class="docutils literal notranslate"><span class="pre">Remote</span> <span class="pre">Development</span> <span class="pre">Extension</span></code>, you can use the <code class="docutils literal notranslate"><span class="pre">Remote</span> <span class="pre">Explorer</span></code> to attach to running containers. Open up the <code class="docutils literal notranslate"><span class="pre">/srv</span></code> directory and enjoy a “local-like” development experience.</p>
+<p>Even more amazing is the ability to attach to containers running on remote machines. If you have remote machines set up as described in the <code class="docutils literal notranslate"><span class="pre">--ls</span></code> section, you can simple type <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">code</span> <span class="pre">-r</span> <span class="pre">my_name_for_my_machine</span></code>. When vscode opens you can use <code class="docutils literal notranslate"><span class="pre">Remote</span> <span class="pre">Explorer</span></code> to attach to the listed containers, but this time you will see the containers running on the remote machine. Super Cool!!!</p>
+<p>You can read more about using vscode with containers here: <a class="reference external" href="https://code.visualstudio.com/docs/remote/containers">https://code.visualstudio.com/docs/remote/containers</a>.</p>
+</div>
+<div class="section" id="--restart">
+<h2>–restart<a class="headerlink" href="#--restart" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco restart --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco restart [-h] [--flask] [--nginx]
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --flask     restart flask
+  --nginx     restart nginx
+</pre></div></div>
+</div>
+<p>When you’re working on creating your Dash dashboard, you will need to restart flask to see the changes you made. <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">restart</span></code> is an easy way to do this. Without options it will restart both <code class="docutils literal notranslate"><span class="pre">nginx</span></code> and <code class="docutils literal notranslate"><span class="pre">flask</span></code>. Use the flags to be more specific.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco restart
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker exec -it $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=dev&#39; --format {{.Names}}) bash -c &#34;service nginx restart&#34;
+[....] Restarting nginx: nginx7[<span class="ansi-green-fg"> ok </span>8.
+docker exec -it $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=dev&#39; --format {{.Names}}) bash -c &#34;supervisorctl restart uwsgi &amp;&amp; supervisorctl status&#34;
+uwsgi: stopped
+uwsgi: started
+jupyter                          RUNNING   pid 57, uptime 0:00:21
+uwsgi                            RUNNING   pid 445, uptime 0:00:01
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="--update_port">
+<h2>–update_port<a class="headerlink" href="#--update_port" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco update_port --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco update_port [-h] [--dev DEV] [--prod PROD] [--debug DEBUG]
+                        [base_port]
+
+positional arguments:
+  base_port      update ports dev: base_port, prod: base_port+1000, debug:
+                 base_port-500
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --dev DEV      update dev port, overwrites base_port
+  --prod PROD    update prod port, overwrites base_port
+  --debug DEBUG  update debug port, overwrites base_port
+</pre></div></div>
+</div>
+<p>When you set up your project, you were prompted for a port number. By default, this is the port of the <code class="docutils literal notranslate"><span class="pre">dev</span></code> container. The <code class="docutils literal notranslate"><span class="pre">prod</span></code> container is assigned <code class="docutils literal notranslate"><span class="pre">port</span> <span class="pre">+</span> <span class="pre">1000</span></code> and the <code class="docutils literal notranslate"><span class="pre">debug</span></code> container is assigned <code class="docutils literal notranslate"><span class="pre">port</span> <span class="pre">-</span> <span class="pre">500</span></code>.</p>
+<p>If you’re running multiple containers on the same machine, they all need to be on different ports. To change the port you can use <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">update_port</span></code></p>
+<p>If you enter <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">update_port</span> <span class="pre">8001</span></code>: you will get the default behavior described above. If you want to override this behavior, simply add the appropriate flag and specify the desired port.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dsco</span> <span class="n">update_port</span> <span class="mi">8001</span> <span class="o">--</span><span class="n">prod</span> <span class="mi">8501</span>
+    <span class="n">dev</span> <span class="o">=</span> <span class="mi">8001</span>
+    <span class="n">prod</span> <span class="o">=</span> <span class="mi">8501</span>
+    <span class="n">debug</span> <span class="o">=</span> <span class="mi">7501</span>
+
+<span class="n">dsco</span> <span class="n">update_port</span> <span class="o">--</span><span class="n">debug</span> <span class="mi">7600</span>
+    <span class="n">dev</span> <span class="o">=</span> <span class="n">unchanged</span>
+    <span class="n">prod</span> <span class="o">=</span> <span class="n">unchanged</span>
+    <span class="n">debug</span> <span class="o">=</span> <span class="mi">7600</span>
+</pre></div>
+</div>
+<p>Once you’ve changed the port you will need to run <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">up</span></code> make the changes take effect.</p>
+<p>Note the port is 8001.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+foo_dev:latest                                                               d5c29dc3707d     35 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up 24 seconds                           </span>
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco update_port 8023
+</pre></div>
+</div>
+</div>
+<p>Still 8001, we need to restart it.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+foo_dev:latest                                                               d5c29dc3707d     37 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up 26 seconds                           </span>
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco up
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker-compose up -d dev
+Recreating foo_dev_1 ...
+eating foo_dev_1 ... <span class="ansi-green-fg">done</span>
+========================================================================================
+up execution time: 1.7434639930725098 seconds
+========================================================================================
+</pre></div></div>
+</div>
+<p>Now we see it has updated.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+foo_dev:latest                                                               d5c29dc3707d     40 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8023                      c9769c1bbe1f     Up Less than a second                   </span>
+</pre></div></div>
+</div>
+<p>Put it back.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco update_port 8001
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco up
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker-compose up -d dev
+Recreating foo_dev_1 ...
+eating foo_dev_1 ... <span class="ansi-green-fg">done</span>
+========================================================================================
+up execution time: 1.7722828388214111 seconds
+========================================================================================
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+foo_dev:latest                                                               d5c29dc3707d     43 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      2d0cdc474c9b     Up Less than a second                   </span>
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="--rm">
+<h2>–rm<a class="headerlink" href="#--rm" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco rm --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco rm [-h] [--dev] [--prod] [--debug] [--all]
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --dev       remove dev
+  --prod      remove prod
+  --debug     remove debug
+  --all       remove dev, prod, and debug
+</pre></div></div>
+</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">rm</span></code> will by default remove the <code class="docutils literal notranslate"><span class="pre">dev</span></code> container.</div>
+<div class="line">Add the appropriate flag to modify this behavior.</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco rm
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker rm -f $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=dev&#39; --format {{.Names}})
+foo_dev_1
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+foo_dev:latest                                                               d5c29dc3707d     46 seconds ago                1.75GB
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="--rmi">
+<h2>–rmi<a class="headerlink" href="#--rmi" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco rmi --help
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+usage: dsco rmi [-h] [--dev] [--prod] [--debug] [--all] [--force]
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --dev       remove dev
+  --prod      remove prod
+  --debug     remove debug
+  --all       remove dev, prod, and debug
+  --force     remove corresponding containers
+</pre></div></div>
+</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">rmi</span></code> will by default remove the <code class="docutils literal notranslate"><span class="pre">dev</span></code> image.</div>
+<div class="line">Add the appropriate flag to modify this behavior.</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">rmi</span></code> will fail is there is a container running that is based on the image you are trying to delete.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco up
+# grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker-compose up -d dev
+Creating foo_dev_1 ...
+ting foo_dev_1 ... <span class="ansi-green-fg">done</span>
+========================================================================================
+up execution time: 1.441547155380249 seconds
+========================================================================================
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+foo_dev:latest                                                               d5c29dc3707d     49 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      5f64ef8e55a5     Up Less than a second                   </span>
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco rmi
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker rmi  foo_dev
+Error response from daemon: conflict: unable to remove repository reference &#34;foo_dev&#34; (must force) - container 5f64ef8e55a5 is using its referenced image d5c29dc3707d
+</pre></div></div>
+</div>
+<p>You can force the removal of both with the <code class="docutils literal notranslate"><span class="pre">--force</span></code> flag.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>!dsco rmi --all --force
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+docker rm -f $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=dev&#39; --format {{.Names}})
+foo_dev_1
+docker rm -f $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=prod&#39; --format {{.Names}})
+&#34;docker rm&#34; requires at least 1 argument.
+See &#39;docker rm --help&#39;.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+docker rm -f $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=debug&#39; --format {{.Names}})
+&#34;docker rm&#34; requires at least 1 argument.
+See &#39;docker rm --help&#39;.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+docker rmi --force foo_dev
+Untagged: foo_dev:latest
+Deleted: sha256:d5c29dc3707de3eb19f8fcca7a63414d3cea707cb1f0f50de9c95dbe2d2d49c4
+Deleted: sha256:36097f11cd5334ebdd9a51a6e28eab3946b8319b3aa8a48cdd4fbe0d9280aab9
+Deleted: sha256:79a8cc5a67562054f9dcd7e814f6286cdb901acd1cb12bac55b8e0eb45defa9e
+Deleted: sha256:45ae1c880b280f359970e0bbff5c064f3cac84f0998c1e9b87475ab377e8459f
+Deleted: sha256:1a09eebc3fd7e46a8277db5b9ee6e920b80e1a22f49730c7fdd1935b70bc8e2b
+Deleted: sha256:88fdda262df3f6a1b4a171fa0e1c12e40ecaed13c5aaf95745ace9aef6bdbba6
+Deleted: sha256:54b5f1dddb0660397fae9695832aa90793e0a227662d5c97dad9f7867fdcbc3c
+Deleted: sha256:fe7bea56aca873718d2bdcda3b7b62b4c4e3fc54259dd9a52e6046a01a69877c
+Deleted: sha256:69f74d12b515a4827ebd7e721f0bbfb3ad01619100d5f8f6ebeae2a5ece4c77a
+docker rmi --force foo_prod
+Error: No such image: foo_prod
+docker rmi --force foo_debug
+Error: No such image: foo_debug
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
+!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
+<span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
+</pre></div></div>
+</div>
+<p>Finish by deleting our project directory.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cd /tmp
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+/private/tmp
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>rm -rf /tmp/dsco_overview
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>ls
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+AlTest1.err                             <span class="ansi-green-fg">port.61201</span>=
+AlTest1.out                             <span class="ansi-green-fg">port.61301</span>=
+ICRC_ROLL.lck                           <span class="ansi-green-fg">port.61302</span>=
+MSS_Menulet                             <span class="ansi-green-fg">port.61304</span>=
+adobegc.log                             <span class="ansi-green-fg">port.61401</span>=
+<span class="ansi-green-fg">com.adobe.AdobeIPCBroker.ctrl-ap186098</span>= <span class="ansi-green-fg">port.61501</span>=
+<span class="ansi-cyan-fg">com.apple.launchd.0R9DDaYyZ6</span>/           <span class="ansi-cyan-fg">powerlog</span>/
+<span class="ansi-cyan-fg">com.apple.launchd.McPXyPKx0Y</span>/           <span class="ansi-cyan-fg">tmux-1937012048</span>/
+<span class="ansi-cyan-fg">com.apple.launchd.vgkMLHbKkP</span>/           wbxtra_03252020_132958.wbt
+meetingJMT.txt                          <span class="ansi-cyan-fg">wbxtrace</span>/
+<span class="ansi-green-fg">port.61100</span>=                             <span class="ansi-cyan-fg">webex</span>/
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="features.html" title="previous chapter (use the left arrow)">Features</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="developer.html" title="next chapter (use the right arrow)">Developer documentation</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="developer.html" title="Developer documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="features.html" title="Features"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">dsco version 0.1.9</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2020, Teradata. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

@@ -1,0 +1,1226 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>dsco.commands package &#8212; dsco version 0.1.9</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="dsco package" href="dsco.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dsco.html" title="dsco package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">dsco version 0.1.9</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developer.html" >Developer documentation</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >dsco</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="dsco.html" accesskey="U">dsco package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    index.html" class="text-logo">dsco</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">How do I use dsco? (commands)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developer.html">Developer documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html">dsco</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+                <li><a href="developer.html">Developer documentation</a></li>
+              
+                <li><a href="modules.html">dsco</a></li>
+              
+                <li><a href="dsco.html">dsco package</a></li>
+              
+              <li>dsco.commands package</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="dsco-commands-package">
+<h1>dsco.commands package<a class="headerlink" href="#dsco-commands-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dsco.commands.build">
+<span id="dsco-commands-build-module"></span><h2>dsco.commands.build module<a class="headerlink" href="#module-dsco.commands.build" title="Permalink to this headline">¶</a></h2>
+<p>Build a container image</p>
+<p><code class="code docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">build</span></code> creates images by running docker-compose from the project
+root directory. By default <code class="code docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">build</span></code> will build the dev container.</p>
+<dl class="simple">
+<dt>Options</dt><dd><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">--</span> <span class="pre">dev</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">--</span> <span class="pre">prod</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">--</span> <span class="pre">all</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">--</span> <span class="pre">debug</span></code></p></li>
+</ul>
+</dd>
+<dt>The dev container will be built when:</dt><dd><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">--</span> <span class="pre">dev</span> <span class="pre">==</span> <span class="pre">True</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">--</span> <span class="pre">all</span> <span class="pre">==</span> <span class="pre">True</span></code></p></li>
+<li><p>no flags are given</p></li>
+</ul>
+</dd>
+<dt>The prod container will be built when:</dt><dd><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">--</span> <span class="pre">prod</span> <span class="pre">==</span> <span class="pre">True</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">--</span> <span class="pre">all</span> <span class="pre">==</span> <span class="pre">True</span></code></p></li>
+</ul>
+</dd>
+<dt>The debug container will be built when:</dt><dd><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">--</span> <span class="pre">debug</span> <span class="pre">==</span> <span class="pre">True</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">--</span> <span class="pre">all</span> <span class="pre">==</span> <span class="pre">True</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="function">
+<dt id="dsco.commands.build.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.build.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.build.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.build.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.build.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.build.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.code">
+<span id="dsco-commands-code-module"></span><h2>dsco.commands.code module<a class="headerlink" href="#module-dsco.commands.code" title="Permalink to this headline">¶</a></h2>
+<p>code: launch vs-code insiders with the appropriate environment</p>
+<dl class="simple">
+<dt>‘dsco code’ will launch vs-code locally. From there you can attach</dt><dd><p>to a locally running container.</p>
+</dd>
+<dt>‘dsco code -r [remote machine]’ or ‘dsco code –remote [remote machine]’</dt><dd><p>will launch vs-code with the appropriate environment variables to
+connect to the remote machine. You should then be able to connect
+to containers running there.</p>
+</dd>
+</dl>
+<dl class="function">
+<dt id="dsco.commands.code.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.code.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.code.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.code.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.code.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.code.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.code.run_cmd">
+<code class="sig-prename descclassname">dsco.commands.code.</code><code class="sig-name descname">run_cmd</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.code.run_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.documentation">
+<span id="dsco-commands-documentation-module"></span><h2>dsco.commands.documentation module<a class="headerlink" href="#module-dsco.commands.documentation" title="Permalink to this headline">¶</a></h2>
+<p>reports: view and update files created in docs/documentation</p>
+<p>Uses sphinx to (re)generate the documentation created in
+docs/documentation. This creates static html
+that can be viewed through the containers web page or github pages.</p>
+<p>Currently this only targets the dev container.</p>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>‘dsco documentation’: open a webbrowser on localhost/documentation/
+‘dsco documentation [-g, –generate]’: update documentation</p>
+</dd>
+</dl>
+<dl class="function">
+<dt id="dsco.commands.documentation.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.documentation.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.documentation.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.documentation.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.documentation.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.documentation.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.documentation.run_cmd">
+<code class="sig-prename descclassname">dsco.commands.documentation.</code><code class="sig-name descname">run_cmd</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.documentation.run_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.go">
+<span id="dsco-commands-go-module"></span><h2>dsco.commands.go module<a class="headerlink" href="#module-dsco.commands.go" title="Permalink to this headline">¶</a></h2>
+<p>go: A quickstart command to build a container and open a browser</p>
+<p>‘dsco go’ is a quickstart method to create a container and open the
+web page interface to the container.</p>
+<dl class="simple">
+<dt>Options</dt><dd><p>–dev: dev container
+–prod: prod container
+–debug: debug container (unlikely to have a running server)</p>
+</dd>
+</dl>
+<p>Options are cumulative, meaning –dev –prod will launch and open
+both the dev and prod containers.</p>
+<dl class="function">
+<dt id="dsco.commands.go.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.go.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.go.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.go.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.go.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.go.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.init">
+<span id="dsco-commands-init-module"></span><h2>dsco.commands.init module<a class="headerlink" href="#module-dsco.commands.init" title="Permalink to this headline">¶</a></h2>
+<p>This is the init parser</p>
+<p>Use this to start a project. Uses the cookiecutter to create a project
+structure.</p>
+<dl class="function">
+<dt id="dsco.commands.init.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.init.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.init.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.init.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.init.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.init.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.init.run_cmd">
+<code class="sig-prename descclassname">dsco.commands.init.</code><code class="sig-name descname">run_cmd</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.init.run_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.ls">
+<span id="dsco-commands-ls-module"></span><h2>dsco.commands.ls module<a class="headerlink" href="#module-dsco.commands.ls" title="Permalink to this headline">¶</a></h2>
+<p>ls: information about images and containers</p>
+<p>Use ‘dsco ls’ to get information about images and containers running
+on your localhost. Use ‘dsco ls -r’ to add information about machines
+listed in $HOME/.dsco/settings.json</p>
+<dl class="class">
+<dt id="dsco.commands.ls.Colors">
+<em class="property">class </em><code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">Colors</code><a class="headerlink" href="#dsco.commands.ls.Colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Define colors and methods to apply formatting to strings</p>
+<p>Use the methods to apply formatting to the specified string type.</p>
+<dl class="simple">
+<dt>Methods</dt><dd><p>container (str): Add container formatting to input string.
+host (str): Add host formatting to input string.
+header (str): Add header formatting to input string.</p>
+</dd>
+<dt>Example</dt><dd><p>header = Colors.header(header_string)
+print(header)</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="dsco.commands.ls.Colors.BOLD">
+<code class="sig-name descname">BOLD</code><em class="property"> = '\x1b[1m'</em><a class="headerlink" href="#dsco.commands.ls.Colors.BOLD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Colors.ENDC">
+<code class="sig-name descname">ENDC</code><em class="property"> = '\x1b[0m'</em><a class="headerlink" href="#dsco.commands.ls.Colors.ENDC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Colors.FAIL">
+<code class="sig-name descname">FAIL</code><em class="property"> = '\x1b[91m'</em><a class="headerlink" href="#dsco.commands.ls.Colors.FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Colors.HEADER">
+<code class="sig-name descname">HEADER</code><em class="property"> = '\x1b[95m'</em><a class="headerlink" href="#dsco.commands.ls.Colors.HEADER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Colors.OKBLUE">
+<code class="sig-name descname">OKBLUE</code><em class="property"> = '\x1b[94m'</em><a class="headerlink" href="#dsco.commands.ls.Colors.OKBLUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Colors.OKGREEN">
+<code class="sig-name descname">OKGREEN</code><em class="property"> = '\x1b[92m'</em><a class="headerlink" href="#dsco.commands.ls.Colors.OKGREEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Colors.REVERSED">
+<code class="sig-name descname">REVERSED</code><em class="property"> = '\x1b[7m'</em><a class="headerlink" href="#dsco.commands.ls.Colors.REVERSED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Colors.UNDERLINE">
+<code class="sig-name descname">UNDERLINE</code><em class="property"> = '\x1b[4m'</em><a class="headerlink" href="#dsco.commands.ls.Colors.UNDERLINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Colors.WARNING">
+<code class="sig-name descname">WARNING</code><em class="property"> = '\x1b[92m'</em><a class="headerlink" href="#dsco.commands.ls.Colors.WARNING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dsco.commands.ls.Colors.container">
+<em class="property">classmethod </em><code class="sig-name descname">container</code><span class="sig-paren">(</span><em class="sig-param">print_string</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Colors.container" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dsco.commands.ls.Colors.header">
+<em class="property">classmethod </em><code class="sig-name descname">header</code><span class="sig-paren">(</span><em class="sig-param">print_string</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Colors.header" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dsco.commands.ls.Colors.host">
+<em class="property">classmethod </em><code class="sig-name descname">host</code><span class="sig-paren">(</span><em class="sig-param">print_string</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Colors.host" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dsco.commands.ls.Container">
+<em class="property">class </em><code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param">properties</em>, <em class="sig-param">host</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Representation of a Docker container</p>
+<dl class="attribute">
+<dt id="dsco.commands.ls.Container.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#dsco.commands.ls.Container.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Container name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Container.image">
+<code class="sig-name descname">image</code><a class="headerlink" href="#dsco.commands.ls.Container.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Container.properties">
+<code class="sig-name descname">properties</code><a class="headerlink" href="#dsco.commands.ls.Container.properties" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>image (str)</dt><dd><p>Image ID.</p>
+</dd>
+<dt>id (str)</dt><dd><p>Container id.</p>
+</dd>
+<dt>name (str)</dt><dd><p>Container name.</p>
+</dd>
+<dt>status (str)</dt><dd><p>Container status.</p>
+</dd>
+<dt>created (str)</dt><dd><p>Time when the container was created.</p>
+</dd>
+<dt>size (str)</dt><dd><p>Size of container.</p>
+</dd>
+<dt>port (str)</dt><dd><p>Exposed ports.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Container.host">
+<code class="sig-name descname">host</code><a class="headerlink" href="#dsco.commands.ls.Container.host" title="Permalink to this definition">¶</a></dt>
+<dd><p>A reference to the container’s host.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dsco.commands.ls.Host" title="dsco.commands.ls.Host">Host</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Container.inspect_dict">
+<code class="sig-name descname">inspect_dict</code><a class="headerlink" href="#dsco.commands.ls.Container.inspect_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information from docker inspect.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Container.link">
+<code class="sig-name descname">link</code><a class="headerlink" href="#dsco.commands.ls.Container.link" title="Permalink to this definition">¶</a></dt>
+<dd><p>link to web server of container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Container.image_id">
+<code class="sig-name descname">image_id</code><a class="headerlink" href="#dsco.commands.ls.Container.image_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>full id of parent image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dsco.commands.ls.Docker">
+<em class="property">class </em><code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">Docker</code><a class="headerlink" href="#dsco.commands.ls.Docker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Encapsulate all the interactions with docker</p>
+<dl class="simple">
+<dt>Attributes</dt><dd><dl class="simple">
+<dt>images_docker_cmd (str): The ‘docker images’ command run to get</dt><dd><p>information about the docker images.</p>
+</dd>
+<dt>ps_docker_cmd (str): The ‘docker ps’ command run to get</dt><dd><p>information about the docker containers.</p>
+</dd>
+</dl>
+</dd>
+<dt>Methods</dt><dd><dl class="simple">
+<dt>run_docker_cmd (cmd, env): Convenience function to run</dt><dd><p>docker commands.</p>
+</dd>
+<dt>images (Host): Return information on all docker images on the</dt><dd><p>given host.</p>
+</dd>
+<dt>ps (Container): Return information on all docker containers on</dt><dd><p>the given host.</p>
+</dd>
+<dt>inspect_container (Container): Return detailed information on</dt><dd><p>the given container.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="dsco.commands.ls.Docker.images">
+<em class="property">classmethod </em><code class="sig-name descname">images</code><span class="sig-paren">(</span><em class="sig-param">host</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Docker.images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of image properties on the specified host</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>host</strong> (<a class="reference internal" href="#dsco.commands.ls.Host" title="dsco.commands.ls.Host"><em>Host</em></a>) – A host object with the attribute “docker_env”.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list containing a dictionary for</dt><dd><p>each image on the host. The dictionary is keyed from the
+name property of the _image_format_list.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>image_list (list[dict])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Docker.images_docker_cmd">
+<code class="sig-name descname">images_docker_cmd</code><em class="property"> = &quot;docker images --no-trunc --format '{{.Repository}}:&amp;:{{.Tag}}:&amp;:{{.ID}}:&amp;:{{.CreatedSince}}:&amp;:{{.Size}}'&quot;</em><a class="headerlink" href="#dsco.commands.ls.Docker.images_docker_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dsco.commands.ls.Docker.inspect_container">
+<em class="property">classmethod </em><code class="sig-name descname">inspect_container</code><span class="sig-paren">(</span><em class="sig-param">container</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Docker.inspect_container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get detailed information about a container</p>
+<p>This information is used to augment the information from the
+ps command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>container</strong> (<a class="reference internal" href="#dsco.commands.ls.Container" title="dsco.commands.ls.Container"><em>Container</em></a>) – Container needs a property “name”
+that corresponds to the name of the container and can be
+used in the docker inspect command.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of container properties.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>docker_inspect_dict(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dsco.commands.ls.Docker.ps">
+<em class="property">classmethod </em><code class="sig-name descname">ps</code><span class="sig-paren">(</span><em class="sig-param">host</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Docker.ps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of container properties on the specified host</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>host</strong> (<a class="reference internal" href="#dsco.commands.ls.Host" title="dsco.commands.ls.Host"><em>Host</em></a>) – A host object with the attribute “docker_env”.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list containing a dictionary</dt><dd><p>for each image on the host. The dictionary is keyed from
+the name property of the _ps_format_list.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>container_list (list[dict])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Docker.ps_docker_cmd">
+<code class="sig-name descname">ps_docker_cmd</code><em class="property"> = &quot;docker ps --all --format '{{.Image}}:&amp;:{{.ID}}:&amp;:{{.Names}}:&amp;:{{.Status}}:&amp;:{{.CreatedAt}}:&amp;:{{.Size}}:&amp;:{{.Ports}}'&quot;</em><a class="headerlink" href="#dsco.commands.ls.Docker.ps_docker_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dsco.commands.ls.Docker.run_docker_cmd">
+<em class="property">classmethod </em><code class="sig-name descname">run_docker_cmd</code><span class="sig-paren">(</span><em class="sig-param">cmd</em>, <em class="sig-param">env=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Docker.run_docker_cmd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience function to run docker commands</p>
+<dl class="simple">
+<dt>Adds try/except, and the following options:</dt><dd><ul class="simple">
+<li><p>shell=True</p></li>
+<li><p>capture_output=True</p></li>
+<li><p>timeout=15</p></li>
+</ul>
+</dd>
+<dt>Args</dt><dd><dl class="simple">
+<dt>cmd (str):</dt><dd><p>The docker command to be run.</p>
+</dd>
+<dt>env (dict):</dt><dd><p>A dictionary containing all the necessary
+environment variables to run the docker command.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns</dt><dd><dl class="simple">
+<dt>completed_process (subprocess.CompletedProcess):</dt><dd><p>Information about the output of the command.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dsco.commands.ls.Format">
+<em class="property">class </em><code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">Format</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">format_string</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Facilitate building and parsing docker format strings</p>
+<p>The formatting option (–format) will pretty print some of the
+docker commands output using a Go template.</p>
+<p>For example:</p>
+<blockquote>
+<div><p>docker images –format ‘{{.Repository}}:&amp;:{{.Tag}}’</p>
+</div></blockquote>
+<p>will print images with the repository name and image tag seperated
+by ‘:&amp;:’:</p>
+<blockquote>
+<div><p>“foo_dev:&amp;:latest”</p>
+</div></blockquote>
+<p>There are many cases where we want to build these format strings
+and then collect the output in a dictionary. To continue with the
+example, we would like to process the output string into the
+following dictionary:</p>
+<blockquote>
+<div><p>dict(name = foo_dev, tag=latest)</p>
+</div></blockquote>
+<p>This class facilitates the building of the format strings and the
+parsing of corresponding docker output.</p>
+<dl class="simple">
+<dt>Methods</dt><dd><dl class="simple">
+<dt>join_format_list (format_list): Given a list of Format objects</dt><dd><p>return a docker ‘–format’ string.</p>
+</dd>
+<dt>format_output_to_dict (format_list, format_output): Convert</dt><dd><p>output of a docker –format command to a dictionary.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="dsco.commands.ls.Format.format_output_to_dict">
+<em class="property">classmethod </em><code class="sig-name descname">format_output_to_dict</code><span class="sig-paren">(</span><em class="sig-param">format_list</em>, <em class="sig-param">format_output</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Format.format_output_to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert output of a docker –format command to a dictionary</p>
+<dl>
+<dt>Args</dt><dd><dl class="simple">
+<dt>format_list (List[Format]):</dt><dd><p>A list of Format objects. Each
+one corresponds to a different piece of information
+about the docker object</p>
+</dd>
+<dt>format_output (str):</dt><dd><p>One line from the output of the
+‘docker –format’ command.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns</dt><dd><p>A dictionary where <code class="code docutils literal notranslate"><span class="pre">keys</span> <span class="pre">=</span> <span class="pre">[key.name</span> <span class="pre">for</span> <span class="pre">key</span> <span class="pre">in</span> <span class="pre">format_list]</span></code>
+and values are equal to the corresponding fields from
+the ‘docker –format’ command.</p>
+</dd>
+<dt>Example</dt><dd><p>Continuing from the example in <a class="reference internal" href="#dsco.commands.ls.Format.join_format_list" title="dsco.commands.ls.Format.join_format_list"><code class="xref py py-func docutils literal notranslate"><span class="pre">join_format_list()</span></code></a> we had:</p>
+<p>format_list:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">format_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;image&quot;</span><span class="p">,</span> <span class="n">format_string</span><span class="o">=</span><span class="s2">&quot;{{.Repository}}&quot;</span><span class="p">),</span>
+    <span class="n">Format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span><span class="p">,</span> <span class="n">format_string</span><span class="o">=</span><span class="s2">&quot;{{.Tag}}&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>docker command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">images</span> <span class="o">--</span><span class="nb">format</span> <span class="s1">&#39;{{.Repository}}:&amp;:{{.Tag}}&#39;</span>
+</pre></div>
+</div>
+<p>Sample output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">:</span><span class="o">&amp;</span><span class="p">:</span><span class="n">latest</span>
+<span class="n">bar</span><span class="p">:</span><span class="o">&amp;</span><span class="p">:</span><span class="mf">4.8</span>
+</pre></div>
+</div>
+<p>would return</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s2">&quot;latest&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dsco.commands.ls.Format.join_format_list">
+<em class="property">classmethod </em><code class="sig-name descname">join_format_list</code><span class="sig-paren">(</span><em class="sig-param">format_list</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Format.join_format_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a docker ‘–format’ string from a list of Format objects.</p>
+<dl>
+<dt>Args</dt><dd><dl class="simple">
+<dt>format_list (List[Format]):</dt><dd><p>A list of Format objects. Each
+one corresponds to a different piece of information
+about the docker object</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns</dt><dd><p>A format string to be used with the –format options of a
+docker command.</p>
+</dd>
+<dt>Example</dt><dd><p>The docker command to return ‘Image Repository’ and
+‘Image Tag’ information is:</p>
+<blockquote>
+<div><p>docker images –format ‘{{.Repository}}:&amp;:{{.Tag}}’</p>
+</div></blockquote>
+<p>To use this method to generate that string we would create
+the list:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">format_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;image&quot;</span><span class="p">,</span> <span class="n">format_string</span><span class="o">=</span><span class="s2">&quot;{{.Repository}}&quot;</span><span class="p">),</span>
+    <span class="n">Format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span><span class="p">,</span> <span class="n">format_string</span><span class="o">=</span><span class="s2">&quot;{{.Tag}}&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>The method would then return:</p>
+<blockquote>
+<div><p>“’{{.Repository}}:&amp;:{{.Tag}}’”</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dsco.commands.ls.Host">
+<em class="property">class </em><code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">Host</code><span class="sig-paren">(</span><em class="sig-param">kernel</em>, <em class="sig-param">images=True</em>, <em class="sig-param">containers=True</em>, <em class="sig-param">inventory=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The representation of a single machine</p>
+<p>Encompasses all the information regarding images and their
+associated containers on a single machine. This information is
+accessed by the string representation of Host, e.g. str(Host).</p>
+<dl class="attribute">
+<dt id="dsco.commands.ls.Host.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#dsco.commands.ls.Host.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arbitrary name for the machine</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Host.properties">
+<code class="sig-name descname">properties</code><a class="headerlink" href="#dsco.commands.ls.Host.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Other relevant information about the machine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Host.docker_env">
+<code class="sig-name descname">docker_env</code><a class="headerlink" href="#dsco.commands.ls.Host.docker_env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Environment variable necessary to run docker
+commands on the machine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Host.image_list">
+<code class="sig-name descname">image_list</code><a class="headerlink" href="#dsco.commands.ls.Host.image_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Image objects. The image
+objects have information about that image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#dsco.commands.ls.Image" title="dsco.commands.ls.Image">Image</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Host.container_list">
+<code class="sig-name descname">container_list</code><a class="headerlink" href="#dsco.commands.ls.Host.container_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Container objects.
+The container objects have information about that container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#dsco.commands.ls.Container" title="dsco.commands.ls.Container">Container</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Host.host_inventory">
+<code class="sig-name descname">host_inventory</code><a class="headerlink" href="#dsco.commands.ls.Host.host_inventory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The host_inventory relates the
+images on a host to the containers created from that image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>OrderedDict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dsco.commands.ls.Image">
+<em class="property">class </em><code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param">image_properties</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Representation of a Docker image</p>
+<dl class="attribute">
+<dt id="dsco.commands.ls.Image.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#dsco.commands.ls.Image.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combination of image and tag, {image:tag}.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Image.properties">
+<code class="sig-name descname">properties</code><a class="headerlink" href="#dsco.commands.ls.Image.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>image (str): Image repository.
+tag (str): Image tag.
+id (str): Image ID
+created (str): Elapsed time since the image was created
+size (str): Image disk size
+name (str): Combination of image and tag, {image:tag}.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dsco.commands.ls.Inventory">
+<em class="property">class </em><code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">Inventory</code><span class="sig-paren">(</span><em class="sig-param">localhost=True</em>, <em class="sig-param">remote=False</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Inventory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create a list of all images and containers</p>
+<p>Tool to list all containers and images on your localhost and the
+remote hosts listed in $HOME/.vscode/settings.json. The list is
+built by the string representation of the object, i.e. str(Inventory).</p>
+<dl class="simple">
+<dt>Attributes</dt><dd><dl class="simple">
+<dt>columns (OrderedDict):</dt><dd><p>A mapping of column name to column
+length. Determines the output of str(Inventory)</p>
+</dd>
+<dt>header (str):</dt><dd><p>Formats the columns into a single output string</p>
+</dd>
+<dt>line_len (int):</dt><dd><p>Total length of header.</p>
+</dd>
+<dt>hosts (List[Host]):</dt><dd><p>A list of host objects. The host objects
+have information about images and containers on that host.</p>
+</dd>
+</dl>
+</dd>
+<dt>Methods</dt><dd><dl class="simple">
+<dt>remote_list (List[Dict]):</dt><dd><p>Static method that returns the remote
+machines listed in $HOME/.dsco/settings.json</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="dsco.commands.ls.Inventory.columns">
+<code class="sig-name descname">columns</code><em class="property"> = {'ID': 17, 'LINK': 43, 'NAME': 34, 'SIZE': 10, 'STATUS': 30}</em><a class="headerlink" href="#dsco.commands.ls.Inventory.columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Inventory.header">
+<code class="sig-name descname">header</code><em class="property"> = 'NAME                              LINK                                       ID               STATUS                        SIZE      '</em><a class="headerlink" href="#dsco.commands.ls.Inventory.header" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="dsco.commands.ls.Inventory.line_len">
+<code class="sig-name descname">line_len</code><em class="property"> = 134</em><a class="headerlink" href="#dsco.commands.ls.Inventory.line_len" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dsco.commands.ls.Inventory.remote_list">
+<em class="property">static </em><code class="sig-name descname">remote_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.Inventory.remote_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get configuration information on remote machines</p>
+<p>Retrieves the list of remote machines from
+$HOME/.dsco/settings.json. Each item in the list is expected
+to include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name (str)</p></li>
+<li><p>ip (str)</p></li>
+<li><p>env (dict)</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.ls.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.ls.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.ls.main">
+<code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><em class="sig-param">localhost=True</em>, <em class="sig-param">remote=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.ls.run_cmd">
+<code class="sig-prename descclassname">dsco.commands.ls.</code><code class="sig-name descname">run_cmd</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.ls.run_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.reports">
+<span id="dsco-commands-reports-module"></span><h2>dsco.commands.reports module<a class="headerlink" href="#module-dsco.commands.reports" title="Permalink to this headline">¶</a></h2>
+<p>reports: view and update reports created in docs/reports</p>
+<p>Uses sphinx to (re)generate the reports created in docs/reports.
+This creates static html that can be viewed
+through the containers web page or github pages.</p>
+<p>Currently this only targets the dev container.</p>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>‘dsco reports’: open a webbrowser on localhost/reports/
+‘dsco reports [-g, –generate]’: update reports</p>
+</dd>
+</dl>
+<dl class="function">
+<dt id="dsco.commands.reports.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.reports.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.reports.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.reports.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.reports.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.reports.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.reports.run_cmd">
+<code class="sig-prename descclassname">dsco.commands.reports.</code><code class="sig-name descname">run_cmd</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.reports.run_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.restart">
+<span id="dsco-commands-restart-module"></span><h2>dsco.commands.restart module<a class="headerlink" href="#module-dsco.commands.restart" title="Permalink to this headline">¶</a></h2>
+<p>restart: Restart nginx or flask in the dev container</p>
+<p>‘dsco restart’ will restart both the nginx service and the flask service
+running inside the development container. To restart just one of those
+use the corresponding flag: –nginx or –flask</p>
+<dl class="function">
+<dt id="dsco.commands.restart.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.restart.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.restart.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.restart.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.restart.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.restart.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.restart.run_cmd">
+<code class="sig-prename descclassname">dsco.commands.restart.</code><code class="sig-name descname">run_cmd</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.restart.run_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.rm">
+<span id="dsco-commands-rm-module"></span><h2>dsco.commands.rm module<a class="headerlink" href="#module-dsco.commands.rm" title="Permalink to this headline">¶</a></h2>
+<p>Remove a running or stopped container with ‘docker rm -f …’</p>
+<p>With no flags, ‘dsco rm’ will remove the dev container. To remove a
+specific container add the appropriate flag:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">--dev</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">--prod</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">--debug</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>Remove all the containers with –all.</p>
+<dl class="function">
+<dt id="dsco.commands.rm.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.rm.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.rm.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.rm.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.rm.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.rm.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.rm.run_cmd">
+<code class="sig-prename descclassname">dsco.commands.rm.</code><code class="sig-name descname">run_cmd</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.rm.run_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.rmi">
+<span id="dsco-commands-rmi-module"></span><h2>dsco.commands.rmi module<a class="headerlink" href="#module-dsco.commands.rmi" title="Permalink to this headline">¶</a></h2>
+<p>Remove a docker image with ‘docker rmi …’</p>
+<p>With no flags, ‘dsco rmi’ will remove the dev image. To remove a
+specific image add the appropriate flag:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">--dev</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">--prod</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">--debug</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>Remove all the images with <code class="code docutils literal notranslate"><span class="pre">--all</span></code>.</p>
+<p>Before an image can be removed, all containers created from that image
+need to be deleted. To force the deletion of all associated containers,
+you can add the <code class="code docutils literal notranslate"><span class="pre">--force</span></code> option.</p>
+<dl class="function">
+<dt id="dsco.commands.rmi.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.rmi.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.rmi.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.rmi.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.rmi.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.rmi.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.rmi.run_cmd">
+<code class="sig-prename descclassname">dsco.commands.rmi.</code><code class="sig-name descname">run_cmd</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.rmi.run_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.shell">
+<span id="dsco-commands-shell-module"></span><h2>dsco.commands.shell module<a class="headerlink" href="#module-dsco.commands.shell" title="Permalink to this headline">¶</a></h2>
+<p>shell: Open a shell inside the specified container</p>
+<p>If not container is specified,</p>
+<dl class="function">
+<dt id="dsco.commands.shell.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.shell.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.shell.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.shell.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.shell.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.shell.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.shell.run_cmd">
+<code class="sig-prename descclassname">dsco.commands.shell.</code><code class="sig-name descname">run_cmd</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.shell.run_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.up">
+<span id="dsco-commands-up-module"></span><h2>dsco.commands.up module<a class="headerlink" href="#module-dsco.commands.up" title="Permalink to this headline">¶</a></h2>
+<p>up: Create and launch specified containers</p>
+<p>Runs ‘docker-compose up -d …’ for the specified process.
+Options: –dev, –prod, –all</p>
+<p>If the –debug flag is provided, only the debug container is launched.
+Even if –dev or –prod flags are provided.</p>
+<dl class="simple">
+<dt>Otherwise (i.e. no –debug):</dt><dd><p>– dev, all, or no flags  |  dev container is launched
+– prod or all            |  prod container is launched</p>
+</dd>
+</dl>
+<dl class="function">
+<dt id="dsco.commands.up.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.up.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.up.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.up.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.up.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.up.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands.update_port">
+<span id="dsco-commands-update-port-module"></span><h2>dsco.commands.update_port module<a class="headerlink" href="#module-dsco.commands.update_port" title="Permalink to this headline">¶</a></h2>
+<p>update_port: Update the ports of the specified container</p>
+<p>Each container on a host needs to have a unique port. This method will
+make the appropriate updates in the project docker-compose file.</p>
+<dl class="simple">
+<dt>If we just enter one port number (e.g. ‘dsco update_port 8000’):</dt><dd><ul class="simple">
+<li><p>the dev port will be set to 8000</p></li>
+<li><p>the prod port will be set to 8000 + 1000 = 9000</p></li>
+<li><p>the debug port will be set to 8000 - 500 = 7500</p></li>
+</ul>
+</dd>
+</dl>
+<p>If we want more control we can use the flag options to set those ports
+to specific values.</p>
+<dl class="simple">
+<dt>Examples</dt><dd><dl class="simple">
+<dt>dsco update_port 8000</dt><dd><p>dev: 8000, prod: 9000, debug: 7500</p>
+</dd>
+<dt>dsco update_port 8000 –prod 9400</dt><dd><p>dev: 8000, prod: 9400, debug: 7500</p>
+</dd>
+<dt>dsco update_port –debug 7630</dt><dd><p>dev: unchanged, prod: unchanged, debug: 7630</p>
+</dd>
+<dt>dsco update_port 8200 –prod 9400 –debug 7630</dt><dd><p>dev: 8200, prod: 9400, debug: 7630</p>
+</dd>
+<dt>dsco update_port –dev 8200 –debug 7620</dt><dd><p>dev: 8200, prod: unchanged, debug: 7620</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="function">
+<dt id="dsco.commands.update_port.add_dispatch">
+<code class="sig-prename descclassname">dsco.commands.update_port.</code><code class="sig-name descname">add_dispatch</code><span class="sig-paren">(</span><em class="sig-param">dispatcher</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.update_port.add_dispatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.update_port.add_subparser">
+<code class="sig-prename descclassname">dsco.commands.update_port.</code><code class="sig-name descname">add_subparser</code><span class="sig-paren">(</span><em class="sig-param">subparsers</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.update_port.add_subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dsco.commands.update_port.run_cmd">
+<code class="sig-prename descclassname">dsco.commands.update_port.</code><code class="sig-name descname">run_cmd</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#dsco.commands.update_port.run_cmd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-dsco.commands">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-dsco.commands" title="Permalink to this headline">¶</a></h2>
+<p>Create subparsers</p>
+<p>See the <a class="reference internal" href="dsco.html#module-dsco.options" title="dsco.options"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dsco.options</span></code></a> module to find an explanation of
+how the subparsers defined here are added to the main parser.</p>
+<p>Each module defined here is expected to declare the following:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>cmd_name(str)</dt><dd><p>The name of the sub-command</p>
+</dd>
+</dl>
+</div></blockquote>
+<hr class="docutils" />
+<blockquote>
+<div><dl class="simple">
+<dt>add_subparser(subparsers)</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>subparsers (argparse._SubParsersAction)</dt><dd><p>The subparser object to which all sub-commands will
+be assigned.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<hr class="docutils" />
+<blockquote>
+<div><dl>
+<dt>add_dispatch(dispatcher)</dt><dd><dl>
+<dt>Args:</dt><dd><dl>
+<dt>dispatcher (dict)</dt><dd><p>Dictionary mapping <code class="code docutils literal notranslate"><span class="pre">cmd</span> <span class="pre">--&gt;</span> <span class="pre">run_cmd</span></code>.</p>
+<dl>
+<dt>cmd (string)</dt><dd><p>This is the name of the subparser</p>
+</dd>
+<dt>run_cmd(args, conf)</dt><dd><p>Executes the desired action.</p>
+<dl class="simple">
+<dt>Args</dt><dd><dl class="simple">
+<dt>args (argParse.Namespace)</dt><dd><p>This contains the command line arguments as
+parsed by the appropriate subparser.</p>
+</dd>
+<dt>conf (dict)</dt><dd><p>This dictionary contains project
+specific settings such as the project root
+directory, settings from the pyproject.toml
+file (if it exists) etc.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p class="rubric">Example</p>
+<p>Let’s look at a simple example. Say we wanted to create a subparser
+called <code class="code docutils literal notranslate"><span class="pre">project_info</span></code> such that when we run the command
+<code class="code docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">project_info</span></code> we get the directory name of the project
+root directory, or <code class="code docutils literal notranslate"><span class="pre">None</span></code> if we were not in a project
+directory tree. We also want to be able to add a <code class="code docutils literal notranslate"><span class="pre">-v</span></code>, or
+<code class="code docutils literal notranslate"><span class="pre">--verbose</span></code> option to get the information in
+the <code class="code docutils literal notranslate"><span class="pre">pyproject</span></code> file.</p>
+<p>We would create a file called <code class="code docutils literal notranslate"><span class="pre">project_info.py</span></code> and it would
+contain the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign the file name without extension to cmd_name.</span>
+<span class="c1"># Naming the command in this way ensures the file name</span>
+<span class="c1"># and command name stay in sync.</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">cmd_name</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span>
+
+<span class="k">def</span> <span class="nf">add_subparser</span><span class="p">(</span><span class="n">subparsers</span><span class="p">):</span>
+    <span class="c1"># create the basic command</span>
+    <span class="n">sub</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span>
+        <span class="n">cmd_name</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;list the project root dir&quot;</span>
+    <span class="p">)</span>
+    <span class="c1"># add the -v option</span>
+    <span class="n">sub</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s2">&quot;-v&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--verbose&quot;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Also show information in pyproject file&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">run_cmd</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">conf</span><span class="p">):</span>
+    <span class="c1"># Only return a value if dsco is run within a project tree</span>
+    <span class="c1"># conf[&quot;proj_root&quot;] is defined in application.py</span>
+    <span class="k">if</span> <span class="n">conf</span><span class="p">[</span><span class="s2">&quot;proj_root&quot;</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">conf</span><span class="p">[</span><span class="s2">&quot;proj_root&quot;</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">conf</span><span class="p">[</span><span class="s2">&quot;pyproject&quot;</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;None&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">add_dispatch</span><span class="p">(</span><span class="n">dispatcher</span><span class="p">):</span>
+    <span class="n">dispatcher</span><span class="p">[</span><span class="n">cmd_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">run_cmd</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="dsco.html" title="previous chapter (use the left arrow)">dsco package</a>
+      </div>
+    
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dsco.html" title="dsco package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">dsco version 0.1.9</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developer.html" >Developer documentation</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >dsco</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="dsco.html" >dsco package</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2020, Teradata. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

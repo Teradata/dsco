@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Features &#8212; dsco version 0.1.9</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How do I use dsco? (commands)" href="commands.html" />
+    <link rel="prev" title="Quickstart" href="quickstart.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="commands.html" title="How do I use dsco? (commands)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="Quickstart"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">dsco version 0.1.9</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    index.html" class="text-logo">dsco</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter-server">jupyter server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependency-management">dependency management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-notebooks-to-static-html">convert notebooks to static html</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connect-to-your-container-with-vscode-local-or-remote">connect to your container with vscode (local or remote)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-dashboard-in-plotly-dash">create a dashboard in plotly | Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-rest-api">create a rest api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#auto-document-your-code">auto document your code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter-extensions">jupyter extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-from-scratch">build from scratch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#local-project-directory-mounted-inside-container">local project directory mounted inside container</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">How do I use dsco? (commands)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer.html">Developer documentation</a></li>
+</ul>
+
+    
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>Features</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="features">
+<h1>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="jupyter-server">
+<h2>jupyter server<a class="headerlink" href="#jupyter-server" title="Permalink to this headline">¶</a></h2>
+<p>The is a jupyter notebook server running in the container.</p>
+</div>
+<div class="section" id="dependency-management">
+<h2>dependency management<a class="headerlink" href="#dependency-management" title="Permalink to this headline">¶</a></h2>
+<p>We use poetry to manage dependencies</p>
+</div>
+<div class="section" id="convert-notebooks-to-static-html">
+<h2>convert notebooks to static html<a class="headerlink" href="#convert-notebooks-to-static-html" title="Permalink to this headline">¶</a></h2>
+<p>We can convert source content written in reStructuredText files or
+jupyter notebook files to static html. The resulting output
+can be accessed from a web server running in the container or
+from github pages.</p>
+</div>
+<div class="section" id="connect-to-your-container-with-vscode-local-or-remote">
+<h2>connect to your container with vscode (local or remote)<a class="headerlink" href="#connect-to-your-container-with-vscode-local-or-remote" title="Permalink to this headline">¶</a></h2>
+<p>We can use vscode running locally to connect to running
+container on our localhost or on a remote host. This gives
+the same feel as developing in a local IDE.</p>
+<p>Dsco is tooled around using vscode, but does not preclude the use
+of other IDEs if you can make them work. For me, this project
+was the impetus for switching from PyCharm to VsCode and
+I have not been disappointed.</p>
+</div>
+<div class="section" id="create-a-dashboard-in-plotly-dash">
+<h2>create a dashboard in plotly | Dash<a class="headerlink" href="#create-a-dashboard-in-plotly-dash" title="Permalink to this headline">¶</a></h2>
+<p>plotly | Dash is running within Flask and there is a bare bones
+project up and running at startup. It’s pretty straight forward
+to expand from here without having to do a lot of the plumbing
+work up front.</p>
+<p>One workflow that works well is to develop the plotly plot in
+your jupyter notebook (plotly renders nicely in static html by
+the way, keeping it’s interactivity), then when you’re ready
+to create your dashboard, pull the code into your package
+directory and use it in Dash!</p>
+</div>
+<div class="section" id="create-a-rest-api">
+<h2>create a rest api<a class="headerlink" href="#create-a-rest-api" title="Permalink to this headline">¶</a></h2>
+<p>Since Flask is already running, you can easily set up new routes
+to create rest APIs. This means you can use this container as
+the basis for data science micro-services. Handle the data
+processing in one and the dashboard in another.</p>
+</div>
+<div class="section" id="auto-document-your-code">
+<h2>auto document your code<a class="headerlink" href="#auto-document-your-code" title="Permalink to this headline">¶</a></h2>
+<p>Use sphinx to automatically generate documentation for your code.
+This includes both project documentation and reports, or what I
+generally think of as EDA.</p>
+</div>
+<div class="section" id="jupyter-extensions">
+<h2>jupyter extensions<a class="headerlink" href="#jupyter-extensions" title="Permalink to this headline">¶</a></h2>
+<p>A selection of jupyter extensions is already configured.
+This includes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Table of contents</p></li>
+<li><p>Ruler</p></li>
+<li><p>Spell checking on markdown cells</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="build-from-scratch">
+<h2>build from scratch<a class="headerlink" href="#build-from-scratch" title="Permalink to this headline">¶</a></h2>
+<p>The entire recipe for you project is contained in your project
+directory. Once created, dsco facilitates working with your
+project, but is not required. This means someone else can
+pull your project from git and build everything needed to run
+your project locally, or on a vm. All that’s really required is
+Docker.</p>
+<p>Generally, dsco is just a wrapper of docker commands.
+When running dsco commands, the equivalent docker command is
+also shown.</p>
+<p>The dsco workflow has been used successfully on mac, linux,
+and windows (under the new wsl2, expected to be generally
+available in Windows 10, version 2004 sometime in April 2020).</p>
+</div>
+<div class="section" id="local-project-directory-mounted-inside-container">
+<h2>local project directory mounted inside container<a class="headerlink" href="#local-project-directory-mounted-inside-container" title="Permalink to this headline">¶</a></h2>
+<p>When working in the dev container, your project folder is
+mounted into the container at <code class="code docutils literal notranslate"><span class="pre">/srv</span></code>. This means you
+can run git commands from your local machine without
+having to worry about getting your git credentials
+installed in your container and potentially checking
+those into git! oops (-_-). It also means that if you
+accidentally delete your container, you work is still
+on your hard drive.</p>
+<p>Unlike the dev container, the project directory is
+copied into the prod container.</p>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="quickstart.html" title="previous chapter (use the left arrow)">Quickstart</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="commands.html" title="next chapter (use the right arrow)">How do I use dsco? (commands)</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="commands.html" title="How do I use dsco? (commands)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="Quickstart"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">dsco version 0.1.9</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2020, Teradata. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

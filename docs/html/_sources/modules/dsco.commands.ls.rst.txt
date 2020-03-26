@@ -1,0 +1,38 @@
+dsco.commands.ls
+================
+
+.. automodule:: dsco.commands.ls
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      add_dispatch
+      add_subparser
+      main
+      run_cmd
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Colors
+      Container
+      Docker
+      Format
+      Host
+      Image
+      Inventory
+   
+   
+   .. autoclass:: dsco.commands.ls.Colors
+      :members:
+
+   .. autoclass:: dsco.commands.ls.Container
+      :members: __init__

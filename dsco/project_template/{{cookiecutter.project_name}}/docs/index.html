@@ -1,2 +1,94 @@
-<a href="documentation/html">Documentation</a><br>
-<a href="reports/html">Reports</a>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>dsco: {{ cookiecutter.project_name }}</title>
+	<style type="text/css">
+		:root {
+			--main-width: 815px;
+		}
+
+		.banner-size {
+			width: var(--main-width);
+			height: 150px;
+		}
+
+		.link-row {
+			padding: 5px;
+			height: 20px;
+		}
+
+		table {
+			width: var(--main-width);
+			border-style: outset;
+			border: 1px solid black;
+			border-spacing: 0px;
+		}
+
+		td {
+			padding: 15px;
+			height: 120px;
+		}
+
+		.td-dark-gray {
+			background-color: #6b767d;
+		}
+
+		.td-light-gray {
+			background-color: #e7e6e6;
+		}
+
+		.indent {
+			margin-left: 40px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>{{ cookiecutter.project_name }}</h2>
+	<div class="banner-size td-dark-gray">
+		<img class="banner-size" src="assets/banner.png">
+	</div>
+	<table>
+		<tbody>
+			<tr>
+				<td>
+					<div class="indent">
+						<a href="https://www.sphinx-doc.org/" target="_blank">
+							<img src="assets/sphinxheader.png" alt="" style="width: 374px; height: 65px;">
+						</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="link-row">
+				<td class="link-row td-light-gray">
+					<div class="indent">
+						<div class="indent">
+							<h2><a href="reports/html" target="_blank">Reports</a></h2>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="link-row">
+					<div class="indent">
+						<div class="indent">
+							<h2><a href="documentation/html" target="_blank">Documentation</a></h2>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="indent">
+		<a href="https://github.com/Teradata/dsco" target="_blank">
+			<img src="assets/space-shuttle-launch.png" style="width: 241px; height: 88px;">
+		</a><br>
+		Learn more at
+		<a href="https://github.com/Teradata/dsco" target="_blank">
+			https://github.com/Teradata/dsco</a>.
+	</p>
+</body>
+
+</html>

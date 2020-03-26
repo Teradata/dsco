@@ -52,6 +52,7 @@ Contents
 .. toctree::
    :maxdepth: 4
 
+   Github <http://github.com/Teradata/dsco>
    quickstart
    features
    commands

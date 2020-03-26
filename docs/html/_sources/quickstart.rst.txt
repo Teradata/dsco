@@ -150,7 +150,10 @@ file if you want to learn more about the formatting, but all you need
 to do is to add the name of your notebook under the highlighted line 
 and save the file.
 
-::
+Like so ...
+
+.. code-block::
+   :emphasize-lines: 2
 
     reports_template
     foo_notebook

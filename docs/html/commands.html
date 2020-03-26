@@ -65,6 +65,7 @@
     
     
       <ul class="current">
+<li class="toctree-l1"><a class="reference external" href="http://github.com/Teradata/dsco">Github</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">How do I use dsco? (commands)</a><ul>
@@ -349,8 +350,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>from IPython.core.display import display, HTML
-display(HTML(&quot;&lt;style&gt;.container { width:85% !important; }&lt;/style&gt;&quot;))
+<span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:85% !important; }&lt;/style&gt;&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -366,7 +367,7 @@ display(HTML(&quot;&lt;style&gt;.container { width:85% !important; }&lt;/style&g
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!mkdir -p /tmp/dsco_overview
+<span></span><span class="o">!</span>mkdir -p /tmp/dsco_overview
 </pre></div>
 </div>
 </div>
@@ -375,7 +376,7 @@ display(HTML(&quot;&lt;style&gt;.container { width:85% !important; }&lt;/style&g
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>cd /tmp/dsco_overview/
+<span></span><span class="n">cd</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">dsco_overview</span><span class="o">/</span>
 </pre></div>
 </div>
 </div>
@@ -396,7 +397,7 @@ display(HTML(&quot;&lt;style&gt;.container { width:85% !important; }&lt;/style&g
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco --help
+<span></span><span class="o">!</span>dsco --help
 </pre></div>
 </div>
 </div>
@@ -438,7 +439,7 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco init --help
+<span></span><span class="o">!</span>dsco init --help
 </pre></div>
 </div>
 </div>
@@ -468,7 +469,7 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!echo &quot;foo\n\n\n\n\n&quot; | dsco init
+<span></span><span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;foo\n\n\n\n\n&quot;</span> <span class="p">|</span> dsco init
 </pre></div>
 </div>
 </div>
@@ -489,7 +490,7 @@ project_name [MyProject]: author [Discovery]: version [0.1]: year [2020]: projec
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>cd foo
+<span></span><span class="n">cd</span> <span class="n">foo</span>
 </pre></div>
 </div>
 </div>
@@ -506,7 +507,7 @@ project_name [MyProject]: author [Discovery]: version [0.1]: year [2020]: projec
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!ls
+<span></span><span class="o">!</span>ls
 </pre></div>
 </div>
 </div>
@@ -536,7 +537,7 @@ README.md          definitions.py     flask_config.ini   <span class="ansi-cyan-
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>cat definitions.py
+<span></span><span class="n">cat</span> <span class="n">definitions</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </div>
@@ -575,7 +576,7 @@ _test_dir(SQL_DIR)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!tree docs
+<span></span><span class="o">!</span>tree docs
 </pre></div>
 </div>
 </div>
@@ -633,7 +634,7 @@ _test_dir(SQL_DIR)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>cat flask_config.ini
+<span></span><span class="n">cat</span> <span class="n">flask_config</span><span class="o">.</span><span class="n">ini</span>
 </pre></div>
 </div>
 </div>
@@ -667,7 +668,7 @@ manage-script-name = true
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>cat flask_run.py
+<span></span><span class="n">cat</span> <span class="n">flask_run</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </div>
@@ -694,7 +695,7 @@ if __name__ == &#34;__main__&#34;:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!tree foo
+<span></span><span class="o">!</span>tree foo
 </pre></div>
 </div>
 </div>
@@ -766,7 +767,7 @@ if __name__ == &#34;__main__&#34;:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco build --help
+<span></span><span class="o">!</span>dsco build --help
 </pre></div>
 </div>
 </div>
@@ -790,8 +791,8 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># this produces a lot of output from ansible and takes ~8 minutes
-!dsco build
+<span></span><span class="c1"># this produces a lot of output from ansible and takes ~8 minutes</span>
+<span class="o">!</span>dsco build
 </pre></div>
 </div>
 </div>
@@ -1052,8 +1053,8 @@ build execution time: 435.13234996795654 seconds
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1076,7 +1077,7 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco up
+<span></span><span class="o">!</span>dsco up
 </pre></div>
 </div>
 </div>
@@ -1099,8 +1100,8 @@ up execution time: 1.7827799320220947 seconds
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1121,9 +1122,9 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># we can use docker commands to interact with our containers as well
-# this one stops the container without deleting it
-!docker stop foo_dev_1
+<span></span><span class="c1"># we can use docker commands to interact with our containers as well</span>
+<span class="c1"># this one stops the container without deleting it</span>
+<span class="o">!</span>docker stop foo_dev_1
 </pre></div>
 </div>
 </div>
@@ -1140,8 +1141,8 @@ foo_dev_1
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1161,8 +1162,8 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># start it again ...
-!dsco up
+<span></span><span class="c1"># start it again ...</span>
+<span class="o">!</span>dsco up
 </pre></div>
 </div>
 </div>
@@ -1187,7 +1188,7 @@ up execution time: 1.3186349868774414 seconds
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco go --help
+<span></span><span class="o">!</span>dsco go --help
 </pre></div>
 </div>
 </div>
@@ -1213,7 +1214,7 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco go
+<span></span><span class="o">!</span>dsco go
 </pre></div>
 </div>
 </div>
@@ -1243,8 +1244,8 @@ go execution time: 1.2834627628326416 seconds
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># build documentation
-!dsco documentation --generate
+<span></span><span class="c1"># build documentation</span>
+<span class="o">!</span>dsco documentation --generate
 </pre></div>
 </div>
 </div>
@@ -1281,8 +1282,8 @@ The HTML pages are in ../html.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># build reports
-!dsco reports --generate
+<span></span><span class="c1"># build reports</span>
+<span class="o">!</span>dsco reports --generate
 </pre></div>
 </div>
 </div>
@@ -1327,11 +1328,11 @@ The HTML pages are in ../html.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>%%writefile docs/reports/source/example.rst
-Example
-=======
+<span></span><span class="o">%%writefile</span> docs/reports/source/example.rst
+<span class="n">Example</span>
+<span class="o">=======</span>
 
-This is an example .rst file
+<span class="n">This</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">example</span> <span class="o">.</span><span class="n">rst</span> <span class="n">file</span>
 </pre></div>
 </div>
 </div>
@@ -1388,7 +1389,7 @@ Overwriting docs/reports/source/index.rst
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco reports --generate
+<span></span><span class="o">!</span>dsco reports --generate
 </pre></div>
 </div>
 </div>
@@ -1428,7 +1429,7 @@ The HTML pages are in ../html.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>display(HTML(&quot;docs/reports/html/index.html&quot;))
+<span></span><span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;docs/reports/html/index.html&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1598,7 +1599,7 @@ The HTML pages are in ../html.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>display(HTML(&quot;docs/reports/html/example.html&quot;))
+<span></span><span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;docs/reports/html/example.html&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1753,7 +1754,7 @@ The HTML pages are in ../html.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco ls --help
+<span></span><span class="o">!</span>dsco ls --help
 </pre></div>
 </div>
 </div>
@@ -1801,8 +1802,8 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1825,7 +1826,7 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco shell --help
+<span></span><span class="o">!</span>dsco shell --help
 </pre></div>
 </div>
 </div>
@@ -1853,7 +1854,7 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco code --help
+<span></span><span class="o">!</span>dsco code --help
 </pre></div>
 </div>
 </div>
@@ -1881,7 +1882,7 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco restart --help
+<span></span><span class="o">!</span>dsco restart --help
 </pre></div>
 </div>
 </div>
@@ -1904,7 +1905,7 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco restart
+<span></span><span class="o">!</span>dsco restart
 </pre></div>
 </div>
 </div>
@@ -1930,7 +1931,7 @@ uwsgi                            RUNNING   pid 445, uptime 0:00:01
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco update_port --help
+<span></span><span class="o">!</span>dsco update_port --help
 </pre></div>
 </div>
 </div>
@@ -1975,8 +1976,8 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1996,7 +1997,7 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco update_port 8023
+<span></span><span class="o">!</span>dsco update_port <span class="m">8023</span>
 </pre></div>
 </div>
 </div>
@@ -2006,8 +2007,8 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -2027,7 +2028,7 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco up
+<span></span><span class="o">!</span>dsco up
 </pre></div>
 </div>
 </div>
@@ -2050,8 +2051,8 @@ up execution time: 1.7434639930725098 seconds
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -2072,7 +2073,7 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco update_port 8001
+<span></span><span class="o">!</span>dsco update_port <span class="m">8001</span>
 </pre></div>
 </div>
 </div>
@@ -2081,7 +2082,7 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco up
+<span></span><span class="o">!</span>dsco up
 </pre></div>
 </div>
 </div>
@@ -2103,8 +2104,8 @@ up execution time: 1.7722828388214111 seconds
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -2127,7 +2128,7 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco rm --help
+<span></span><span class="o">!</span>dsco rm --help
 </pre></div>
 </div>
 </div>
@@ -2155,7 +2156,7 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco rm
+<span></span><span class="o">!</span>dsco rm
 </pre></div>
 </div>
 </div>
@@ -2173,8 +2174,8 @@ foo_dev_1
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -2196,7 +2197,7 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco rmi --help
+<span></span><span class="o">!</span>dsco rmi --help
 </pre></div>
 </div>
 </div>
@@ -2226,9 +2227,9 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco up
-# grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="o">!</span>dsco up
+<span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -2254,7 +2255,7 @@ foo_dev:latest                                                               d5c
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco rmi
+<span></span><span class="o">!</span>dsco rmi
 </pre></div>
 </div>
 </div>
@@ -2273,7 +2274,7 @@ Error response from daemon: conflict: unable to remove repository reference &#34
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>!dsco rmi --all --force
+<span></span><span class="o">!</span>dsco rmi --all --force
 </pre></div>
 </div>
 </div>
@@ -2320,8 +2321,8 @@ Error: No such image: foo_debug
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># grep is just filtering the content. Generally just use &#39;dsco ls&#39;
-!dsco ls | egrep &#39;localhost|foo|NAME&#39;
+<span></span><span class="c1"># grep is just filtering the content. Generally just use &#39;dsco ls&#39;</span>
+<span class="o">!</span>dsco ls <span class="p">|</span> egrep <span class="s1">&#39;localhost|foo|NAME&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -2340,7 +2341,7 @@ Error: No such image: foo_debug
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>cd /tmp
+<span></span><span class="n">cd</span> <span class="o">/</span><span class="n">tmp</span>
 </pre></div>
 </div>
 </div>
@@ -2357,7 +2358,7 @@ Error: No such image: foo_debug
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>rm -rf /tmp/dsco_overview
+<span></span><span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">dsco_overview</span>
 </pre></div>
 </div>
 </div>
@@ -2366,7 +2367,7 @@ Error: No such image: foo_debug
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>ls
+<span></span><span class="n">ls</span>
 </pre></div>
 </div>
 </div>

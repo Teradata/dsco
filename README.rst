@@ -1,9 +1,37 @@
+.. image:: docs/assets/banner.png
+
 ==========================
-DSCO (Draft documentation)
+DSCO
 ==========================
-(D)ata (S)cience (Co)ntainer
 
 A utility to create a data science development container.
+
+Documentation
+-------------
+
+`https://teradata.github.io/dsco/html/`_
+
+Features
+--------
+
+DSCO creates a development container that:
+
+  - runs a jupyter notebook server.
+  - generates static html representations of your notebooks 
+    for easy sharing with anyone by either the included server
+    or github pages.
+  - manages python dependencies with `poetry <https://python-poetry.org/>`_
+  - integrates with vscode for an IDE with a local-like feel.
+
+If that's not enough, you also get:
+
+  - `Flask <https://palletsprojects.com/p/flask/>`_ and 
+    `plotly | Dash <https://dash.plotly.com/>`_ for creating dashboards 
+    and REST APIs.
+  - Sphinx for automatic code documentation.
+  - Useful Jupyter extensions installed and configured.
+  - Your local project directory mounted and synced.
+  - Ansible playbooks that build everything from scratch.
 
 Install
 -------
@@ -12,61 +40,36 @@ Install
 
     pip install git+ssh://git@github.com/Teradata/dsco.git
 
-Features
---------
+Ultra Quickstart
+----------------
 
-- Uses `poetry <https://poetry.eustace.io/>`_ to keep track of dependencies.
-- Uses nginx and uwsgi to serve:
+See also: `Quickstart <https://teradata.github.io/dsco/html/quickstart.html>`_
 
-  - Jupyter (uwsgi)
-  - Static reports (nginx)
-  - Flask (uwsgi)
+Create project :code:`foo` in the current directory:
 
-    - Dask
+::
 
-- Starts with a project skeleton that includes:
+    >>> dsco init
+    Using template: ...
+    Creating project in ...
+    project_name [MyProject]: foo
+    author [Discovery]: 
+    version [0.1]: 
+    year [2020]: 
+    project_port [8001]:
 
-  - resources to build production and dev containers with docker / ansible.
-  - flask skeleton already set up for use as api
-  - dask skeleton integrated into flask for quickstart web dashboards
+Build the development image and create a development container:
 
-Useful Commands
----------------
+::
 
-dsco init
-  Creates a new project directory
-
-  example::
-
-      dsco init
-
-  Running this will prompt for project name and other information.
-
-dsco go
-  Launch container and open info page in a browser.
-  First build should take approximately 7 minutes.
-  After the image has been built, this command should finish almost instantly.
-
-dsco up
-  Launch dev container.
-
-dsco build
-  Build images only
-
-dsco gen_reports
-  Build the static html versions of reports created in the reports directory.
-
-dsco restart_flask
-  Restart flask in the container. Necessary to pick up changes made.
-
-dsco rm
-  Delete containers.
-
-dsco rmi
-  Delete containers and images.
-
-dsco shell
-  Open up a shell in a container.
-
-dsco update_port
-  Update to ports used for the containers.
+    >>> cd foo
+    >>> dsco go
+    docker-compose up -d dev
+    Building dev
+    ...
+    <lots of ansible output>
+    ...
+    Creating foo_dev_1 ... done
+    ========================================================================================
+    execution time: 490.9753198623657 seconds
+    ========================================================================================

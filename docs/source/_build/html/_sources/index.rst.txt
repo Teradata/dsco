@@ -57,6 +57,7 @@ Contents
    features
    commands
    developer
+   roadmap
 
 
 Indices and tables

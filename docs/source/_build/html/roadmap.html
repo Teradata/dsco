@@ -13,10 +13,9 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Search &#8212; dsco version 0.1.9</title>
+    <title>Roadmap &#8212; dsco version 0.1.9</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -24,14 +23,11 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script type="text/javascript" src="_static/searchtools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script type="text/javascript" src="searchindex.js" defer></script>
-  
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="dsco.commands package" href="dsco.commands.html" />
   
    
-
 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -43,6 +39,9 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="dsco.commands.html" title="dsco.commands package"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">dsco version 0.1.9</a> &#187;</li> 
       </ul>
     </div>
@@ -61,16 +60,29 @@
   <div class="sidebar-toc">
     
     
-      <ul>
+      <ul class="current">
 <li class="toctree-l1"><a class="reference external" href="http://github.com/Teradata/dsco">Github</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">How do I use dsco? (commands)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developer.html">Developer documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Roadmap</a></li>
 </ul>
 
     
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
   </div>
 </div>
       
@@ -82,46 +94,37 @@
             <ol class="breadcrumb">
               <li><a href="index.html">Docs</a></li>
               
-              <li>Search</li>
+              <li>Roadmap</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <h1 id="search-documentation">Search</h1>
-  <div id="fallback" class="admonition warning">
-  <script type="text/javascript">$('#fallback').hide();</script>
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  <p>
-    From here you can search these documents. Enter your search
-    words into the box below and click "search". Note that the search
-    function will automatically search for all of the words. Pages
-    containing fewer words won't appear in the result list.
-  </p>
+  <div class="section" id="roadmap">
+<h1>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Switch <code class="code docutils literal notranslate"><span class="pre">$HOME/.dsco/settings.json</span></code> to a <code class="code docutils literal notranslate"><span class="pre">toml</span></code> file.
+This will allow me to add comments, which should make it much
+easier to use.</p></li>
+<li><p>Figure out where in the code to automatically create the <code class="code docutils literal notranslate"><span class="pre">settings</span></code>
+file.</p></li>
+<li><p>Figure out how to allow for custom project templates.</p></li>
+<li><p>Add tools to (re)run and manage sphinx-apidoc</p></li>
+</ul>
+</div>
 
-  <div class="search-page-form">
-    <form class="form-inline" action="#" method="GET" role="form">
-      <div class="input-group">
-        <input name="q" type="text" class="form-control" />
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">search</button>
-        </span>
-      </div>
-      <span id="search-progress" style="padding-left: 10px"></span>
-    </form>
-  </div>
-
-  
-  <div id="search-results">
-  
-  </div>
 
           </div>
             
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="dsco.commands.html" title="previous chapter (use the left arrow)">dsco.commands package</a>
+      </div>
+    
+    </div>
+    <div class="clearer"></div>
+  
         </div>
         <div class="clearfix"></div>
     </div>
@@ -134,6 +137,9 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="dsco.commands.html" title="dsco.commands package"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">dsco version 0.1.9</a> &#187;</li> 
       </ul>
     </div>

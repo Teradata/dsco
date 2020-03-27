@@ -41,6 +41,12 @@ Install
 
     pip install git+ssh://git@github.com/Teradata/dsco.git
 
+Requirements:
+
+    - pip > version 10
+    - docker: tested with version 2.2.0.4
+    - python >= 3.7
+
 Ultra Quickstart
 ----------------
 

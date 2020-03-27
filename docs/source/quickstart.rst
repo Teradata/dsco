@@ -24,6 +24,10 @@ Create project :code:`foo` in the current directory:
     version [0.1]: 
     year [2020]: 
     project_port [8001]:
+    select python_version:
+    1 - 3.7
+    2 - 3.6
+    Choose from 1, 2 [1]:
 
 Build the development image and create a development container:
 

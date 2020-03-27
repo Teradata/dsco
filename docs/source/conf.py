@@ -24,9 +24,9 @@ copyright = '2020, Teradata'
 author = 'Teradata'
 
 # The full version, including alpha/beta/rc tags
-# config = toml.load('../pyproject.toml')
-# release = config["tool"]["poetry"]["version"]
-release = "0.1.9"
+config = toml.load('../../pyproject.toml')
+release = config["tool"]["poetry"]["version"]
+# release = "0.1.9"
 
 
 # -- General configuration ---------------------------------------------------

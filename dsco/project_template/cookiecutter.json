@@ -4,6 +4,7 @@
   "version": "0.1",
   "year": "2020",
   "project_port": "8001",
+  "python_version": ["3.7", "3.6"],
   "_copy_without_render": [
     "*.sql",
     "*ansible"

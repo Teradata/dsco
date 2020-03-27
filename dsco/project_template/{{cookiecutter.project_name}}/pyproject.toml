@@ -5,7 +5,7 @@ description = ""
 authors = ["{{ cookiecutter.author }}"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^{{ cookiecutter.python_version }}.0"
 pandas = "^1.0.0"
 teradataml = "^16.20"
 sspipe = "^0.1.6"

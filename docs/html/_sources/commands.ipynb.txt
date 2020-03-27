@@ -28,8 +28,8 @@
    "execution_count": 1,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:30.391906Z",
-     "start_time": "2020-03-26T03:59:30.381749Z"
+     "end_time": "2020-03-27T15:43:17.389116Z",
+     "start_time": "2020-03-27T15:43:17.379302Z"
     }
    },
    "outputs": [
@@ -63,8 +63,8 @@
    "execution_count": 2,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:30.620020Z",
-     "start_time": "2020-03-26T03:59:30.484875Z"
+     "end_time": "2020-03-27T15:43:18.999719Z",
+     "start_time": "2020-03-27T15:43:18.870886Z"
     }
    },
    "outputs": [],
@@ -77,8 +77,8 @@
    "execution_count": 3,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:30.628515Z",
-     "start_time": "2020-03-26T03:59:30.622613Z"
+     "end_time": "2020-03-27T15:43:19.722905Z",
+     "start_time": "2020-03-27T15:43:19.716066Z"
     }
    },
    "outputs": [
@@ -114,8 +114,8 @@
    "execution_count": 4,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:31.111118Z",
-     "start_time": "2020-03-26T03:59:30.630597Z"
+     "end_time": "2020-03-27T15:43:22.129131Z",
+     "start_time": "2020-03-27T15:43:21.659183Z"
     }
    },
    "outputs": [
@@ -165,8 +165,8 @@
    "execution_count": 5,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:31.588689Z",
-     "start_time": "2020-03-26T03:59:31.113465Z"
+     "end_time": "2020-03-27T15:43:29.692308Z",
+     "start_time": "2020-03-27T15:43:29.210412Z"
     }
    },
    "outputs": [
@@ -206,6 +206,10 @@
     "    - version [0.1]: \n",
     "    - year [2020]: \n",
     "    - project_port[8001]: \n",
+    "    - select python_version:\n",
+    "      1 - 3.7\n",
+    "      2 - 3.6\n",
+    "      Choose from 1, 2 [1]:\n",
     "    \n",
     "The only default we're changing is the project name. In actual usage \n",
     "just run `dsco init` and answer the prompts."
@@ -216,8 +220,8 @@
    "execution_count": 6,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:34.326223Z",
-     "start_time": "2020-03-26T03:59:31.590793Z"
+     "end_time": "2020-03-27T15:43:35.239666Z",
+     "start_time": "2020-03-27T15:43:33.324347Z"
     }
    },
    "outputs": [
@@ -227,12 +231,15 @@
      "text": [
       "Using template: /Users/ap186098/.pyenv/versions/3.7.5/lib/python3.7/site-packages/dsco/project_template\n",
       "Creating project in /private/tmp/dsco_overview\n",
-      "project_name [MyProject]: author [Discovery]: version [0.1]: year [2020]: project_port [8001]: "
+      "project_name [MyProject]: author [Discovery]: version [0.1]: year [2020]: project_port [8001]: Select python_version:\n",
+      "1 - 3.7\n",
+      "2 - 3.6\n",
+      "Choose from 1, 2 [1]: "
      ]
     }
    ],
    "source": [
-    "!echo \"foo\\n\\n\\n\\n\\n\" | dsco init"
+    "!echo \"foo\\n\\n\\n\\n\\n\\n\" | dsco init"
    ]
   },
   {
@@ -247,8 +254,8 @@
    "execution_count": 7,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:34.333839Z",
-     "start_time": "2020-03-26T03:59:34.329191Z"
+     "end_time": "2020-03-27T15:43:54.173878Z",
+     "start_time": "2020-03-27T15:43:54.168560Z"
     }
    },
    "outputs": [
@@ -269,8 +276,8 @@
    "execution_count": 8,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:34.471071Z",
-     "start_time": "2020-03-26T03:59:34.335828Z"
+     "end_time": "2020-03-27T15:43:54.309218Z",
+     "start_time": "2020-03-27T15:43:54.175721Z"
     }
    },
    "outputs": [
@@ -338,8 +345,8 @@
    "execution_count": 9,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:34.612658Z",
-     "start_time": "2020-03-26T03:59:34.473120Z"
+     "end_time": "2020-03-27T15:43:54.615688Z",
+     "start_time": "2020-03-27T15:43:54.490028Z"
     }
    },
    "outputs": [
@@ -406,8 +413,8 @@
    "execution_count": 10,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:34.760394Z",
-     "start_time": "2020-03-26T03:59:34.614842Z"
+     "end_time": "2020-03-27T15:43:54.834008Z",
+     "start_time": "2020-03-27T15:43:54.671195Z"
     }
    },
    "outputs": [
@@ -486,8 +493,8 @@
    "execution_count": 11,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:34.894227Z",
-     "start_time": "2020-03-26T03:59:34.762517Z"
+     "end_time": "2020-03-27T15:43:54.966444Z",
+     "start_time": "2020-03-27T15:43:54.836641Z"
     }
    },
    "outputs": [
@@ -536,8 +543,8 @@
    "execution_count": 12,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:35.029184Z",
-     "start_time": "2020-03-26T03:59:34.896451Z"
+     "end_time": "2020-03-27T15:43:55.094479Z",
+     "start_time": "2020-03-27T15:43:54.968935Z"
     }
    },
    "outputs": [
@@ -579,8 +586,8 @@
    "execution_count": 13,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:35.163201Z",
-     "start_time": "2020-03-26T03:59:35.031362Z"
+     "end_time": "2020-03-27T15:43:55.225037Z",
+     "start_time": "2020-03-27T15:43:55.096952Z"
     }
    },
    "outputs": [
@@ -741,8 +748,8 @@
    "execution_count": 14,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T03:59:35.628183Z",
-     "start_time": "2020-03-26T03:59:35.165347Z"
+     "end_time": "2020-03-27T15:43:55.903016Z",
+     "start_time": "2020-03-27T15:43:55.428394Z"
     }
    },
    "outputs": [
@@ -770,8 +777,8 @@
    "execution_count": 15,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:06:51.253718Z",
-     "start_time": "2020-03-26T03:59:35.633655Z"
+     "end_time": "2020-03-27T15:52:02.040785Z",
+     "start_time": "2020-03-27T15:43:55.905279Z"
     },
     "scrolled": false
    },
@@ -782,59 +789,57 @@
      "text": [
       "docker-compose build dev\n",
       "Building dev\n",
-      "Step 1/8 : FROM python:3.7.5-slim-buster as base\n",
-      " ---> 07ee12a5eb2a\n",
+      "Step 1/8 : FROM python:3.7-slim as base\n",
+      " ---> 69afd9568c9d\n",
       "Step 2/8 : COPY . /srv\n",
-      " ---> fe7bea56aca8\n",
+      " ---> ca403a3be728\n",
       "Step 3/8 : SHELL [\"/bin/bash\", \"-c\"]\n",
-      " ---> Running in 979b9edc0383\n",
-      "Removing intermediate container 979b9edc0383\n",
-      " ---> 54b5f1dddb06\n",
+      " ---> Running in a233c691f4c8\n",
+      "Removing intermediate container a233c691f4c8\n",
+      " ---> 218704534db2\n",
       "Step 4/8 : RUN pip install ansible toml\n",
-      " ---> Running in dcbc0ef6d114\n",
+      " ---> Running in 46ddbe2dbe06\n",
       "Collecting ansible\n",
-      "  Downloading https://files.pythonhosted.org/packages/ae/b7/c717363f767f7af33d90af9458d5f1e0960db9c2393a6c221c2ce97ad1aa/ansible-2.9.6.tar.gz (14.2MB)\n",
+      "  Downloading ansible-2.9.6.tar.gz (14.2 MB)\n",
       "Collecting toml\n",
-      "  Downloading https://files.pythonhosted.org/packages/a2/12/ced7105d2de62fa7c8fb5fce92cc4ce66b57c95fb875e9318dba7f8c5db0/toml-0.10.0-py2.py3-none-any.whl\n",
+      "  Downloading toml-0.10.0-py2.py3-none-any.whl (25 kB)\n",
       "Collecting jinja2\n",
-      "  Downloading https://files.pythonhosted.org/packages/27/24/4f35961e5c669e96f6559760042a55b9bcfcdb82b9bdb3c8753dbe042e35/Jinja2-2.11.1-py2.py3-none-any.whl (126kB)\n",
+      "  Downloading Jinja2-2.11.1-py2.py3-none-any.whl (126 kB)\n",
       "Collecting PyYAML\n",
-      "  Downloading https://files.pythonhosted.org/packages/64/c2/b80047c7ac2478f9501676c988a5411ed5572f35d1beff9cae07d321512c/PyYAML-5.3.1.tar.gz (269kB)\n",
+      "  Downloading PyYAML-5.3.1.tar.gz (269 kB)\n",
       "Collecting cryptography\n",
-      "  Downloading https://files.pythonhosted.org/packages/ca/9a/7cece52c46546e214e10811b36b2da52ce1ea7fa203203a629b8dfadad53/cryptography-2.8-cp34-abi3-manylinux2010_x86_64.whl (2.3MB)\n",
+      "  Downloading cryptography-2.8-cp34-abi3-manylinux2010_x86_64.whl (2.3 MB)\n",
       "Collecting MarkupSafe>=0.23\n",
-      "  Downloading https://files.pythonhosted.org/packages/98/7b/ff284bd8c80654e471b769062a9b43cc5d03e7a615048d96f4619df8d420/MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl\n",
+      "  Downloading MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl (27 kB)\n",
       "Collecting six>=1.4.1\n",
-      "  Downloading https://files.pythonhosted.org/packages/65/eb/1f97cb97bfc2390a276969c6fae16075da282f5058082d4cb10c6c5c1dba/six-1.14.0-py2.py3-none-any.whl\n",
+      "  Downloading six-1.14.0-py2.py3-none-any.whl (10 kB)\n",
       "Collecting cffi!=1.11.3,>=1.8\n",
-      "  Downloading https://files.pythonhosted.org/packages/ff/1d/0b743dadcdf4980b717163fd2d24cd18c1c0c7a78a076268afd7e0e2c25e/cffi-1.14.0-cp37-cp37m-manylinux1_x86_64.whl (400kB)\n",
+      "  Downloading cffi-1.14.0-cp37-cp37m-manylinux1_x86_64.whl (400 kB)\n",
       "Collecting pycparser\n",
-      "  Downloading https://files.pythonhosted.org/packages/ae/e7/d9c3a176ca4b02024debf82342dab36efadfc5776f9c8db077e8f6e71821/pycparser-2.20-py2.py3-none-any.whl (112kB)\n",
+      "  Downloading pycparser-2.20-py2.py3-none-any.whl (112 kB)\n",
       "Building wheels for collected packages: ansible, PyYAML\n",
       "  Building wheel for ansible (setup.py): started\n",
       "  Building wheel for ansible (setup.py): finished with status 'done'\n",
-      "  Created wheel for ansible: filename=ansible-2.9.6-cp37-none-any.whl size=16164186 sha256=6e0bd6c2ef9e37e73be07f049833a55e5f0c615ed06f0b582f6d1334bb189db6\n",
-      "  Stored in directory: /root/.cache/pip/wheels/e0/d8/74/a4e0b92e45a38ab0c22eaadc5981f3ddab41a6e188c0c8867d\n",
+      "  Created wheel for ansible: filename=ansible-2.9.6-py3-none-any.whl size=16164182 sha256=b918f090a8f388bb08738ab81fdc49613a99e8023ad25111c2bf505809a73299\n",
+      "  Stored in directory: /root/.cache/pip/wheels/59/31/d9/a309a1fce4216dd912b705ce76035bff3ed5bbd990853bad97\n",
       "  Building wheel for PyYAML (setup.py): started\n",
       "  Building wheel for PyYAML (setup.py): finished with status 'done'\n",
-      "  Created wheel for PyYAML: filename=PyYAML-5.3.1-cp37-cp37m-linux_x86_64.whl size=44620 sha256=b4f815b4dd4db5f08317f85d97d4eba20aed66ec1dc880d3a2159c843665280d\n",
-      "  Stored in directory: /root/.cache/pip/wheels/a7/c1/ea/cf5bd31012e735dc1dfea3131a2d5eae7978b251083d6247bd\n",
+      "  Created wheel for PyYAML: filename=PyYAML-5.3.1-cp37-cp37m-linux_x86_64.whl size=44619 sha256=857ca518426df24e3866d57274075d09b8ff7aa886860205f32154d98e799d8c\n",
+      "  Stored in directory: /root/.cache/pip/wheels/5e/03/1e/e1e954795d6f35dfc7b637fe2277bff021303bd9570ecea653\n",
       "Successfully built ansible PyYAML\n",
       "Installing collected packages: MarkupSafe, jinja2, PyYAML, six, pycparser, cffi, cryptography, ansible, toml\n",
       "Successfully installed MarkupSafe-1.1.1 PyYAML-5.3.1 ansible-2.9.6 cffi-1.14.0 cryptography-2.8 jinja2-2.11.1 pycparser-2.20 six-1.14.0 toml-0.10.0\n",
-      "\u001b[91mWARNING: You are using pip version 19.3.1; however, version 20.0.2 is available.\n",
-      "You should consider upgrading via the 'pip install --upgrade pip' command.\n",
-      "\u001b[0mRemoving intermediate container dcbc0ef6d114\n",
-      " ---> 1a09eebc3fd7\n",
+      "Removing intermediate container 46ddbe2dbe06\n",
+      " ---> 080ee5a933be\n",
       "\u001b[2K\n",
       "Step 5/8 : FROM base as dev\n",
-      " ---> 1a09eebc3fd7\n",
+      " ---> 080ee5a933be\n",
       "Step 6/8 : SHELL [\"/bin/bash\", \"-c\"]\n",
-      " ---> Running in 74cf887c347d\n",
-      "Removing intermediate container 74cf887c347d\n",
-      " ---> 45ae1c880b28\n",
+      " ---> Running in f385ccba1915\n",
+      "Removing intermediate container f385ccba1915\n",
+      " ---> 0d0997f87dd0\n",
       "Step 7/8 : RUN cd /srv/builder/ansible && ansible-playbook build_dev_container.yml\n",
-      " ---> Running in 9d2529d7a485\n",
+      " ---> Running in 9cc14a874aa5\n",
       "\u001b[91m[WARNING]: No inventory was parsed, only implicit localhost is available\n",
       "\u001b[0m\u001b[91m[WARNING]: provided hosts list is empty, only localhost is available. Note that\n",
       "the implicit localhost does not match 'all'\n",
@@ -879,7 +884,7 @@
       "changed: [localhost] => (item=pandoc)\n",
       "\n",
       "TASK [poetry : check if poetry is installed] ***********************************\n",
-      "fatal: [localhost]: FAILED! => {\"changed\": true, \"cmd\": \"$HOME/.poetry/bin/poetry --version\", \"delta\": \"0:00:00.004405\", \"end\": \"2020-03-26 04:01:33.488639\", \"msg\": \"non-zero return code\", \"rc\": 127, \"start\": \"2020-03-26 04:01:33.484234\", \"stderr\": \"/bin/sh: 1: /root/.poetry/bin/poetry: not found\", \"stderr_lines\": [\"/bin/sh: 1: /root/.poetry/bin/poetry: not found\"], \"stdout\": \"\", \"stdout_lines\": []}\n",
+      "fatal: [localhost]: FAILED! => {\"changed\": true, \"cmd\": \"$HOME/.poetry/bin/poetry --version\", \"delta\": \"0:00:00.003655\", \"end\": \"2020-03-27 15:45:59.181337\", \"msg\": \"non-zero return code\", \"rc\": 127, \"start\": \"2020-03-27 15:45:59.177682\", \"stderr\": \"/bin/sh: 1: /root/.poetry/bin/poetry: not found\", \"stderr_lines\": [\"/bin/sh: 1: /root/.poetry/bin/poetry: not found\"], \"stdout\": \"\", \"stdout_lines\": []}\n",
       "...ignoring\n",
       "\n",
       "TASK [poetry : download] *******************************************************\n",
@@ -938,8 +943,8 @@
       "changed: [localhost] => (item=qgrid)\n",
       "\n",
       "TASK [jupyter-config : install if missing] *************************************\n",
-      "skipping: [localhost] => (item=['jupyter-contrib-nbextensions', {'cmd': '$HOME/.poetry/bin/poetry show jupyter-contrib-nbextensions', 'stdout': 'Skipping virtualenv creation, as specified in config file.\\nname         : jupyter-contrib-nbextensions\\nversion      : 0.5.1\\ndescription  : A collection of Jupyter nbextensions.\\n\\ndependencies\\n - ipython-genutils *\\n - jupyter-contrib-core >=0.3.3\\n - jupyter-core *\\n - jupyter-highlight-selected-word >=0.1.1\\n - jupyter-latex-envs >=1.3.8\\n - jupyter-nbextensions-configurator >=0.4.0\\n - lxml *\\n - nbconvert >=4.2\\n - notebook >=4.0\\n - pyyaml *\\n - tornado *\\n - traitlets >=4.1', 'stderr': '', 'rc': 0, 'start': '2020-03-26 04:05:30.977206', 'end': '2020-03-26 04:05:32.446634', 'delta': '0:00:01.469428', 'changed': True, 'invocation': {'module_args': {'_raw_params': '$HOME/.poetry/bin/poetry show jupyter-contrib-nbextensions', '_uses_shell': True, 'warn': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['Skipping virtualenv creation, as specified in config file.', 'name         : jupyter-contrib-nbextensions', 'version      : 0.5.1', 'description  : A collection of Jupyter nbextensions.', '', 'dependencies', ' - ipython-genutils *', ' - jupyter-contrib-core >=0.3.3', ' - jupyter-core *', ' - jupyter-highlight-selected-word >=0.1.1', ' - jupyter-latex-envs >=1.3.8', ' - jupyter-nbextensions-configurator >=0.4.0', ' - lxml *', ' - nbconvert >=4.2', ' - notebook >=4.0', ' - pyyaml *', ' - tornado *', ' - traitlets >=4.1'], 'stderr_lines': [], 'failed': False, 'item': 'jupyter-contrib-nbextensions', 'ansible_loop_var': 'item'}]) \n",
-      "skipping: [localhost] => (item=['qgrid', {'cmd': '$HOME/.poetry/bin/poetry show qgrid', 'stdout': 'Skipping virtualenv creation, as specified in config file.\\nname         : qgrid\\nversion      : 1.3.0\\ndescription  : An Interactive Grid for Sorting and Filtering DataFrames in\\n            Jupyter Notebook\\n\\ndependencies\\n - ipywidgets >=7.0.0\\n - notebook >=4.0.0\\n - pandas >=0.18.0', 'stderr': '', 'rc': 0, 'start': '2020-03-26 04:05:32.643039', 'end': '2020-03-26 04:05:34.084638', 'delta': '0:00:01.441599', 'changed': True, 'invocation': {'module_args': {'_raw_params': '$HOME/.poetry/bin/poetry show qgrid', '_uses_shell': True, 'warn': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['Skipping virtualenv creation, as specified in config file.', 'name         : qgrid', 'version      : 1.3.0', 'description  : An Interactive Grid for Sorting and Filtering DataFrames in', '            Jupyter Notebook', '', 'dependencies', ' - ipywidgets >=7.0.0', ' - notebook >=4.0.0', ' - pandas >=0.18.0'], 'stderr_lines': [], 'failed': False, 'item': 'qgrid', 'ansible_loop_var': 'item'}]) \n",
+      "skipping: [localhost] => (item=['jupyter-contrib-nbextensions', {'cmd': '$HOME/.poetry/bin/poetry show jupyter-contrib-nbextensions', 'stdout': 'Skipping virtualenv creation, as specified in config file.\\nname         : jupyter-contrib-nbextensions\\nversion      : 0.5.1\\ndescription  : A collection of Jupyter nbextensions.\\n\\ndependencies\\n - ipython-genutils *\\n - jupyter-contrib-core >=0.3.3\\n - jupyter-core *\\n - jupyter-highlight-selected-word >=0.1.1\\n - jupyter-latex-envs >=1.3.8\\n - jupyter-nbextensions-configurator >=0.4.0\\n - lxml *\\n - nbconvert >=4.2\\n - notebook >=4.0\\n - pyyaml *\\n - tornado *\\n - traitlets >=4.1', 'stderr': '', 'rc': 0, 'start': '2020-03-27 15:50:46.201458', 'end': '2020-03-27 15:50:47.602127', 'delta': '0:00:01.400669', 'changed': True, 'invocation': {'module_args': {'_raw_params': '$HOME/.poetry/bin/poetry show jupyter-contrib-nbextensions', '_uses_shell': True, 'warn': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['Skipping virtualenv creation, as specified in config file.', 'name         : jupyter-contrib-nbextensions', 'version      : 0.5.1', 'description  : A collection of Jupyter nbextensions.', '', 'dependencies', ' - ipython-genutils *', ' - jupyter-contrib-core >=0.3.3', ' - jupyter-core *', ' - jupyter-highlight-selected-word >=0.1.1', ' - jupyter-latex-envs >=1.3.8', ' - jupyter-nbextensions-configurator >=0.4.0', ' - lxml *', ' - nbconvert >=4.2', ' - notebook >=4.0', ' - pyyaml *', ' - tornado *', ' - traitlets >=4.1'], 'stderr_lines': [], 'failed': False, 'item': 'jupyter-contrib-nbextensions', 'ansible_loop_var': 'item'}]) \n",
+      "skipping: [localhost] => (item=['qgrid', {'cmd': '$HOME/.poetry/bin/poetry show qgrid', 'stdout': 'Skipping virtualenv creation, as specified in config file.\\nname         : qgrid\\nversion      : 1.3.0\\ndescription  : An Interactive Grid for Sorting and Filtering DataFrames in\\n            Jupyter Notebook\\n\\ndependencies\\n - ipywidgets >=7.0.0\\n - notebook >=4.0.0\\n - pandas >=0.18.0', 'stderr': '', 'rc': 0, 'start': '2020-03-27 15:50:47.790825', 'end': '2020-03-27 15:50:49.200780', 'delta': '0:00:01.409955', 'changed': True, 'invocation': {'module_args': {'_raw_params': '$HOME/.poetry/bin/poetry show qgrid', '_uses_shell': True, 'warn': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['Skipping virtualenv creation, as specified in config file.', 'name         : qgrid', 'version      : 1.3.0', 'description  : An Interactive Grid for Sorting and Filtering DataFrames in', '            Jupyter Notebook', '', 'dependencies', ' - ipywidgets >=7.0.0', ' - notebook >=4.0.0', ' - pandas >=0.18.0'], 'stderr_lines': [], 'failed': False, 'item': 'qgrid', 'ansible_loop_var': 'item'}]) \n",
       "\n",
       "TASK [jupyter-config : create jupyter log dir] *********************************\n"
      ]
@@ -989,8 +994,8 @@
       "changed: [localhost] => (item=guzzle-sphinx-theme)\n",
       "\n",
       "TASK [sphinx-config : install if missing] **************************************\n",
-      "skipping: [localhost] => (item=['nbsphinx', {'cmd': '. $HOME/.poetry/env\\npoetry show nbsphinx\\n', 'stdout': 'Skipping virtualenv creation, as specified in config file.\\nname         : nbsphinx\\nversion      : 0.4.3\\ndescription  : Jupyter Notebook Tools for Sphinx\\n\\ndependencies\\n - docutils *\\n - jinja2 *\\n - nbconvert !=5.4\\n - nbformat *\\n - sphinx >=1.6.3\\n - traitlets *', 'stderr': '', 'rc': 0, 'start': '2020-03-26 04:05:49.708241', 'end': '2020-03-26 04:05:51.194933', 'delta': '0:00:01.486692', 'changed': True, 'invocation': {'module_args': {'_raw_params': '. $HOME/.poetry/env\\npoetry show nbsphinx\\n', '_uses_shell': True, 'warn': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['Skipping virtualenv creation, as specified in config file.', 'name         : nbsphinx', 'version      : 0.4.3', 'description  : Jupyter Notebook Tools for Sphinx', '', 'dependencies', ' - docutils *', ' - jinja2 *', ' - nbconvert !=5.4', ' - nbformat *', ' - sphinx >=1.6.3', ' - traitlets *'], 'stderr_lines': [], 'failed': False, 'item': 'nbsphinx', 'ansible_loop_var': 'item'}]) \n",
-      "skipping: [localhost] => (item=['guzzle-sphinx-theme', {'cmd': '. $HOME/.poetry/env\\npoetry show guzzle-sphinx-theme\\n', 'stdout': 'Skipping virtualenv creation, as specified in config file.\\nname         : guzzle-sphinx-theme\\nversion      : 0.7.11\\ndescription  : Sphinx theme used by Guzzle.\\n\\ndependencies\\n - Sphinx >=1.2b1', 'stderr': '', 'rc': 0, 'start': '2020-03-26 04:05:51.398301', 'end': '2020-03-26 04:05:52.837945', 'delta': '0:00:01.439644', 'changed': True, 'invocation': {'module_args': {'_raw_params': '. $HOME/.poetry/env\\npoetry show guzzle-sphinx-theme\\n', '_uses_shell': True, 'warn': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['Skipping virtualenv creation, as specified in config file.', 'name         : guzzle-sphinx-theme', 'version      : 0.7.11', 'description  : Sphinx theme used by Guzzle.', '', 'dependencies', ' - Sphinx >=1.2b1'], 'stderr_lines': [], 'failed': False, 'item': 'guzzle-sphinx-theme', 'ansible_loop_var': 'item'}]) \n",
+      "skipping: [localhost] => (item=['nbsphinx', {'cmd': '. $HOME/.poetry/env\\npoetry show nbsphinx\\n', 'stdout': 'Skipping virtualenv creation, as specified in config file.\\nname         : nbsphinx\\nversion      : 0.4.3\\ndescription  : Jupyter Notebook Tools for Sphinx\\n\\ndependencies\\n - docutils *\\n - jinja2 *\\n - nbconvert !=5.4\\n - nbformat *\\n - sphinx >=1.6.3\\n - traitlets *', 'stderr': '', 'rc': 0, 'start': '2020-03-27 15:51:03.336287', 'end': '2020-03-27 15:51:04.717443', 'delta': '0:00:01.381156', 'changed': True, 'invocation': {'module_args': {'_raw_params': '. $HOME/.poetry/env\\npoetry show nbsphinx\\n', '_uses_shell': True, 'warn': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['Skipping virtualenv creation, as specified in config file.', 'name         : nbsphinx', 'version      : 0.4.3', 'description  : Jupyter Notebook Tools for Sphinx', '', 'dependencies', ' - docutils *', ' - jinja2 *', ' - nbconvert !=5.4', ' - nbformat *', ' - sphinx >=1.6.3', ' - traitlets *'], 'stderr_lines': [], 'failed': False, 'item': 'nbsphinx', 'ansible_loop_var': 'item'}]) \n",
+      "skipping: [localhost] => (item=['guzzle-sphinx-theme', {'cmd': '. $HOME/.poetry/env\\npoetry show guzzle-sphinx-theme\\n', 'stdout': 'Skipping virtualenv creation, as specified in config file.\\nname         : guzzle-sphinx-theme\\nversion      : 0.7.11\\ndescription  : Sphinx theme used by Guzzle.\\n\\ndependencies\\n - Sphinx >=1.2b1', 'stderr': '', 'rc': 0, 'start': '2020-03-27 15:51:04.903681', 'end': '2020-03-27 15:51:06.271434', 'delta': '0:00:01.367753', 'changed': True, 'invocation': {'module_args': {'_raw_params': '. $HOME/.poetry/env\\npoetry show guzzle-sphinx-theme\\n', '_uses_shell': True, 'warn': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['Skipping virtualenv creation, as specified in config file.', 'name         : guzzle-sphinx-theme', 'version      : 0.7.11', 'description  : Sphinx theme used by Guzzle.', '', 'dependencies', ' - Sphinx >=1.2b1'], 'stderr_lines': [], 'failed': False, 'item': 'guzzle-sphinx-theme', 'ansible_loop_var': 'item'}]) \n",
       "\n",
       "TASK [sphinx-config : Get location of python site-packages] ********************\n",
       "changed: [localhost]\n",
@@ -1016,18 +1021,18 @@
       "PLAY RECAP *********************************************************************\n",
       "localhost                  : ok=47   changed=42   unreachable=0    failed=0    skipped=4    rescued=0    ignored=1   \n",
       "\n",
-      "Removing intermediate container 9d2529d7a485\n",
-      " ---> 36097f11cd53\n",
+      "Removing intermediate container 9cc14a874aa5\n",
+      " ---> 10b203751251\n",
       "Step 8/8 : LABEL com.teradata.dsco=True\n",
-      " ---> Running in b59472161481\n",
-      "Removing intermediate container b59472161481\n",
-      " ---> d5c29dc3707d\n",
+      " ---> Running in d7b58242fb18\n",
+      "Removing intermediate container d7b58242fb18\n",
+      " ---> 881efba8cbb3\n",
       "\u001b[2K\n",
-      "Successfully built d5c29dc3707d\n",
+      "Successfully built 881efba8cbb3\n",
       "Successfully tagged foo_dev:latest\n",
       "\n",
       "========================================================================================\n",
-      "build execution time: 435.13234996795654 seconds\n",
+      "build execution time: 485.67613315582275 seconds\n",
       "========================================================================================\n"
      ]
     }
@@ -1052,8 +1057,8 @@
    "execution_count": 16,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:06:55.758752Z",
-     "start_time": "2020-03-26T04:06:51.257153Z"
+     "end_time": "2020-03-27T15:52:03.840799Z",
+     "start_time": "2020-03-27T15:52:02.044790Z"
     }
    },
    "outputs": [
@@ -1063,7 +1068,7 @@
      "text": [
       "\u001b[7mlocalhost                                                                                                                             \u001b[0m\r\n",
       "\u001b[4mNAME                              LINK                                       ID               STATUS                        SIZE      \u001b[0m\r\n",
-      "foo_dev:latest                                                               d5c29dc3707d     3 seconds ago                 1.75GB    \r\n"
+      "foo_dev:latest                                                               881efba8cbb3     1 second ago                  1.75GB    \r\n"
      ]
     }
    ],
@@ -1094,8 +1099,8 @@
    "execution_count": 17,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:06:58.041480Z",
-     "start_time": "2020-03-26T04:06:55.761936Z"
+     "end_time": "2020-03-27T15:52:05.796380Z",
+     "start_time": "2020-03-27T15:52:03.844445Z"
     }
    },
    "outputs": [
@@ -1107,7 +1112,7 @@
       "Creating foo_dev_1 ... \n",
       "\u001b[1Bting foo_dev_1 ... \u001b[32mdone\u001b[0m\n",
       "========================================================================================\n",
-      "up execution time: 1.7827799320220947 seconds\n",
+      "up execution time: 1.4652199745178223 seconds\n",
       "========================================================================================\n"
      ]
     }
@@ -1128,8 +1133,8 @@
    "execution_count": 18,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:06:58.946160Z",
-     "start_time": "2020-03-26T04:06:58.044010Z"
+     "end_time": "2020-03-27T15:52:06.711169Z",
+     "start_time": "2020-03-27T15:52:05.798454Z"
     }
    },
    "outputs": [
@@ -1139,8 +1144,8 @@
      "text": [
       "\u001b[7mlocalhost                                                                                                                             \u001b[0m\r\n",
       "\u001b[4mNAME                              LINK                                       ID               STATUS                        SIZE      \u001b[0m\r\n",
-      "foo_dev:latest                                                               d5c29dc3707d     7 seconds ago                 1.75GB    \r\n",
-      "\u001b[94m    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up Less than a second                   \u001b[0m\r\n"
+      "foo_dev:latest                                                               881efba8cbb3     5 seconds ago                 1.75GB    \r\n",
+      "\u001b[94m    foo_dev_1                     http://localhost:8001                      591858ba06da     Up Less than a second                   \u001b[0m\r\n"
      ]
     }
    ],
@@ -1162,8 +1167,8 @@
    "execution_count": 19,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:06:59.388025Z",
-     "start_time": "2020-03-26T04:06:58.948976Z"
+     "end_time": "2020-03-27T15:52:07.071046Z",
+     "start_time": "2020-03-27T15:52:06.713500Z"
     }
    },
    "outputs": [
@@ -1186,8 +1191,8 @@
    "execution_count": 20,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:00.279815Z",
-     "start_time": "2020-03-26T04:06:59.390451Z"
+     "end_time": "2020-03-27T15:52:07.990269Z",
+     "start_time": "2020-03-27T15:52:07.073235Z"
     }
    },
    "outputs": [
@@ -1197,8 +1202,8 @@
      "text": [
       "\u001b[7mlocalhost                                                                                                                             \u001b[0m\r\n",
       "\u001b[4mNAME                              LINK                                       ID               STATUS                        SIZE      \u001b[0m\r\n",
-      "foo_dev:latest                                                               d5c29dc3707d     8 seconds ago                 1.75GB    \r\n",
-      "\u001b[94m    foo_dev_1                     http://_________:8001                      cca408b97e0a     Exited (143) Less than a second ago          \u001b[0m\r\n"
+      "foo_dev:latest                                                               881efba8cbb3     6 seconds ago                 1.75GB    \r\n",
+      "\u001b[94m    foo_dev_1                     http://_________:8001                      591858ba06da     Exited (143) Less than a second ago          \u001b[0m\r\n"
      ]
     }
    ],
@@ -1212,8 +1217,8 @@
    "execution_count": 21,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:02.099598Z",
-     "start_time": "2020-03-26T04:07:00.282833Z"
+     "end_time": "2020-03-27T15:52:09.738973Z",
+     "start_time": "2020-03-27T15:52:07.995016Z"
     }
    },
    "outputs": [
@@ -1225,7 +1230,7 @@
       "Starting foo_dev_1 ... \n",
       "\u001b[1Bting foo_dev_1 ... \u001b[32mdone\u001b[0m\n",
       "========================================================================================\n",
-      "up execution time: 1.3186349868774414 seconds\n",
+      "up execution time: 1.2733056545257568 seconds\n",
       "========================================================================================\n"
      ]
     }
@@ -1247,8 +1252,8 @@
    "execution_count": 22,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:02.598392Z",
-     "start_time": "2020-03-26T04:07:02.102628Z"
+     "end_time": "2020-03-27T15:52:10.215129Z",
+     "start_time": "2020-03-27T15:52:09.741554Z"
     }
    },
    "outputs": [
@@ -1288,8 +1293,8 @@
    "execution_count": 23,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:04.419452Z",
-     "start_time": "2020-03-26T04:07:02.601493Z"
+     "end_time": "2020-03-27T15:52:11.797999Z",
+     "start_time": "2020-03-27T15:52:10.217403Z"
     }
    },
    "outputs": [
@@ -1301,11 +1306,11 @@
       "foo_dev_1 is up-to-date\n",
       "\n",
       "========================================================================================\n",
-      "up execution time: 0.9284379482269287 seconds\n",
+      "up execution time: 0.8994390964508057 seconds\n",
       "========================================================================================\n",
       "\n",
       "========================================================================================\n",
-      "go execution time: 1.2834627628326416 seconds\n",
+      "go execution time: 1.089184045791626 seconds\n",
       "========================================================================================\n"
      ]
     }
@@ -1335,8 +1340,8 @@
    "execution_count": 24,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:09.104585Z",
-     "start_time": "2020-03-26T04:07:04.422795Z"
+     "end_time": "2020-03-27T15:52:16.257323Z",
+     "start_time": "2020-03-27T15:52:11.800094Z"
     }
    },
    "outputs": [
@@ -1378,8 +1383,8 @@
    "execution_count": 25,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:15.684604Z",
-     "start_time": "2020-03-26T04:07:09.106435Z"
+     "end_time": "2020-03-27T15:52:22.632295Z",
+     "start_time": "2020-03-27T15:52:16.259246Z"
     }
    },
    "outputs": [
@@ -1439,8 +1444,8 @@
    "execution_count": 26,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:15.693419Z",
-     "start_time": "2020-03-26T04:07:15.686946Z"
+     "end_time": "2020-03-27T15:52:22.641766Z",
+     "start_time": "2020-03-27T15:52:22.634422Z"
     }
    },
    "outputs": [
@@ -1465,8 +1470,8 @@
    "execution_count": 27,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:15.700841Z",
-     "start_time": "2020-03-26T04:07:15.695903Z"
+     "end_time": "2020-03-27T15:52:22.649754Z",
+     "start_time": "2020-03-27T15:52:22.644202Z"
     }
    },
    "outputs": [
@@ -1509,8 +1514,8 @@
    "execution_count": 28,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:18.448251Z",
-     "start_time": "2020-03-26T04:07:15.703564Z"
+     "end_time": "2020-03-27T15:52:25.352193Z",
+     "start_time": "2020-03-27T15:52:22.652645Z"
     }
    },
    "outputs": [
@@ -1561,8 +1566,8 @@
    "execution_count": 29,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:18.457125Z",
-     "start_time": "2020-03-26T04:07:18.450160Z"
+     "end_time": "2020-03-27T15:52:25.362769Z",
+     "start_time": "2020-03-27T15:52:25.354553Z"
     }
    },
    "outputs": [
@@ -1750,8 +1755,8 @@
    "execution_count": 30,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:18.465096Z",
-     "start_time": "2020-03-26T04:07:18.459082Z"
+     "end_time": "2020-03-27T15:52:25.374222Z",
+     "start_time": "2020-03-27T15:52:25.365549Z"
     }
    },
    "outputs": [
@@ -1922,8 +1927,8 @@
    "execution_count": 31,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:19.025826Z",
-     "start_time": "2020-03-26T04:07:18.467373Z"
+     "end_time": "2020-03-27T15:52:25.975492Z",
+     "start_time": "2020-03-27T15:52:25.376957Z"
     }
    },
    "outputs": [
@@ -1999,8 +2004,8 @@
    "execution_count": 32,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:27.175871Z",
-     "start_time": "2020-03-26T04:07:26.303440Z"
+     "end_time": "2020-03-27T15:52:26.971525Z",
+     "start_time": "2020-03-27T15:52:25.977795Z"
     }
    },
    "outputs": [
@@ -2010,8 +2015,8 @@
      "text": [
       "\u001b[7mlocalhost                                                                                                                             \u001b[0m\r\n",
       "\u001b[4mNAME                              LINK                                       ID               STATUS                        SIZE      \u001b[0m\r\n",
-      "foo_dev:latest                                                               d5c29dc3707d     28 seconds ago                1.75GB    \r\n",
-      "\u001b[94m    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up 17 seconds                           \u001b[0m\r\n"
+      "foo_dev:latest                                                               881efba8cbb3     25 seconds ago                1.75GB    \r\n",
+      "\u001b[94m    foo_dev_1                     http://localhost:8001                      591858ba06da     Up 16 seconds                           \u001b[0m\r\n"
      ]
     }
    ],
@@ -2032,8 +2037,8 @@
    "execution_count": 33,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:20.394691Z",
-     "start_time": "2020-03-26T04:07:19.904359Z"
+     "end_time": "2020-03-27T15:52:27.464424Z",
+     "start_time": "2020-03-27T15:52:26.973324Z"
     }
    },
    "outputs": [
@@ -2076,8 +2081,8 @@
    "execution_count": 34,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:20.874299Z",
-     "start_time": "2020-03-26T04:07:20.396724Z"
+     "end_time": "2020-03-27T15:52:27.947858Z",
+     "start_time": "2020-03-27T15:52:27.466630Z"
     }
    },
    "outputs": [
@@ -2135,8 +2140,8 @@
    "execution_count": 35,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:21.372050Z",
-     "start_time": "2020-03-26T04:07:20.876352Z"
+     "end_time": "2020-03-27T15:52:28.406553Z",
+     "start_time": "2020-03-27T15:52:27.950178Z"
     }
    },
    "outputs": [
@@ -2172,8 +2177,8 @@
    "execution_count": 36,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:25.814280Z",
-     "start_time": "2020-03-26T04:07:21.374777Z"
+     "end_time": "2020-03-27T15:52:32.759630Z",
+     "start_time": "2020-03-27T15:52:28.412786Z"
     }
    },
    "outputs": [
@@ -2186,8 +2191,8 @@
       "docker exec -it $(docker ps --all --filter 'label=com.docker.compose.project=foo' --filter 'label=com.docker.compose.service=dev' --format {{.Names}}) bash -c \"supervisorctl restart uwsgi && supervisorctl status\"\n",
       "uwsgi: stopped\n",
       "uwsgi: started\n",
-      "jupyter                          RUNNING   pid 57, uptime 0:00:21\n",
-      "uwsgi                            RUNNING   pid 445, uptime 0:00:01\n"
+      "jupyter                          RUNNING   pid 56, uptime 0:00:21\n",
+      "uwsgi                            RUNNING   pid 446, uptime 0:00:01\n"
      ]
     }
    ],
@@ -2207,8 +2212,8 @@
    "execution_count": 37,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:26.299920Z",
-     "start_time": "2020-03-26T04:07:25.817670Z"
+     "end_time": "2020-03-27T15:52:33.227077Z",
+     "start_time": "2020-03-27T15:52:32.762903Z"
     }
    },
    "outputs": [
@@ -2284,8 +2289,8 @@
    "execution_count": 38,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:27.175871Z",
-     "start_time": "2020-03-26T04:07:26.303440Z"
+     "end_time": "2020-03-27T15:52:34.148471Z",
+     "start_time": "2020-03-27T15:52:33.230570Z"
     }
    },
    "outputs": [
@@ -2295,8 +2300,8 @@
      "text": [
       "\u001b[7mlocalhost                                                                                                                             \u001b[0m\r\n",
       "\u001b[4mNAME                              LINK                                       ID               STATUS                        SIZE      \u001b[0m\r\n",
-      "foo_dev:latest                                                               d5c29dc3707d     35 seconds ago                1.75GB    \r\n",
-      "\u001b[94m    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up 24 seconds                           \u001b[0m\r\n"
+      "foo_dev:latest                                                               881efba8cbb3     32 seconds ago                1.75GB    \r\n",
+      "\u001b[94m    foo_dev_1                     http://localhost:8001                      591858ba06da     Up 24 seconds                           \u001b[0m\r\n"
      ]
     }
    ],
@@ -2310,8 +2315,8 @@
    "execution_count": 39,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:27.665115Z",
-     "start_time": "2020-03-26T04:07:27.182836Z"
+     "end_time": "2020-03-27T15:52:34.623441Z",
+     "start_time": "2020-03-27T15:52:34.151943Z"
     }
    },
    "outputs": [],
@@ -2331,8 +2336,8 @@
    "execution_count": 40,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:28.549432Z",
-     "start_time": "2020-03-26T04:07:27.669100Z"
+     "end_time": "2020-03-27T15:52:35.513163Z",
+     "start_time": "2020-03-27T15:52:34.627017Z"
     }
    },
    "outputs": [
@@ -2342,8 +2347,8 @@
      "text": [
       "\u001b[7mlocalhost                                                                                                                             \u001b[0m\r\n",
       "\u001b[4mNAME                              LINK                                       ID               STATUS                        SIZE      \u001b[0m\r\n",
-      "foo_dev:latest                                                               d5c29dc3707d     37 seconds ago                1.75GB    \r\n",
-      "\u001b[94m    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up 26 seconds                           \u001b[0m\r\n"
+      "foo_dev:latest                                                               881efba8cbb3     34 seconds ago                1.75GB    \r\n",
+      "\u001b[94m    foo_dev_1                     http://localhost:8001                      591858ba06da     Up 25 seconds                           \u001b[0m\r\n"
      ]
     }
    ],
@@ -2357,8 +2362,8 @@
    "execution_count": 41,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:30.787878Z",
-     "start_time": "2020-03-26T04:07:28.552592Z"
+     "end_time": "2020-03-27T15:52:37.652433Z",
+     "start_time": "2020-03-27T15:52:35.516858Z"
     }
    },
    "outputs": [
@@ -2370,7 +2375,7 @@
       "Recreating foo_dev_1 ... \n",
       "\u001b[1Beating foo_dev_1 ... \u001b[32mdone\u001b[0m\n",
       "========================================================================================\n",
-      "up execution time: 1.7434639930725098 seconds\n",
+      "up execution time: 1.6713709831237793 seconds\n",
       "========================================================================================\n"
      ]
     }
@@ -2391,8 +2396,8 @@
    "execution_count": 42,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:31.668603Z",
-     "start_time": "2020-03-26T04:07:30.791070Z"
+     "end_time": "2020-03-27T15:52:38.567521Z",
+     "start_time": "2020-03-27T15:52:37.654959Z"
     }
    },
    "outputs": [
@@ -2402,8 +2407,8 @@
      "text": [
       "\u001b[7mlocalhost                                                                                                                             \u001b[0m\r\n",
       "\u001b[4mNAME                              LINK                                       ID               STATUS                        SIZE      \u001b[0m\r\n",
-      "foo_dev:latest                                                               d5c29dc3707d     40 seconds ago                1.75GB    \r\n",
-      "\u001b[94m    foo_dev_1                     http://localhost:8023                      c9769c1bbe1f     Up Less than a second                   \u001b[0m\r\n"
+      "foo_dev:latest                                                               881efba8cbb3     37 seconds ago                1.75GB    \r\n",
+      "\u001b[94m    foo_dev_1                     http://localhost:8023                      6ccb824c7cf9     Up Less than a second                   \u001b[0m\r\n"
      ]
     }
    ],
@@ -2424,8 +2429,8 @@
    "execution_count": 43,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:32.151348Z",
-     "start_time": "2020-03-26T04:07:31.670526Z"
+     "end_time": "2020-03-27T15:52:39.023072Z",
+     "start_time": "2020-03-27T15:52:38.569747Z"
     }
    },
    "outputs": [],
@@ -2438,8 +2443,8 @@
    "execution_count": 44,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:34.419380Z",
-     "start_time": "2020-03-26T04:07:32.154860Z"
+     "end_time": "2020-03-27T15:52:41.127260Z",
+     "start_time": "2020-03-27T15:52:39.025741Z"
     }
    },
    "outputs": [
@@ -2451,7 +2456,7 @@
       "Recreating foo_dev_1 ... \n",
       "\u001b[1Beating foo_dev_1 ... \u001b[32mdone\u001b[0m\n",
       "========================================================================================\n",
-      "up execution time: 1.7722828388214111 seconds\n",
+      "up execution time: 1.6443562507629395 seconds\n",
       "========================================================================================\n"
      ]
     }
@@ -2465,8 +2470,8 @@
    "execution_count": 45,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:35.306793Z",
-     "start_time": "2020-03-26T04:07:34.422490Z"
+     "end_time": "2020-03-27T15:52:42.018610Z",
+     "start_time": "2020-03-27T15:52:41.130355Z"
     }
    },
    "outputs": [
@@ -2476,8 +2481,8 @@
      "text": [
       "\u001b[7mlocalhost                                                                                                                             \u001b[0m\r\n",
       "\u001b[4mNAME                              LINK                                       ID               STATUS                        SIZE      \u001b[0m\r\n",
-      "foo_dev:latest                                                               d5c29dc3707d     43 seconds ago                1.75GB    \r\n",
-      "\u001b[94m    foo_dev_1                     http://localhost:8001                      2d0cdc474c9b     Up Less than a second                   \u001b[0m\r\n"
+      "foo_dev:latest                                                               881efba8cbb3     40 seconds ago                1.75GB    \r\n",
+      "\u001b[94m    foo_dev_1                     http://localhost:8001                      e266fa9944c7     Up Less than a second                   \u001b[0m\r\n"
      ]
     }
    ],
@@ -2498,8 +2503,8 @@
    "execution_count": 46,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:35.802894Z",
-     "start_time": "2020-03-26T04:07:35.308751Z"
+     "end_time": "2020-03-27T15:52:42.467920Z",
+     "start_time": "2020-03-27T15:52:42.020618Z"
     }
    },
    "outputs": [
@@ -2535,8 +2540,8 @@
    "execution_count": 47,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:36.656913Z",
-     "start_time": "2020-03-26T04:07:35.805039Z"
+     "end_time": "2020-03-27T15:52:43.238972Z",
+     "start_time": "2020-03-27T15:52:42.471287Z"
     }
    },
    "outputs": [
@@ -2558,8 +2563,8 @@
    "execution_count": 48,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:37.501013Z",
-     "start_time": "2020-03-26T04:07:36.659934Z"
+     "end_time": "2020-03-27T15:52:44.068055Z",
+     "start_time": "2020-03-27T15:52:43.242284Z"
     }
    },
    "outputs": [
@@ -2569,7 +2574,7 @@
      "text": [
       "\u001b[7mlocalhost                                                                                                                             \u001b[0m\r\n",
       "\u001b[4mNAME                              LINK                                       ID               STATUS                        SIZE      \u001b[0m\r\n",
-      "foo_dev:latest                                                               d5c29dc3707d     46 seconds ago                1.75GB    \r\n"
+      "foo_dev:latest                                                               881efba8cbb3     42 seconds ago                1.75GB    \r\n"
      ]
     }
    ],
@@ -2590,8 +2595,8 @@
    "execution_count": 49,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:37.984907Z",
-     "start_time": "2020-03-26T04:07:37.503834Z"
+     "end_time": "2020-03-27T15:52:44.532183Z",
+     "start_time": "2020-03-27T15:52:44.070597Z"
     }
    },
    "outputs": [
@@ -2631,8 +2636,8 @@
    "execution_count": 50,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:40.796132Z",
-     "start_time": "2020-03-26T04:07:37.987514Z"
+     "end_time": "2020-03-27T15:52:47.174298Z",
+     "start_time": "2020-03-27T15:52:44.534568Z"
     }
    },
    "outputs": [
@@ -2644,12 +2649,12 @@
       "Creating foo_dev_1 ... \n",
       "\u001b[1Bting foo_dev_1 ... \u001b[32mdone\u001b[0m\n",
       "========================================================================================\n",
-      "up execution time: 1.441547155380249 seconds\n",
+      "up execution time: 1.297410011291504 seconds\n",
       "========================================================================================\n",
       "\u001b[7mlocalhost                                                                                                                             \u001b[0m\n",
       "\u001b[4mNAME                              LINK                                       ID               STATUS                        SIZE      \u001b[0m\n",
-      "foo_dev:latest                                                               d5c29dc3707d     49 seconds ago                1.75GB    \n",
-      "\u001b[94m    foo_dev_1                     http://localhost:8001                      5f64ef8e55a5     Up Less than a second                   \u001b[0m\n"
+      "foo_dev:latest                                                               881efba8cbb3     45 seconds ago                1.75GB    \n",
+      "\u001b[94m    foo_dev_1                     http://localhost:8001                      71cb8ff45a4e     Up Less than a second                   \u001b[0m\n"
      ]
     }
    ],
@@ -2664,8 +2669,8 @@
    "execution_count": 51,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:41.360788Z",
-     "start_time": "2020-03-26T04:07:40.798180Z"
+     "end_time": "2020-03-27T15:52:47.707396Z",
+     "start_time": "2020-03-27T15:52:47.176788Z"
     }
    },
    "outputs": [
@@ -2674,7 +2679,7 @@
      "output_type": "stream",
      "text": [
       "docker rmi  foo_dev\n",
-      "Error response from daemon: conflict: unable to remove repository reference \"foo_dev\" (must force) - container 5f64ef8e55a5 is using its referenced image d5c29dc3707d\n"
+      "Error response from daemon: conflict: unable to remove repository reference \"foo_dev\" (must force) - container 71cb8ff45a4e is using its referenced image 881efba8cbb3\n"
      ]
     }
    ],
@@ -2694,8 +2699,8 @@
    "execution_count": 52,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:44.125341Z",
-     "start_time": "2020-03-26T04:07:41.364351Z"
+     "end_time": "2020-03-27T15:52:50.199220Z",
+     "start_time": "2020-03-27T15:52:47.709702Z"
     }
    },
    "outputs": [
@@ -2721,15 +2726,15 @@
       "Remove one or more containers\n",
       "docker rmi --force foo_dev\n",
       "Untagged: foo_dev:latest\n",
-      "Deleted: sha256:d5c29dc3707de3eb19f8fcca7a63414d3cea707cb1f0f50de9c95dbe2d2d49c4\n",
-      "Deleted: sha256:36097f11cd5334ebdd9a51a6e28eab3946b8319b3aa8a48cdd4fbe0d9280aab9\n",
-      "Deleted: sha256:79a8cc5a67562054f9dcd7e814f6286cdb901acd1cb12bac55b8e0eb45defa9e\n",
-      "Deleted: sha256:45ae1c880b280f359970e0bbff5c064f3cac84f0998c1e9b87475ab377e8459f\n",
-      "Deleted: sha256:1a09eebc3fd7e46a8277db5b9ee6e920b80e1a22f49730c7fdd1935b70bc8e2b\n",
-      "Deleted: sha256:88fdda262df3f6a1b4a171fa0e1c12e40ecaed13c5aaf95745ace9aef6bdbba6\n",
-      "Deleted: sha256:54b5f1dddb0660397fae9695832aa90793e0a227662d5c97dad9f7867fdcbc3c\n",
-      "Deleted: sha256:fe7bea56aca873718d2bdcda3b7b62b4c4e3fc54259dd9a52e6046a01a69877c\n",
-      "Deleted: sha256:69f74d12b515a4827ebd7e721f0bbfb3ad01619100d5f8f6ebeae2a5ece4c77a\n",
+      "Deleted: sha256:881efba8cbb309ac440aa19d1897bac2d45da338a2058263659deae2fdb79969\n",
+      "Deleted: sha256:10b203751251eba5827454031a24170918d487a4abd0a064ee887881295cdcd6\n",
+      "Deleted: sha256:5ebffafa2085339cb1362fd74950805f059d9b8ac210db84799417d43210583d\n",
+      "Deleted: sha256:0d0997f87dd086a98ae5b65111b80e21101a209f846f13be2f35c9e7e5ba1342\n",
+      "Deleted: sha256:080ee5a933be553f3f0f13528e1a14cd87d94900564f03106bc841189ef937b9\n",
+      "Deleted: sha256:54a2868080c30299e6afdc583b6f912346787839fd3ef8264fd636536cc6bc4a\n",
+      "Deleted: sha256:218704534db2f9964bc3183fb8044afa45a17a5d2c60e1eac770d66bbbc91fc4\n",
+      "Deleted: sha256:ca403a3be7289870c52f39d6eb2694c1a98fe9821b653e5f04d39f015c39b413\n",
+      "Deleted: sha256:0b57602ea2d3ef35d86704ffac55602d7c3af7d0b2fcf75fe2f430bf3605dcd9\n",
       "docker rmi --force foo_prod\n",
       "Error: No such image: foo_prod\n",
       "docker rmi --force foo_debug\n",
@@ -2746,8 +2751,8 @@
    "execution_count": 53,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:44.958658Z",
-     "start_time": "2020-03-26T04:07:44.129245Z"
+     "end_time": "2020-03-27T15:52:51.040484Z",
+     "start_time": "2020-03-27T15:52:50.202594Z"
     }
    },
    "outputs": [
@@ -2777,8 +2782,8 @@
    "execution_count": 54,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:44.970839Z",
-     "start_time": "2020-03-26T04:07:44.962338Z"
+     "end_time": "2020-03-27T15:52:51.050761Z",
+     "start_time": "2020-03-27T15:52:51.043835Z"
     }
    },
    "outputs": [
@@ -2799,8 +2804,8 @@
    "execution_count": 55,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:45.170014Z",
-     "start_time": "2020-03-26T04:07:44.972597Z"
+     "end_time": "2020-03-27T15:52:51.247808Z",
+     "start_time": "2020-03-27T15:52:51.052475Z"
     }
    },
    "outputs": [],
@@ -2813,8 +2818,8 @@
    "execution_count": 56,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2020-03-26T04:07:45.325744Z",
-     "start_time": "2020-03-26T04:07:45.173128Z"
+     "end_time": "2020-03-27T15:52:51.391340Z",
+     "start_time": "2020-03-27T15:52:51.251222Z"
     }
    },
    "outputs": [
@@ -2822,17 +2827,20 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "AlTest1.err                             \u001b[32mport.61201\u001b[m\u001b[m=\r\n",
-      "AlTest1.out                             \u001b[32mport.61301\u001b[m\u001b[m=\r\n",
+      "\u001b[36m4E65C18E-676A-4F76-A157-7B16F54B6B1F\u001b[m\u001b[m/   \u001b[36mcom.google.Keystone\u001b[m\u001b[m/\r\n",
+      "\u001b[36m65B7725E-4EA0-4B57-A357-C39E564D676B\u001b[m\u001b[m/   com.trendmicro.tmsm.run.plist\r\n",
+      "\u001b[36m8EFCF5EB-0232-4BA2-BE29-E882B44305EF\u001b[m\u001b[m/   \u001b[36mcvcd\u001b[m\u001b[m/\r\n",
+      "AlTest1.err                             ipcroboform8.3.6\r\n",
+      "AlTest1.out                             \u001b[32mport.61100\u001b[m\u001b[m=\r\n",
+      "\u001b[36mB531E494-1D8B-44CA-960F-D5D1DDE836CF\u001b[m\u001b[m/   \u001b[32mport.61201\u001b[m\u001b[m=\r\n",
+      "ExmanProcessMutex                       \u001b[32mport.61301\u001b[m\u001b[m=\r\n",
       "ICRC_ROLL.lck                           \u001b[32mport.61302\u001b[m\u001b[m=\r\n",
       "MSS_Menulet                             \u001b[32mport.61304\u001b[m\u001b[m=\r\n",
       "adobegc.log                             \u001b[32mport.61401\u001b[m\u001b[m=\r\n",
       "\u001b[32mcom.adobe.AdobeIPCBroker.ctrl-ap186098\u001b[m\u001b[m= \u001b[32mport.61501\u001b[m\u001b[m=\r\n",
-      "\u001b[36mcom.apple.launchd.0R9DDaYyZ6\u001b[m\u001b[m/           \u001b[36mpowerlog\u001b[m\u001b[m/\r\n",
-      "\u001b[36mcom.apple.launchd.McPXyPKx0Y\u001b[m\u001b[m/           \u001b[36mtmux-1937012048\u001b[m\u001b[m/\r\n",
-      "\u001b[36mcom.apple.launchd.vgkMLHbKkP\u001b[m\u001b[m/           wbxtra_03252020_132958.wbt\r\n",
-      "meetingJMT.txt                          \u001b[36mwbxtrace\u001b[m\u001b[m/\r\n",
-      "\u001b[32mport.61100\u001b[m\u001b[m=                             \u001b[36mwebex\u001b[m\u001b[m/\r\n"
+      "\u001b[36mcom.apple.launchd.TAzDf6vxI5\u001b[m\u001b[m/           \u001b[36mpowerlog\u001b[m\u001b[m/\r\n",
+      "\u001b[36mcom.apple.launchd.wiVigXgrId\u001b[m\u001b[m/           \u001b[36mtmux-1937012048\u001b[m\u001b[m/\r\n",
+      "\u001b[36mcom.apple.launchd.wyf1x4DwRU\u001b[m\u001b[m/           \u001b[36mwbxtrace\u001b[m\u001b[m/\r\n"
      ]
     }
    ],

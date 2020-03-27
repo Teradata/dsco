@@ -1,4 +1,4 @@
-FROM python:3.7.5-slim-buster as base
+FROM {{ cookiecutter.python_version }}-slim as base
 
 COPY . /srv
 

@@ -462,6 +462,10 @@ optional arguments:
 <span class="o">-</span> <span class="n">version</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">]:</span>
 <span class="o">-</span> <span class="n">year</span> <span class="p">[</span><span class="mi">2020</span><span class="p">]:</span>
 <span class="o">-</span> <span class="n">project_port</span><span class="p">[</span><span class="mi">8001</span><span class="p">]:</span>
+<span class="o">-</span> <span class="n">select</span> <span class="n">python_version</span><span class="p">:</span>
+  <span class="mi">1</span> <span class="o">-</span> <span class="mf">3.7</span>
+  <span class="mi">2</span> <span class="o">-</span> <span class="mf">3.6</span>
+  <span class="n">Choose</span> <span class="kn">from</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
 </pre></div>
 </div>
 <p>The only default we’re changing is the project name. In actual usage just run <code class="docutils literal notranslate"><span class="pre">dsco</span> <span class="pre">init</span></code> and answer the prompts.</p>
@@ -470,7 +474,7 @@ optional arguments:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;foo\n\n\n\n\n&quot;</span> <span class="p">|</span> dsco init
+<span></span><span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;foo\n\n\n\n\n\n&quot;</span> <span class="p">|</span> dsco init
 </pre></div>
 </div>
 </div>
@@ -481,7 +485,10 @@ optional arguments:
 <div class="highlight"><pre>
 Using template: /Users/ap186098/.pyenv/versions/3.7.5/lib/python3.7/site-packages/dsco/project_template
 Creating project in /private/tmp/dsco_overview
-project_name [MyProject]: author [Discovery]: version [0.1]: year [2020]: project_port [8001]:
+project_name [MyProject]: author [Discovery]: version [0.1]: year [2020]: project_port [8001]: Select python_version:
+1 - 3.7
+2 - 3.6
+Choose from 1, 2 [1]:
 </pre></div></div>
 </div>
 <div class="section" id="PROJECT-DIRECTORY">
@@ -804,59 +811,57 @@ optional arguments:
 <div class="highlight"><pre>
 docker-compose build dev
 Building dev
-Step 1/8 : FROM python:3.7.5-slim-buster as base
- ---&gt; 07ee12a5eb2a
+Step 1/8 : FROM python:3.7-slim as base
+ ---&gt; 69afd9568c9d
 Step 2/8 : COPY . /srv
- ---&gt; fe7bea56aca8
+ ---&gt; ca403a3be728
 Step 3/8 : SHELL [&#34;/bin/bash&#34;, &#34;-c&#34;]
- ---&gt; Running in 979b9edc0383
-Removing intermediate container 979b9edc0383
- ---&gt; 54b5f1dddb06
+ ---&gt; Running in a233c691f4c8
+Removing intermediate container a233c691f4c8
+ ---&gt; 218704534db2
 Step 4/8 : RUN pip install ansible toml
- ---&gt; Running in dcbc0ef6d114
+ ---&gt; Running in 46ddbe2dbe06
 Collecting ansible
-  Downloading https://files.pythonhosted.org/packages/ae/b7/c717363f767f7af33d90af9458d5f1e0960db9c2393a6c221c2ce97ad1aa/ansible-2.9.6.tar.gz (14.2MB)
+  Downloading ansible-2.9.6.tar.gz (14.2 MB)
 Collecting toml
-  Downloading https://files.pythonhosted.org/packages/a2/12/ced7105d2de62fa7c8fb5fce92cc4ce66b57c95fb875e9318dba7f8c5db0/toml-0.10.0-py2.py3-none-any.whl
+  Downloading toml-0.10.0-py2.py3-none-any.whl (25 kB)
 Collecting jinja2
-  Downloading https://files.pythonhosted.org/packages/27/24/4f35961e5c669e96f6559760042a55b9bcfcdb82b9bdb3c8753dbe042e35/Jinja2-2.11.1-py2.py3-none-any.whl (126kB)
+  Downloading Jinja2-2.11.1-py2.py3-none-any.whl (126 kB)
 Collecting PyYAML
-  Downloading https://files.pythonhosted.org/packages/64/c2/b80047c7ac2478f9501676c988a5411ed5572f35d1beff9cae07d321512c/PyYAML-5.3.1.tar.gz (269kB)
+  Downloading PyYAML-5.3.1.tar.gz (269 kB)
 Collecting cryptography
-  Downloading https://files.pythonhosted.org/packages/ca/9a/7cece52c46546e214e10811b36b2da52ce1ea7fa203203a629b8dfadad53/cryptography-2.8-cp34-abi3-manylinux2010_x86_64.whl (2.3MB)
+  Downloading cryptography-2.8-cp34-abi3-manylinux2010_x86_64.whl (2.3 MB)
 Collecting MarkupSafe&gt;=0.23
-  Downloading https://files.pythonhosted.org/packages/98/7b/ff284bd8c80654e471b769062a9b43cc5d03e7a615048d96f4619df8d420/MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl
+  Downloading MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl (27 kB)
 Collecting six&gt;=1.4.1
-  Downloading https://files.pythonhosted.org/packages/65/eb/1f97cb97bfc2390a276969c6fae16075da282f5058082d4cb10c6c5c1dba/six-1.14.0-py2.py3-none-any.whl
+  Downloading six-1.14.0-py2.py3-none-any.whl (10 kB)
 Collecting cffi!=1.11.3,&gt;=1.8
-  Downloading https://files.pythonhosted.org/packages/ff/1d/0b743dadcdf4980b717163fd2d24cd18c1c0c7a78a076268afd7e0e2c25e/cffi-1.14.0-cp37-cp37m-manylinux1_x86_64.whl (400kB)
+  Downloading cffi-1.14.0-cp37-cp37m-manylinux1_x86_64.whl (400 kB)
 Collecting pycparser
-  Downloading https://files.pythonhosted.org/packages/ae/e7/d9c3a176ca4b02024debf82342dab36efadfc5776f9c8db077e8f6e71821/pycparser-2.20-py2.py3-none-any.whl (112kB)
+  Downloading pycparser-2.20-py2.py3-none-any.whl (112 kB)
 Building wheels for collected packages: ansible, PyYAML
   Building wheel for ansible (setup.py): started
   Building wheel for ansible (setup.py): finished with status &#39;done&#39;
-  Created wheel for ansible: filename=ansible-2.9.6-cp37-none-any.whl size=16164186 sha256=6e0bd6c2ef9e37e73be07f049833a55e5f0c615ed06f0b582f6d1334bb189db6
-  Stored in directory: /root/.cache/pip/wheels/e0/d8/74/a4e0b92e45a38ab0c22eaadc5981f3ddab41a6e188c0c8867d
+  Created wheel for ansible: filename=ansible-2.9.6-py3-none-any.whl size=16164182 sha256=b918f090a8f388bb08738ab81fdc49613a99e8023ad25111c2bf505809a73299
+  Stored in directory: /root/.cache/pip/wheels/59/31/d9/a309a1fce4216dd912b705ce76035bff3ed5bbd990853bad97
   Building wheel for PyYAML (setup.py): started
   Building wheel for PyYAML (setup.py): finished with status &#39;done&#39;
-  Created wheel for PyYAML: filename=PyYAML-5.3.1-cp37-cp37m-linux_x86_64.whl size=44620 sha256=b4f815b4dd4db5f08317f85d97d4eba20aed66ec1dc880d3a2159c843665280d
-  Stored in directory: /root/.cache/pip/wheels/a7/c1/ea/cf5bd31012e735dc1dfea3131a2d5eae7978b251083d6247bd
+  Created wheel for PyYAML: filename=PyYAML-5.3.1-cp37-cp37m-linux_x86_64.whl size=44619 sha256=857ca518426df24e3866d57274075d09b8ff7aa886860205f32154d98e799d8c
+  Stored in directory: /root/.cache/pip/wheels/5e/03/1e/e1e954795d6f35dfc7b637fe2277bff021303bd9570ecea653
 Successfully built ansible PyYAML
 Installing collected packages: MarkupSafe, jinja2, PyYAML, six, pycparser, cffi, cryptography, ansible, toml
 Successfully installed MarkupSafe-1.1.1 PyYAML-5.3.1 ansible-2.9.6 cffi-1.14.0 cryptography-2.8 jinja2-2.11.1 pycparser-2.20 six-1.14.0 toml-0.10.0
-<span class="ansi-red-intense-fg">WARNING: You are using pip version 19.3.1; however, version 20.0.2 is available.
-You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.
-</span>Removing intermediate container dcbc0ef6d114
- ---&gt; 1a09eebc3fd7
+Removing intermediate container 46ddbe2dbe06
+ ---&gt; 080ee5a933be
 
 Step 5/8 : FROM base as dev
- ---&gt; 1a09eebc3fd7
+ ---&gt; 080ee5a933be
 Step 6/8 : SHELL [&#34;/bin/bash&#34;, &#34;-c&#34;]
- ---&gt; Running in 74cf887c347d
-Removing intermediate container 74cf887c347d
- ---&gt; 45ae1c880b28
+ ---&gt; Running in f385ccba1915
+Removing intermediate container f385ccba1915
+ ---&gt; 0d0997f87dd0
 Step 7/8 : RUN cd /srv/builder/ansible &amp;&amp; ansible-playbook build_dev_container.yml
- ---&gt; Running in 9d2529d7a485
+ ---&gt; Running in 9cc14a874aa5
 <span class="ansi-red-intense-fg">[WARNING]: No inventory was parsed, only implicit localhost is available
 </span><span class="ansi-red-intense-fg">[WARNING]: provided hosts list is empty, only localhost is available. Note that
 the implicit localhost does not match &#39;all&#39;
@@ -901,7 +906,7 @@ changed: [localhost] =&gt; (item=vim)
 changed: [localhost] =&gt; (item=pandoc)
 
 TASK [poetry : check if poetry is installed] ***********************************
-fatal: [localhost]: FAILED! =&gt; {&#34;changed&#34;: true, &#34;cmd&#34;: &#34;$HOME/.poetry/bin/poetry --version&#34;, &#34;delta&#34;: &#34;0:00:00.004405&#34;, &#34;end&#34;: &#34;2020-03-26 04:01:33.488639&#34;, &#34;msg&#34;: &#34;non-zero return code&#34;, &#34;rc&#34;: 127, &#34;start&#34;: &#34;2020-03-26 04:01:33.484234&#34;, &#34;stderr&#34;: &#34;/bin/sh: 1: /root/.poetry/bin/poetry: not found&#34;, &#34;stderr_lines&#34;: [&#34;/bin/sh: 1: /root/.poetry/bin/poetry: not found&#34;], &#34;stdout&#34;: &#34;&#34;, &#34;stdout_lines&#34;: []}
+fatal: [localhost]: FAILED! =&gt; {&#34;changed&#34;: true, &#34;cmd&#34;: &#34;$HOME/.poetry/bin/poetry --version&#34;, &#34;delta&#34;: &#34;0:00:00.003655&#34;, &#34;end&#34;: &#34;2020-03-27 15:45:59.181337&#34;, &#34;msg&#34;: &#34;non-zero return code&#34;, &#34;rc&#34;: 127, &#34;start&#34;: &#34;2020-03-27 15:45:59.177682&#34;, &#34;stderr&#34;: &#34;/bin/sh: 1: /root/.poetry/bin/poetry: not found&#34;, &#34;stderr_lines&#34;: [&#34;/bin/sh: 1: /root/.poetry/bin/poetry: not found&#34;], &#34;stdout&#34;: &#34;&#34;, &#34;stdout_lines&#34;: []}
 ...ignoring
 
 TASK [poetry : download] *******************************************************
@@ -960,8 +965,8 @@ changed: [localhost] =&gt; (item=jupyter-contrib-nbextensions)
 changed: [localhost] =&gt; (item=qgrid)
 
 TASK [jupyter-config : install if missing] *************************************
-skipping: [localhost] =&gt; (item=[&#39;jupyter-contrib-nbextensions&#39;, {&#39;cmd&#39;: &#39;$HOME/.poetry/bin/poetry show jupyter-contrib-nbextensions&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : jupyter-contrib-nbextensions\nversion      : 0.5.1\ndescription  : A collection of Jupyter nbextensions.\n\ndependencies\n - ipython-genutils *\n - jupyter-contrib-core &gt;=0.3.3\n - jupyter-core *\n - jupyter-highlight-selected-word &gt;=0.1.1\n - jupyter-latex-envs &gt;=1.3.8\n - jupyter-nbextensions-configurator &gt;=0.4.0\n - lxml *\n - nbconvert &gt;=4.2\n - notebook &gt;=4.0\n - pyyaml *\n - tornado *\n - traitlets &gt;=4.1&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-26 04:05:30.977206&#39;, &#39;end&#39;: &#39;2020-03-26 04:05:32.446634&#39;, &#39;delta&#39;: &#39;0:00:01.469428&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;$HOME/.poetry/bin/poetry show jupyter-contrib-nbextensions&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : jupyter-contrib-nbextensions&#39;, &#39;version      : 0.5.1&#39;, &#39;description  : A collection of Jupyter nbextensions.&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - ipython-genutils *&#39;, &#39; - jupyter-contrib-core &gt;=0.3.3&#39;, &#39; - jupyter-core *&#39;, &#39; - jupyter-highlight-selected-word &gt;=0.1.1&#39;, &#39; - jupyter-latex-envs &gt;=1.3.8&#39;, &#39; - jupyter-nbextensions-configurator &gt;=0.4.0&#39;, &#39; - lxml *&#39;, &#39; - nbconvert &gt;=4.2&#39;, &#39; - notebook &gt;=4.0&#39;, &#39; - pyyaml *&#39;, &#39; - tornado *&#39;, &#39; - traitlets &gt;=4.1&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;jupyter-contrib-nbextensions&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
-skipping: [localhost] =&gt; (item=[&#39;qgrid&#39;, {&#39;cmd&#39;: &#39;$HOME/.poetry/bin/poetry show qgrid&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : qgrid\nversion      : 1.3.0\ndescription  : An Interactive Grid for Sorting and Filtering DataFrames in\n            Jupyter Notebook\n\ndependencies\n - ipywidgets &gt;=7.0.0\n - notebook &gt;=4.0.0\n - pandas &gt;=0.18.0&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-26 04:05:32.643039&#39;, &#39;end&#39;: &#39;2020-03-26 04:05:34.084638&#39;, &#39;delta&#39;: &#39;0:00:01.441599&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;$HOME/.poetry/bin/poetry show qgrid&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : qgrid&#39;, &#39;version      : 1.3.0&#39;, &#39;description  : An Interactive Grid for Sorting and Filtering DataFrames in&#39;, &#39;            Jupyter Notebook&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - ipywidgets &gt;=7.0.0&#39;, &#39; - notebook &gt;=4.0.0&#39;, &#39; - pandas &gt;=0.18.0&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;qgrid&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
+skipping: [localhost] =&gt; (item=[&#39;jupyter-contrib-nbextensions&#39;, {&#39;cmd&#39;: &#39;$HOME/.poetry/bin/poetry show jupyter-contrib-nbextensions&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : jupyter-contrib-nbextensions\nversion      : 0.5.1\ndescription  : A collection of Jupyter nbextensions.\n\ndependencies\n - ipython-genutils *\n - jupyter-contrib-core &gt;=0.3.3\n - jupyter-core *\n - jupyter-highlight-selected-word &gt;=0.1.1\n - jupyter-latex-envs &gt;=1.3.8\n - jupyter-nbextensions-configurator &gt;=0.4.0\n - lxml *\n - nbconvert &gt;=4.2\n - notebook &gt;=4.0\n - pyyaml *\n - tornado *\n - traitlets &gt;=4.1&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-27 15:50:46.201458&#39;, &#39;end&#39;: &#39;2020-03-27 15:50:47.602127&#39;, &#39;delta&#39;: &#39;0:00:01.400669&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;$HOME/.poetry/bin/poetry show jupyter-contrib-nbextensions&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : jupyter-contrib-nbextensions&#39;, &#39;version      : 0.5.1&#39;, &#39;description  : A collection of Jupyter nbextensions.&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - ipython-genutils *&#39;, &#39; - jupyter-contrib-core &gt;=0.3.3&#39;, &#39; - jupyter-core *&#39;, &#39; - jupyter-highlight-selected-word &gt;=0.1.1&#39;, &#39; - jupyter-latex-envs &gt;=1.3.8&#39;, &#39; - jupyter-nbextensions-configurator &gt;=0.4.0&#39;, &#39; - lxml *&#39;, &#39; - nbconvert &gt;=4.2&#39;, &#39; - notebook &gt;=4.0&#39;, &#39; - pyyaml *&#39;, &#39; - tornado *&#39;, &#39; - traitlets &gt;=4.1&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;jupyter-contrib-nbextensions&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
+skipping: [localhost] =&gt; (item=[&#39;qgrid&#39;, {&#39;cmd&#39;: &#39;$HOME/.poetry/bin/poetry show qgrid&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : qgrid\nversion      : 1.3.0\ndescription  : An Interactive Grid for Sorting and Filtering DataFrames in\n            Jupyter Notebook\n\ndependencies\n - ipywidgets &gt;=7.0.0\n - notebook &gt;=4.0.0\n - pandas &gt;=0.18.0&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-27 15:50:47.790825&#39;, &#39;end&#39;: &#39;2020-03-27 15:50:49.200780&#39;, &#39;delta&#39;: &#39;0:00:01.409955&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;$HOME/.poetry/bin/poetry show qgrid&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : qgrid&#39;, &#39;version      : 1.3.0&#39;, &#39;description  : An Interactive Grid for Sorting and Filtering DataFrames in&#39;, &#39;            Jupyter Notebook&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - ipywidgets &gt;=7.0.0&#39;, &#39; - notebook &gt;=4.0.0&#39;, &#39; - pandas &gt;=0.18.0&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;qgrid&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
 
 TASK [jupyter-config : create jupyter log dir] *********************************
 changed: [localhost]
@@ -1005,8 +1010,8 @@ changed: [localhost] =&gt; (item=nbsphinx)
 changed: [localhost] =&gt; (item=guzzle-sphinx-theme)
 
 TASK [sphinx-config : install if missing] **************************************
-skipping: [localhost] =&gt; (item=[&#39;nbsphinx&#39;, {&#39;cmd&#39;: &#39;. $HOME/.poetry/env\npoetry show nbsphinx\n&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : nbsphinx\nversion      : 0.4.3\ndescription  : Jupyter Notebook Tools for Sphinx\n\ndependencies\n - docutils *\n - jinja2 *\n - nbconvert !=5.4\n - nbformat *\n - sphinx &gt;=1.6.3\n - traitlets *&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-26 04:05:49.708241&#39;, &#39;end&#39;: &#39;2020-03-26 04:05:51.194933&#39;, &#39;delta&#39;: &#39;0:00:01.486692&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;. $HOME/.poetry/env\npoetry show nbsphinx\n&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : nbsphinx&#39;, &#39;version      : 0.4.3&#39;, &#39;description  : Jupyter Notebook Tools for Sphinx&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - docutils *&#39;, &#39; - jinja2 *&#39;, &#39; - nbconvert !=5.4&#39;, &#39; - nbformat *&#39;, &#39; - sphinx &gt;=1.6.3&#39;, &#39; - traitlets *&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;nbsphinx&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
-skipping: [localhost] =&gt; (item=[&#39;guzzle-sphinx-theme&#39;, {&#39;cmd&#39;: &#39;. $HOME/.poetry/env\npoetry show guzzle-sphinx-theme\n&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : guzzle-sphinx-theme\nversion      : 0.7.11\ndescription  : Sphinx theme used by Guzzle.\n\ndependencies\n - Sphinx &gt;=1.2b1&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-26 04:05:51.398301&#39;, &#39;end&#39;: &#39;2020-03-26 04:05:52.837945&#39;, &#39;delta&#39;: &#39;0:00:01.439644&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;. $HOME/.poetry/env\npoetry show guzzle-sphinx-theme\n&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : guzzle-sphinx-theme&#39;, &#39;version      : 0.7.11&#39;, &#39;description  : Sphinx theme used by Guzzle.&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - Sphinx &gt;=1.2b1&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;guzzle-sphinx-theme&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
+skipping: [localhost] =&gt; (item=[&#39;nbsphinx&#39;, {&#39;cmd&#39;: &#39;. $HOME/.poetry/env\npoetry show nbsphinx\n&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : nbsphinx\nversion      : 0.4.3\ndescription  : Jupyter Notebook Tools for Sphinx\n\ndependencies\n - docutils *\n - jinja2 *\n - nbconvert !=5.4\n - nbformat *\n - sphinx &gt;=1.6.3\n - traitlets *&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-27 15:51:03.336287&#39;, &#39;end&#39;: &#39;2020-03-27 15:51:04.717443&#39;, &#39;delta&#39;: &#39;0:00:01.381156&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;. $HOME/.poetry/env\npoetry show nbsphinx\n&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : nbsphinx&#39;, &#39;version      : 0.4.3&#39;, &#39;description  : Jupyter Notebook Tools for Sphinx&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - docutils *&#39;, &#39; - jinja2 *&#39;, &#39; - nbconvert !=5.4&#39;, &#39; - nbformat *&#39;, &#39; - sphinx &gt;=1.6.3&#39;, &#39; - traitlets *&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;nbsphinx&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
+skipping: [localhost] =&gt; (item=[&#39;guzzle-sphinx-theme&#39;, {&#39;cmd&#39;: &#39;. $HOME/.poetry/env\npoetry show guzzle-sphinx-theme\n&#39;, &#39;stdout&#39;: &#39;Skipping virtualenv creation, as specified in config file.\nname         : guzzle-sphinx-theme\nversion      : 0.7.11\ndescription  : Sphinx theme used by Guzzle.\n\ndependencies\n - Sphinx &gt;=1.2b1&#39;, &#39;stderr&#39;: &#39;&#39;, &#39;rc&#39;: 0, &#39;start&#39;: &#39;2020-03-27 15:51:04.903681&#39;, &#39;end&#39;: &#39;2020-03-27 15:51:06.271434&#39;, &#39;delta&#39;: &#39;0:00:01.367753&#39;, &#39;changed&#39;: True, &#39;invocation&#39;: {&#39;module_args&#39;: {&#39;_raw_params&#39;: &#39;. $HOME/.poetry/env\npoetry show guzzle-sphinx-theme\n&#39;, &#39;_uses_shell&#39;: True, &#39;warn&#39;: True, &#39;stdin_add_newline&#39;: True, &#39;strip_empty_ends&#39;: True, &#39;argv&#39;: None, &#39;chdir&#39;: None, &#39;executable&#39;: None, &#39;creates&#39;: None, &#39;removes&#39;: None, &#39;stdin&#39;: None}}, &#39;stdout_lines&#39;: [&#39;Skipping virtualenv creation, as specified in config file.&#39;, &#39;name         : guzzle-sphinx-theme&#39;, &#39;version      : 0.7.11&#39;, &#39;description  : Sphinx theme used by Guzzle.&#39;, &#39;&#39;, &#39;dependencies&#39;, &#39; - Sphinx &gt;=1.2b1&#39;], &#39;stderr_lines&#39;: [], &#39;failed&#39;: False, &#39;item&#39;: &#39;guzzle-sphinx-theme&#39;, &#39;ansible_loop_var&#39;: &#39;item&#39;}])
 
 TASK [sphinx-config : Get location of python site-packages] ********************
 changed: [localhost]
@@ -1032,18 +1037,18 @@ changed: [localhost]
 PLAY RECAP *********************************************************************
 localhost                  : ok=47   changed=42   unreachable=0    failed=0    skipped=4    rescued=0    ignored=1
 
-Removing intermediate container 9d2529d7a485
- ---&gt; 36097f11cd53
+Removing intermediate container 9cc14a874aa5
+ ---&gt; 10b203751251
 Step 8/8 : LABEL com.teradata.dsco=True
- ---&gt; Running in b59472161481
-Removing intermediate container b59472161481
- ---&gt; d5c29dc3707d
+ ---&gt; Running in d7b58242fb18
+Removing intermediate container d7b58242fb18
+ ---&gt; 881efba8cbb3
 
-Successfully built d5c29dc3707d
+Successfully built 881efba8cbb3
 Successfully tagged foo_dev:latest
 
 ========================================================================================
-build execution time: 435.13234996795654 seconds
+build execution time: 485.67613315582275 seconds
 ========================================================================================
 </pre></div></div>
 </div>
@@ -1066,7 +1071,7 @@ build execution time: 435.13234996795654 seconds
 <div class="highlight"><pre>
 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
 <span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
-foo_dev:latest                                                               d5c29dc3707d     3 seconds ago                 1.75GB
+foo_dev:latest                                                               881efba8cbb3     1 second ago                  1.75GB
 </pre></div></div>
 </div>
 </div>
@@ -1091,7 +1096,7 @@ docker-compose up -d dev
 Creating foo_dev_1 ...
 ting foo_dev_1 ... <span class="ansi-green-fg">done</span>
 ========================================================================================
-up execution time: 1.7827799320220947 seconds
+up execution time: 1.4652199745178223 seconds
 ========================================================================================
 </pre></div></div>
 </div>
@@ -1113,8 +1118,8 @@ up execution time: 1.7827799320220947 seconds
 <div class="highlight"><pre>
 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
 <span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
-foo_dev:latest                                                               d5c29dc3707d     7 seconds ago                 1.75GB
-<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up Less than a second                   </span>
+foo_dev:latest                                                               881efba8cbb3     5 seconds ago                 1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      591858ba06da     Up Less than a second                   </span>
 </pre></div></div>
 </div>
 <p>We can access the container at the specified link. If the container is not running you will see this.</p>
@@ -1154,8 +1159,8 @@ foo_dev_1
 <div class="highlight"><pre>
 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
 <span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
-foo_dev:latest                                                               d5c29dc3707d     8 seconds ago                 1.75GB
-<span class="ansi-blue-intense-fg">    foo_dev_1                     http://_________:8001                      cca408b97e0a     Exited (143) Less than a second ago          </span>
+foo_dev:latest                                                               881efba8cbb3     6 seconds ago                 1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://_________:8001                      591858ba06da     Exited (143) Less than a second ago          </span>
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1177,7 +1182,7 @@ docker-compose up -d dev
 Starting foo_dev_1 ...
 ting foo_dev_1 ... <span class="ansi-green-fg">done</span>
 ========================================================================================
-up execution time: 1.3186349868774414 seconds
+up execution time: 1.2733056545257568 seconds
 ========================================================================================
 </pre></div></div>
 </div>
@@ -1228,11 +1233,11 @@ docker-compose up -d dev
 foo_dev_1 is up-to-date
 
 ========================================================================================
-up execution time: 0.9284379482269287 seconds
+up execution time: 0.8994390964508057 seconds
 ========================================================================================
 
 ========================================================================================
-go execution time: 1.2834627628326416 seconds
+go execution time: 1.089184045791626 seconds
 ========================================================================================
 </pre></div></div>
 </div>
@@ -1815,8 +1820,8 @@ optional arguments:
 <div class="highlight"><pre>
 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
 <span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
-foo_dev:latest                                                               d5c29dc3707d     28 seconds ago                1.75GB
-<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up 17 seconds                           </span>
+foo_dev:latest                                                               881efba8cbb3     25 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      591858ba06da     Up 16 seconds                           </span>
 </pre></div></div>
 </div>
 </div>
@@ -1920,8 +1925,8 @@ docker exec -it $(docker ps --all --filter &#39;label=com.docker.compose.project
 docker exec -it $(docker ps --all --filter &#39;label=com.docker.compose.project=foo&#39; --filter &#39;label=com.docker.compose.service=dev&#39; --format {{.Names}}) bash -c &#34;supervisorctl restart uwsgi &amp;&amp; supervisorctl status&#34;
 uwsgi: stopped
 uwsgi: started
-jupyter                          RUNNING   pid 57, uptime 0:00:21
-uwsgi                            RUNNING   pid 445, uptime 0:00:01
+jupyter                          RUNNING   pid 56, uptime 0:00:21
+uwsgi                            RUNNING   pid 446, uptime 0:00:01
 </pre></div></div>
 </div>
 </div>
@@ -1989,8 +1994,8 @@ optional arguments:
 <div class="highlight"><pre>
 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
 <span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
-foo_dev:latest                                                               d5c29dc3707d     35 seconds ago                1.75GB
-<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up 24 seconds                           </span>
+foo_dev:latest                                                               881efba8cbb3     32 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      591858ba06da     Up 24 seconds                           </span>
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -2020,8 +2025,8 @@ foo_dev:latest                                                               d5c
 <div class="highlight"><pre>
 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
 <span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
-foo_dev:latest                                                               d5c29dc3707d     37 seconds ago                1.75GB
-<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      cca408b97e0a     Up 26 seconds                           </span>
+foo_dev:latest                                                               881efba8cbb3     34 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      591858ba06da     Up 25 seconds                           </span>
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -2042,7 +2047,7 @@ docker-compose up -d dev
 Recreating foo_dev_1 ...
 eating foo_dev_1 ... <span class="ansi-green-fg">done</span>
 ========================================================================================
-up execution time: 1.7434639930725098 seconds
+up execution time: 1.6713709831237793 seconds
 ========================================================================================
 </pre></div></div>
 </div>
@@ -2064,8 +2069,8 @@ up execution time: 1.7434639930725098 seconds
 <div class="highlight"><pre>
 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
 <span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
-foo_dev:latest                                                               d5c29dc3707d     40 seconds ago                1.75GB
-<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8023                      c9769c1bbe1f     Up Less than a second                   </span>
+foo_dev:latest                                                               881efba8cbb3     37 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8023                      6ccb824c7cf9     Up Less than a second                   </span>
 </pre></div></div>
 </div>
 <p>Put it back.</p>
@@ -2096,7 +2101,7 @@ docker-compose up -d dev
 Recreating foo_dev_1 ...
 eating foo_dev_1 ... <span class="ansi-green-fg">done</span>
 ========================================================================================
-up execution time: 1.7722828388214111 seconds
+up execution time: 1.6443562507629395 seconds
 ========================================================================================
 </pre></div></div>
 </div>
@@ -2117,8 +2122,8 @@ up execution time: 1.7722828388214111 seconds
 <div class="highlight"><pre>
 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
 <span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
-foo_dev:latest                                                               d5c29dc3707d     43 seconds ago                1.75GB
-<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      2d0cdc474c9b     Up Less than a second                   </span>
+foo_dev:latest                                                               881efba8cbb3     40 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      e266fa9944c7     Up Less than a second                   </span>
 </pre></div></div>
 </div>
 </div>
@@ -2187,7 +2192,7 @@ foo_dev_1
 <div class="highlight"><pre>
 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
 <span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
-foo_dev:latest                                                               d5c29dc3707d     46 seconds ago                1.75GB
+foo_dev:latest                                                               881efba8cbb3     42 seconds ago                1.75GB
 </pre></div></div>
 </div>
 </div>
@@ -2243,12 +2248,12 @@ docker-compose up -d dev
 Creating foo_dev_1 ...
 ting foo_dev_1 ... <span class="ansi-green-fg">done</span>
 ========================================================================================
-up execution time: 1.441547155380249 seconds
+up execution time: 1.297410011291504 seconds
 ========================================================================================
 <span class="ansi-default-inverse-fg ansi-default-inverse-bg">localhost                                                                                                                             </span>
 <span class="ansi-underline">NAME                              LINK                                       ID               STATUS                        SIZE      </span>
-foo_dev:latest                                                               d5c29dc3707d     49 seconds ago                1.75GB
-<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      5f64ef8e55a5     Up Less than a second                   </span>
+foo_dev:latest                                                               881efba8cbb3     45 seconds ago                1.75GB
+<span class="ansi-blue-intense-fg">    foo_dev_1                     http://localhost:8001                      71cb8ff45a4e     Up Less than a second                   </span>
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -2266,7 +2271,7 @@ foo_dev:latest                                                               d5c
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 docker rmi  foo_dev
-Error response from daemon: conflict: unable to remove repository reference &#34;foo_dev&#34; (must force) - container 5f64ef8e55a5 is using its referenced image d5c29dc3707d
+Error response from daemon: conflict: unable to remove repository reference &#34;foo_dev&#34; (must force) - container 71cb8ff45a4e is using its referenced image 881efba8cbb3
 </pre></div></div>
 </div>
 <p>You can force the removal of both with the <code class="docutils literal notranslate"><span class="pre">--force</span></code> flag.</p>
@@ -2302,15 +2307,15 @@ Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
 Remove one or more containers
 docker rmi --force foo_dev
 Untagged: foo_dev:latest
-Deleted: sha256:d5c29dc3707de3eb19f8fcca7a63414d3cea707cb1f0f50de9c95dbe2d2d49c4
-Deleted: sha256:36097f11cd5334ebdd9a51a6e28eab3946b8319b3aa8a48cdd4fbe0d9280aab9
-Deleted: sha256:79a8cc5a67562054f9dcd7e814f6286cdb901acd1cb12bac55b8e0eb45defa9e
-Deleted: sha256:45ae1c880b280f359970e0bbff5c064f3cac84f0998c1e9b87475ab377e8459f
-Deleted: sha256:1a09eebc3fd7e46a8277db5b9ee6e920b80e1a22f49730c7fdd1935b70bc8e2b
-Deleted: sha256:88fdda262df3f6a1b4a171fa0e1c12e40ecaed13c5aaf95745ace9aef6bdbba6
-Deleted: sha256:54b5f1dddb0660397fae9695832aa90793e0a227662d5c97dad9f7867fdcbc3c
-Deleted: sha256:fe7bea56aca873718d2bdcda3b7b62b4c4e3fc54259dd9a52e6046a01a69877c
-Deleted: sha256:69f74d12b515a4827ebd7e721f0bbfb3ad01619100d5f8f6ebeae2a5ece4c77a
+Deleted: sha256:881efba8cbb309ac440aa19d1897bac2d45da338a2058263659deae2fdb79969
+Deleted: sha256:10b203751251eba5827454031a24170918d487a4abd0a064ee887881295cdcd6
+Deleted: sha256:5ebffafa2085339cb1362fd74950805f059d9b8ac210db84799417d43210583d
+Deleted: sha256:0d0997f87dd086a98ae5b65111b80e21101a209f846f13be2f35c9e7e5ba1342
+Deleted: sha256:080ee5a933be553f3f0f13528e1a14cd87d94900564f03106bc841189ef937b9
+Deleted: sha256:54a2868080c30299e6afdc583b6f912346787839fd3ef8264fd636536cc6bc4a
+Deleted: sha256:218704534db2f9964bc3183fb8044afa45a17a5d2c60e1eac770d66bbbc91fc4
+Deleted: sha256:ca403a3be7289870c52f39d6eb2694c1a98fe9821b653e5f04d39f015c39b413
+Deleted: sha256:0b57602ea2d3ef35d86704ffac55602d7c3af7d0b2fcf75fe2f430bf3605dcd9
 docker rmi --force foo_prod
 Error: No such image: foo_prod
 docker rmi --force foo_debug
@@ -2377,17 +2382,20 @@ Error: No such image: foo_debug
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-AlTest1.err                             <span class="ansi-green-fg">port.61201</span>=
-AlTest1.out                             <span class="ansi-green-fg">port.61301</span>=
+<span class="ansi-cyan-fg">4E65C18E-676A-4F76-A157-7B16F54B6B1F</span>/   <span class="ansi-cyan-fg">com.google.Keystone</span>/
+<span class="ansi-cyan-fg">65B7725E-4EA0-4B57-A357-C39E564D676B</span>/   com.trendmicro.tmsm.run.plist
+<span class="ansi-cyan-fg">8EFCF5EB-0232-4BA2-BE29-E882B44305EF</span>/   <span class="ansi-cyan-fg">cvcd</span>/
+AlTest1.err                             ipcroboform8.3.6
+AlTest1.out                             <span class="ansi-green-fg">port.61100</span>=
+<span class="ansi-cyan-fg">B531E494-1D8B-44CA-960F-D5D1DDE836CF</span>/   <span class="ansi-green-fg">port.61201</span>=
+ExmanProcessMutex                       <span class="ansi-green-fg">port.61301</span>=
 ICRC_ROLL.lck                           <span class="ansi-green-fg">port.61302</span>=
 MSS_Menulet                             <span class="ansi-green-fg">port.61304</span>=
 adobegc.log                             <span class="ansi-green-fg">port.61401</span>=
 <span class="ansi-green-fg">com.adobe.AdobeIPCBroker.ctrl-ap186098</span>= <span class="ansi-green-fg">port.61501</span>=
-<span class="ansi-cyan-fg">com.apple.launchd.0R9DDaYyZ6</span>/           <span class="ansi-cyan-fg">powerlog</span>/
-<span class="ansi-cyan-fg">com.apple.launchd.McPXyPKx0Y</span>/           <span class="ansi-cyan-fg">tmux-1937012048</span>/
-<span class="ansi-cyan-fg">com.apple.launchd.vgkMLHbKkP</span>/           wbxtra_03252020_132958.wbt
-meetingJMT.txt                          <span class="ansi-cyan-fg">wbxtrace</span>/
-<span class="ansi-green-fg">port.61100</span>=                             <span class="ansi-cyan-fg">webex</span>/
+<span class="ansi-cyan-fg">com.apple.launchd.TAzDf6vxI5</span>/           <span class="ansi-cyan-fg">powerlog</span>/
+<span class="ansi-cyan-fg">com.apple.launchd.wiVigXgrId</span>/           <span class="ansi-cyan-fg">tmux-1937012048</span>/
+<span class="ansi-cyan-fg">com.apple.launchd.wyf1x4DwRU</span>/           <span class="ansi-cyan-fg">wbxtrace</span>/
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">

@@ -9,3 +9,5 @@ Roadmap
   file.
 - Figure out how to allow for custom project templates.
 - Add tools to (re)run and manage sphinx-apidoc
+- Add instructions for working in wsl2
+  - To get browser working from python: wslview -r $(cmd.exe /c start)

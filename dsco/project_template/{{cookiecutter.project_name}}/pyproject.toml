@@ -23,7 +23,7 @@ qgrid = "^1.1"
 tdsqlmagic = {file = "builder/cache/tdsqlmagic-0.18-py3-none-any.whl"}
 sphinx = "^2.0"
 nbsphinx = "^0.4.2"
-guzzle-sphinx-theme = "^0.7.11"
+guzzle-sphinx-theme = {git = "https://github.com/guzzle/guzzle_sphinx_theme.git"}
 pylint = "^2.3"
 black = {version = "^18.3-alpha.0",allow-prereleases = true}
 blackcellmagic = "^0.0.2"

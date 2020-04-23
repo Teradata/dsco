@@ -18,7 +18,7 @@ from dsco.commands.ls import Docker, Host, Inventory
 
 
 cmd_name = Path(__file__).stem
-VSCODE = "code-insiders"
+VSCODE = "code"
 
 def add_subparser(subparsers):
     sub = subparsers.add_parser(cmd_name, help="launch vs-code")

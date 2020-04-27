@@ -3,42 +3,38 @@
   shell: |
     . $HOME/.poetry/env
     poetry show sphinx
-  ignore_errors: yes
-  register: sphinx_installed
+    # ignore_errors: yes
+    # register: sphinx_installed
 
-- name: Install os requirements
-  apt:
-    name: "{{ item }}"
-    state: present
-  loop:
-    - make
-    - pandoc
-  when: sphinx_installed.rc|int == 0
+  # - name: Install os requirements
+  #   apt:
+  #     name: "{{ item }}"
+  #     state: present
+  #   loop:
+  #     - make
+  #     - pandoc
+  #   when: sphinx_installed.rc|int == 0
 
 - name: check if sphinx_extensions (var) are installed
   shell: | 
     . $HOME/.poetry/env
     poetry show {{ item }}
-  ignore_errors: yes
+    #  ignore_errors: yes
   loop: "{{ sphinx_extensions }}"
-  register: extensions_installed
-  when: sphinx_installed.rc|int == 0
+  # register: extensions_installed
+  # when: sphinx_installed.rc|int == 0
 
-- name: install if missing
-  shell: |
-    . $HOME/.poetry/env
-    poetry add {{ item.0 }}
-  when: sphinx_installed.rc|int == 0 and item.1.rc|int != 0
-  loop: "{{ sphinx_extensions|zip(extensions_installed.results)|list }}"
-
-- name: Get location of python site-packages
-  shell: python -c "import site; import os.path; print(os.path.join(site.getsitepackages()[0],''))"
-  register: site_path
+  # - name: install if missing
+  #   shell: |
+  #     . $HOME/.poetry/env
+  #     poetry add {{ item.0 }}
+  #   when: sphinx_installed.rc|int == 0 and item.1.rc|int != 0
+  #   loop: "{{ sphinx_extensions|zip(extensions_installed.results)|list }}"
 
 - name: modify guzzle theme (make it wider)
   copy:
     src: guzzle.css_t
-    dest: "{{ site_path.stdout_lines.0 }}guzzle_sphinx_theme/guzzle_sphinx_theme/static/guzzle.css_t"
+    dest: "/usr/local/src/guzzle-sphinx-theme/guzzle_sphinx_theme/guzzle_sphinx_theme/static/guzzle.css_t"
     owner: root
     group: root
     mode: 0644

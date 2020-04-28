@@ -15,6 +15,7 @@ from pathlib import Path
 import subprocess
 import yaml
 from dsco.commands.ls import Docker, Host, Inventory
+from dsco.local_options import Settings
 
 
 cmd_name = Path(__file__).stem
@@ -35,7 +36,7 @@ def run_cmd(args, conf):
     if args.remote:
         try:
             machine_name = args.remote
-            machine_list = Inventory.remote_list()
+            machine_list = Settings.get_remote_kernal_list()
             machine = next(
                 machine for machine in machine_list if machine_name == machine["name"]
             )

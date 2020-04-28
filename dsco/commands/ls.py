@@ -15,6 +15,8 @@ import subprocess
 from collections import OrderedDict
 import json
 
+from dsco.local_options import Settings
+
 
 # ======================================================================================
 # Add subparser
@@ -724,16 +726,6 @@ class Inventory(object):
             A list of host objects. The host objects 
             have information about images and containers on that host.
 
-    Methods
-        get_local_settings (Dict):
-            Static method that returns $HOME/.dsco/setting.json as dict
-
-        get_local_kernal (Dict):
-            Static method that returns localhost kernal
-
-        get_remote_kernal_list (List[Dict]): 
-            Static method that returns the remote 
-            machines listed in $HOME/.dsco/settings.json
     """
 
     # output columns
@@ -742,53 +734,6 @@ class Inventory(object):
         ["{title:<{width}}".format(title=k, width=v) for k, v in columns.items()]
     )
     line_len = sum(columns.values())
-
-    @staticmethod
-    def get_local_settings():
-        """Get local configuration options
-
-        Retrieves the settings, if any, from $HOME/.dsco/setting.json
-        """
-        settings_file = Path.home() / ".dsco" / "settings.json"
-        if settings_file.exists():
-            settings = json.load(settings_file.open())
-        else:
-            settings = dict(loaded=True)
-        
-        return settings
-
-    @staticmethod
-    def get_local_kernal(settings):
-        # mutate settings
-        if not settings:
-            settings.update(Inventory.get_local_settings())
-
-        # Default values for local_kernal
-        local_kernal = dict(name="localhost", properties=dict(ip="localhost"), env={})
-        # Override with anything found in settings["local"]
-        local_kernal.update(settings.get("local", {}))
-
-        return local_kernal
-        
-    @staticmethod
-    def get_remote_kernal_list(settings):
-        """Get configuration information on remote machines
-
-        Retrieves the list of remote machines from 
-        $HOME/.dsco/settings.json. Each item in the list is expected
-        to include:
-
-            - name (str)
-            - ip (str)
-            - env (dict)
-        """
-        # mutate settings
-        if not settings:
-            settings.update(Inventory.get_local_settings())
-        
-        remote_list = settings.get("remote", [])
-
-        return remote_list
 
     def __init__(self, localhost=True, remote=False):
         """
@@ -801,12 +746,12 @@ class Inventory(object):
         # Use a threadpool to build each host in parallel.
         with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
             if localhost:
-                local = self.get_local_kernal(settings)
+                local = Settings.get_local_kernal(settings)
                 future = executor.submit(Host, local)
                 hosts.append(future)
 
             if remote:
-                for remote in self.get_remote_kernal_list(settings):
+                for remote in Settings.get_remote_kernal_list(settings):
                     future = executor.submit(Host, remote)
                     hosts.append(future)
 

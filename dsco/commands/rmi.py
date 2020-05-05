@@ -48,7 +48,7 @@ def run_cmd(args, conf):
         ]
         flagged_service_filter = lambda x: x[1]
 
-        proj_name = conf["pyproject"]["tool"]["poetry"]["name"]
+        proj_name = conf["pyproject"]["tool"]["poetry"]["name"].lower()
 
         force = "--force" if args.force else ""
         

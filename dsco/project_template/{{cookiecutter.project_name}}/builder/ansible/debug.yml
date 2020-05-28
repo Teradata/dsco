@@ -1,4 +1,8 @@
 - hosts: localhost
   gather_facts: False
   roles:
-    - data-refresh
+    - python3-apt
+    - os-prod
+    - os-dev
+    - ca-certificates
+    - poetry

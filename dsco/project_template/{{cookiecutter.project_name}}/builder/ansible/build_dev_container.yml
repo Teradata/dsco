@@ -6,6 +6,7 @@
     - python3-apt
     - os-prod
     - os-dev
+    - ca-certificates
     - poetry
     - python-dev
     - jupyter-config

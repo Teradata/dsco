@@ -5,6 +5,7 @@
   roles:
     - python3-apt
     - os-prod
+    - ca-certificates
     - poetry
     - python-prod
     - nginx

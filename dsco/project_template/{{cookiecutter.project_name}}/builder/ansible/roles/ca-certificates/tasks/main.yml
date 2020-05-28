@@ -1,0 +1,8 @@
+- name: Copy certs
+  copy:
+    remote_src: yes
+    src: /srv/builder/cache/ca-certificates/
+    dest: /usr/local/share/ca-certificates/
+
+- name: Update certs
+  command: update-ca-certificates

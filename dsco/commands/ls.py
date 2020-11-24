@@ -613,7 +613,10 @@ class Host(object):
         on the specified machine.
         """
         if kernel["name"] == "localhost":
-            return kernel["env"]
+            env = os.environ.copy()
+            env.update(kernel["env"])
+            return env
+            #return kernel["env"]
         else:
             env = os.environ.copy()
             env.update(kernel["env"])

@@ -44,16 +44,17 @@ def add_subparser(subparsers):
 def run_cmd(args, conf):
     # only run if there's a project on our path
     if conf["proj_root"]:
-        no_flag = not any([args.dev, args.prod, args.debug])
-        dev_flag = args.dev or args.all or no_flag
-        prod_flag = args.prod or args.all
-        debug_flag = args.dev or args.all
+        no_flag = not any([args.dev, args.prod, args.debug, args.all])
+        dev_flag = (args.dev or args.all or no_flag) and not args.debug
+        prod_flag = (args.prod or args.all) and not args.debug
+        debug_flag = args.debug
 
         service_list = [("dev", dev_flag), ("prod", prod_flag), ("debug", debug_flag)]
         service_str = " ".join([service for (service, flag) in service_list if flag])
 
         docker_cmd = f"docker-compose build {service_str}"
 
+        print(f"service_str: >{service_str}<")
         print(docker_cmd)
         subprocess.run(docker_cmd, cwd=conf["proj_root"], shell=True)
 

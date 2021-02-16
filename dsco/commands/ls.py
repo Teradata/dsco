@@ -612,15 +612,9 @@ class Host(object):
         Create the environment variables needed to run docker commands
         on the specified machine.
         """
-        if kernel["name"] == "localhost":
-            env = os.environ.copy()
-            env.update(kernel["env"])
-            return env
-            #return kernel["env"]
-        else:
-            env = os.environ.copy()
-            env.update(kernel["env"])
-            return env
+        env = os.environ.copy()
+        env.update(kernel["env"])
+        return env
 
     # ----------------------------------------------------------------------------------
     # Images / Containers

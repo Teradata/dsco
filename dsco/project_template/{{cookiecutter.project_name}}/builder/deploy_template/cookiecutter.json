@@ -1,0 +1,8 @@
+{
+  "project_name": "{{ cookiecutter.project_name }}",
+  "deploy_directory_name": "deploy",
+  "namespace": "k8s_namespace",
+  "private_container_registry": "private_container_registry/",
+  "registry_secret": "k8s_secret",
+  "ingress_host": "ingress_host"
+}

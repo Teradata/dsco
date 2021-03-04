@@ -44,3 +44,4 @@
   make:
     chdir: /srv/docs/reports/source
     target: html
+  ignore_errors: yes

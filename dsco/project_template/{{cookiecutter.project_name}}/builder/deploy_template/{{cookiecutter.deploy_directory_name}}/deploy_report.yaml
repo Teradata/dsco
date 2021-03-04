@@ -1,0 +1,66 @@
+# create custom default values in ~/.cookiecutterrc
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ cookiecutter.project_name|replace("_","-") }}-report-deployment
+  namespace: {{ cookiecutter.namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      report: {{ cookiecutter.project_name }}
+  template:
+    metadata:
+      labels:
+        report: {{ cookiecutter.project_name }}
+    spec:
+      containers:
+      - name: {{ cookiecutter.project_name|replace("_","-") }}-report
+        image: {{ cookiecutter.private_container_registry }}{{ cookiecutter.project_name }}
+        ports:
+          - containerPort: 8043
+            protocol: TCP
+      imagePullSecrets:
+      - name: {{ cookiecutter.registry_secret }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ cookiecutter.project_name|replace("_","-") }}-report-service
+  namespace: {{ cookiecutter.namespace }}
+  labels:
+    report: {{ cookiecutter.project_name }}-service
+spec:
+  type: NodePort
+  selector:
+    report: {{ cookiecutter.project_name }}
+  ports:
+    - protocol: TCP
+      port: 8043
+      targetPort: 8043
+      # nodePort: << cookiecutter.node_port >>
+status:
+  loadBalancer:
+    ingress:
+      - hostname: localhost
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata: 
+  name: {{ cookiecutter.project_name|replace("_","-") }}-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+  namespace: {{ cookiecutter.namespace }}
+spec:
+  rules:
+    - host: {{ cookiecutter.ingress_host }}
+      http:
+        paths:
+          - path: /{{ cookiecutter.project_name }}
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ cookiecutter.project_name|replace("_","-") }}-report-service
+                port:
+                  number: 8043
+                  

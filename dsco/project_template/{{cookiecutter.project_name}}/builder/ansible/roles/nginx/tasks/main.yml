@@ -22,8 +22,16 @@
     group: root
     mode: 0644
 
-- name: restart nginx
-  service:
-    name: nginx
-    state: restarted
+#- name: restart nginx
+#  service:
+#    name: nginx
+#    state: restarted
+
+- name: configure nginx to start with supervisor
+  copy:
+    src: nginx.conf
+    dest: /etc/supervisor/conf.d
+    owner: root
+    group: root
+    mode: 0644
 

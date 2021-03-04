@@ -14,12 +14,6 @@ services:
       volumes:
          - ./:/srv
       init: true
-      command: >
-        bash -c "service nginx restart 
-        && service supervisor start 
-        && cd /srv 
-        && ~/.poetry/bin/poetry install 
-        && bash"
       stdin_open: true
       tty: true
    prod:
@@ -34,12 +28,6 @@ services:
       ports:
         - "{{ cookiecutter.project_port|int + 1000 }}:80"
       init: true
-      command: >
-        bash -c "service nginx restart 
-        && service supervisor start 
-        && cd /srv 
-        && ~/.poetry/bin/poetry install --no-dev 
-        && bash"
       stdin_open: true
       tty: true
    debug:

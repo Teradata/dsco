@@ -17,7 +17,7 @@
     path: /dev/shm/supervisor.sock
     state: absent
 
-- name: start
-  service:
-    name: supervisor
-    state: started
+#- name: start
+#  service:
+#    name: supervisor
+#    state: started

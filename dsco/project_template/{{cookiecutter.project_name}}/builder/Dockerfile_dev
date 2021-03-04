@@ -12,3 +12,4 @@ SHELL ["/bin/bash", "-c"]
 
 RUN cd /srv/builder/ansible && ansible-playbook build_dev_container.yml
 
+ENTRYPOINT ["/usr/bin/supervisord"]

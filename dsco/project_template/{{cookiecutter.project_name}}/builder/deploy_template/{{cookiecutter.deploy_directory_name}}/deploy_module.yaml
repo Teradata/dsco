@@ -1,0 +1,46 @@
+# Create custom default values in ~/.cookiecutterrc
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ cookiecutter.project_name|replace("_","-") }}-module-deployment
+  namespace: {{ cookiecutter.namespace }}
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      module: {{ cookiecutter.project_name }}
+  template:
+    metadata:
+      labels:
+        module: {{ cookiecutter.project_name }}
+    spec:
+      containers:
+      - name: {{ cookiecutter.project_name|replace("_","-") }}-module
+        image: {{ cookiecutter.private_container_registry }}{{ cookiecutter.project_name }}
+        #imagePullPolicy: Never
+        ports:
+          - containerPort: 80
+            protocol: TCP
+      imagePullSecrets:
+      - name: {{ cookiecutter.registry_secret }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ cookiecutter.project_name|replace("_","-") }}-module-service
+  namespace: {{ cookiecutter.namespace }}
+  labels:
+    module: {{ cookiecutter.project_name }}-service
+spec:
+  type: NodePort
+  selector:
+    module: {{ cookiecutter.project_name }}
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      # nodePort: << cookiecutter.node_port >>
+status:
+  loadBalancer:
+    ingress:
+      - hostname: localhost

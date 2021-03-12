@@ -3,6 +3,7 @@ from jinja2 import meta
 import os
 from types import SimpleNamespace
 import inspect
+from pathlib import Path
 
 ############################
 # set up jinja environment #
@@ -19,8 +20,7 @@ loader = jinja2.FileSystemLoader(searchpath=sql_search_path)
 # create environment
 env = jinja2.Environment(loader=loader)
 
-sql = SimpleNamespace()
+sql_file_dict = {p.stem: env.get_template(p.name) for p in SQL_DIR_PATH.rglob("*.sql")}
+sql = SimpleNamespace(**sql_file_dict)
 
-sql.all_test_queries = env.get_template("all_test_queries.sql")
-sql.events = env.get_template("events.sql")
 

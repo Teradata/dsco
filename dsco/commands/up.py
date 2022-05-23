@@ -1,6 +1,6 @@
 """up: Create and launch specified containers
 
-Runs 'docker-compose up -d ...' for the specified process. 
+Runs 'docker compose up -d ...' for the specified process. 
 Options: --dev, --prod, --all
 
 If the --debug flag is provided, only the debug container is launched. 
@@ -44,7 +44,7 @@ def run_cmd(args, conf):
         ]
         services_str = " ".join([service for service, flag in service_list if flag])
 
-        cmd = f"docker-compose up -d {services_str}"
+        cmd = f"docker compose up -d {services_str}"
         print(cmd)
         subprocess.run(cmd, cwd=conf["proj_root"], shell=True)
 

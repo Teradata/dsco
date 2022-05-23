@@ -1,6 +1,6 @@
 """Build a container image
 
-:code:`dsco build` creates images by running docker-compose from the project 
+:code:`dsco build` creates images by running docker compose from the project 
 root directory. By default :code:`dsco build` will build the dev container. 
 
 Options
@@ -52,7 +52,7 @@ def run_cmd(args, conf):
         service_list = [("dev", dev_flag), ("prod", prod_flag), ("debug", debug_flag)]
         service_str = " ".join([service for (service, flag) in service_list if flag])
 
-        docker_cmd = f"docker-compose build {service_str}"
+        docker_cmd = f"docker compose build {service_str}"
 
         print(f"service_str: >{service_str}<")
         print(docker_cmd)

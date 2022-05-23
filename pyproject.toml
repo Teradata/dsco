@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dsco"
-version = "0.8.2"
+version = "0.8.3"
 description = ""
 authors = ["Aaron Palumbo <aaron.palumbo@teradata.com>"]
 

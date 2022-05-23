@@ -14,11 +14,11 @@ import dash_html_components as html
 
 def add_dash(server):
     """Populates page with previews of datasets."""
-    dash_app = Dash(server=server, url_base_pathname="/dash/")
-    dash_app.config.update({
-        'routes_pathname_prefix': '/',
-        'requests_pathname_prefix': '/webapp/dash/'
-    })
+    dash_app = Dash(
+        server=server, 
+        requests_pathname_prefix="/webapp/dash/",
+        routes_pathname_prefix="/dash/",
+    )
 
     # Create layout
     dash_app.layout = html.Div(

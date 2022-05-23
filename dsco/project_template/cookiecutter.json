@@ -2,9 +2,9 @@
   "project_name": "MyProject",
   "author": "Discovery",
   "version": "0.1",
-  "year": "2020",
+  "year": "2022",
   "project_port": "8001",
-  "python_version": ["3.7", "3.6"],
+  "python_version": ["3.9", "3.8", "3.7", "3.6"],
   "_copy_without_render": [
     "*.sql",
     "*ansible"

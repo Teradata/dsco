@@ -82,7 +82,7 @@ html_sidebars = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-def setup(app):
-    app.add_javascript('https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js')
+#def setup(app):
+    #app.add_javascript('https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js')
     #This next line causes errors: fixed the issued by placing plotly.js in _build/html directory
     #app.add_javascript('https://cdn.plot.ly/plotly-latest.min.js')
